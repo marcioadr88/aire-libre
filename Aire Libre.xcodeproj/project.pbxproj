@@ -14,6 +14,9 @@
 		0A3B049C291733AA0026D3DF /* AireLibreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B049B291733AA0026D3DF /* AireLibreTests.swift */; };
 		0A3B04A6291733AA0026D3DF /* AireLibreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B04A5291733AA0026D3DF /* AireLibreUITests.swift */; };
 		0A3B04A8291733AA0026D3DF /* AireLibreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B04A7291733AA0026D3DF /* AireLibreUITestsLaunchTests.swift */; };
+		0AC259CD29175D6E0047397E /* AQIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC259CC29175D6E0047397E /* AQIData.swift */; };
+		0AC259CF29175D760047397E /* Quality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC259CE29175D760047397E /* Quality.swift */; };
+		0AC259D12917615B0047397E /* MeasurementData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC259D02917615B0047397E /* MeasurementData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		0A3B04A1291733AA0026D3DF /* Aire LibreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aire LibreUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A3B04A5291733AA0026D3DF /* AireLibreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AireLibreUITests.swift; sourceTree = "<group>"; };
 		0A3B04A7291733AA0026D3DF /* AireLibreUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AireLibreUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0AC259CC29175D6E0047397E /* AQIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIData.swift; sourceTree = "<group>"; };
+		0AC259CE29175D760047397E /* Quality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quality.swift; sourceTree = "<group>"; };
+		0AC259D02917615B0047397E /* MeasurementData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +81,7 @@
 		0A3B047D291733A90026D3DF = {
 			isa = PBXGroup;
 			children = (
+				0A3B0490291733AA0026D3DF /* Preview Content */,
 				0A3B0488291733A90026D3DF /* Aire Libre */,
 				0A3B049A291733AA0026D3DF /* Aire LibreTests */,
 				0A3B04A4291733AA0026D3DF /* Aire LibreUITests */,
@@ -95,12 +102,11 @@
 		0A3B0488291733A90026D3DF /* Aire Libre */ = {
 			isa = PBXGroup;
 			children = (
-				0AC259CB29175CC20047397E /* Models */,
 				0A3B0489291733A90026D3DF /* AireLibreApp.swift */,
 				0A3B048B291733A90026D3DF /* ContentView.swift */,
 				0A3B048D291733AA0026D3DF /* Assets.xcassets */,
 				0A3B048F291733AA0026D3DF /* AireLibre.entitlements */,
-				0A3B0490291733AA0026D3DF /* Preview Content */,
+				0AC259CB29175CC20047397E /* Models */,
 			);
 			path = "Aire Libre";
 			sourceTree = "<group>";
@@ -133,6 +139,9 @@
 		0AC259CB29175CC20047397E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0AC259CC29175D6E0047397E /* AQIData.swift */,
+				0AC259CE29175D760047397E /* Quality.swift */,
+				0AC259D02917615B0047397E /* MeasurementData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -268,7 +277,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A3B048C291733A90026D3DF /* ContentView.swift in Sources */,
+				0AC259CF29175D760047397E /* Quality.swift in Sources */,
+				0AC259D12917615B0047397E /* MeasurementData.swift in Sources */,
 				0A3B048A291733A90026D3DF /* AireLibreApp.swift in Sources */,
+				0AC259CD29175D6E0047397E /* AQIData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,7 +434,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Aire Libre/AireLibre.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Aire Libre/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "Preview\\ Content/Preview\\ Assets.xcassets";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -460,7 +472,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Aire Libre/AireLibre.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Aire Libre/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "Preview\\ Content/Preview\\ Assets.xcassets";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
