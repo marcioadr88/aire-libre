@@ -1,0 +1,9 @@
+/* 
+  Strings.strings
+  Aire Libre
+
+  Created by Marcio Duarte on 2022-11-23.
+  
+*/
+"invalidEndpoindURL" = "El endpoint proveído no es válido";
+"noConnection" = "No hay una conexión activa a la red";

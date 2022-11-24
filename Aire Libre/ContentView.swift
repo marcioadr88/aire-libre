@@ -6,16 +6,16 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct ContentView: View {
+    @State private var region = MKCoordinateRegion(center: AppConstants.asuncionCoordinates,
+                                                   span: AppConstants.defaultSpan)
+
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+        Map(coordinateRegion: $region)
+            .ignoresSafeArea()
     }
 }
 

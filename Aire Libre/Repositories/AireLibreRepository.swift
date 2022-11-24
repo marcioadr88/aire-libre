@@ -7,18 +7,63 @@
 
 import Foundation
 
+/// The repository fetches data either from network (online) or locally (offline)
 protocol AireLibreRepository {
-    func fetchAQI()
+    /// Fetches AQI data from repository
+    ///
+    /// Fetches Air Quality Index data according to the parameters
+    ///
+    /// - Parameter source: Include measurements from this source only
+    /// - Parameter start: Include measurements after this date and time
+    /// - Parameter end: Include measurements before this date and time
+    /// - Parameter latitude: Target latitude coordinate
+    /// - Parameter longitude: Target longitude coordinate
+    /// - Parameter distance: Include measurements that are this kilometers far from the target
+    /// - Parameter handler: Function called with the result of the repository call
+    func getAQI(
+        start: Date?,
+        end: Date?,
+        latitude: Double?,
+        longitude: Double?,
+        distance: Double?,
+        source: String?,
+        handler: @escaping ((Result<[AQIData], AppError>) -> Void)
+    )
 }
 
 final class AireLibreRepositoryImpl: AireLibreRepository {
     private let networkService: NetworkService
+    private let connectionChecker: ConnectionChecker
     
-    init(networkService: NetworkService) {
+    init(networkService: NetworkService,
+         connectionChecker: ConnectionChecker) {
         self.networkService = networkService
+        self.connectionChecker = connectionChecker
     }
     
-    func fetchAQI() {
+    func getAQI(
+        start: Date?,
+        end: Date?,
+        latitude: Double?,
+        longitude: Double?,
+        distance: Double?,
+        source: String?,
+        handler: @escaping ((Result<[AQIData], AppError>) -> Void)
+    ) {
+        // check for an active connection
+        guard connectionChecker.isConnected else {
+            handler(.failure(.noConnection))
+            
+            return
+        }
         
+        // we have a connection, then hit the network
+        networkService.fetchAQI(start: start,
+                                end: end,
+                                latitude: latitude,
+                                longitude: longitude,
+                                distance: distance,
+                                source: source,
+                                handler: handler)
     }
 }

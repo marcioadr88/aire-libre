@@ -21,6 +21,10 @@
 		0AC259CD29175D6E0047397E /* AQIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC259CC29175D6E0047397E /* AQIData.swift */; };
 		0AC259CF29175D760047397E /* Quality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC259CE29175D760047397E /* Quality.swift */; };
 		0AC259D12917615B0047397E /* MeasurementData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC259D02917615B0047397E /* MeasurementData.swift */; };
+		0AEF37BA292EE4B90086514C /* Localizables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF37B9292EE4B90086514C /* Localizables.swift */; };
+		0AEF37C0292EE6100086514C /* Strings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF37C2292EE6100086514C /* Strings.strings */; };
+		0AEF37C6292EEA260086514C /* ConnectionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF37C5292EEA260086514C /* ConnectionChecker.swift */; };
+		0AEF37C8292EEE4E0086514C /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF37C7292EEE4E0086514C /* AppConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,11 @@
 		0AC259CC29175D6E0047397E /* AQIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIData.swift; sourceTree = "<group>"; };
 		0AC259CE29175D760047397E /* Quality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quality.swift; sourceTree = "<group>"; };
 		0AC259D02917615B0047397E /* MeasurementData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementData.swift; sourceTree = "<group>"; };
+		0AEF37B9292EE4B90086514C /* Localizables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizables.swift; sourceTree = "<group>"; };
+		0AEF37C1292EE6100086514C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Strings.strings; sourceTree = "<group>"; };
+		0AEF37C3292EE6150086514C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Strings.strings; sourceTree = "<group>"; };
+		0AEF37C5292EEA260086514C /* ConnectionChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionChecker.swift; sourceTree = "<group>"; };
+		0AEF37C7292EEE4E0086514C /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,9 +124,11 @@
 				0ABB875A292D9A1000F7644E /* AppError.swift */,
 				0A3B048D291733AA0026D3DF /* Assets.xcassets */,
 				0A3B048F291733AA0026D3DF /* AireLibre.entitlements */,
+				0AEF37C4292EEA160086514C /* Utils */,
 				0AC259CB29175CC20047397E /* Models */,
 				0ABB8755292D969D00F7644E /* Services */,
 				0ACA398B291B434D0022DDC9 /* Repositories */,
+				0AEF37BF292EE5F00086514C /* Localization */,
 			);
 			path = "Aire Libre";
 			sourceTree = "<group>";
@@ -172,6 +183,24 @@
 				0ABB8753292D969600F7644E /* AireLibreRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		0AEF37BF292EE5F00086514C /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				0AEF37C2292EE6100086514C /* Strings.strings */,
+				0AEF37B9292EE4B90086514C /* Localizables.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		0AEF37C4292EEA160086514C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0AEF37C5292EEA260086514C /* ConnectionChecker.swift */,
+				0AEF37C7292EEE4E0086514C /* AppConstants.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,11 +266,6 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				KnownAssetTags = (
-					Growth,
-					PayMe,
-					Restaurants,
-				);
 				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
@@ -265,6 +289,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 0A3B047D291733A90026D3DF;
 			productRefGroup = 0A3B0487291733A90026D3DF /* Products */;
@@ -285,6 +310,7 @@
 			files = (
 				0A3B0492291733AA0026D3DF /* Preview Assets.xcassets in Resources */,
 				0A3B048E291733AA0026D3DF /* Assets.xcassets in Resources */,
+				0AEF37C0292EE6100086514C /* Strings.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,8 +338,11 @@
 				0A3B048C291733A90026D3DF /* ContentView.swift in Sources */,
 				0AC259CF29175D760047397E /* Quality.swift in Sources */,
 				0ABB875B292D9A1000F7644E /* AppError.swift in Sources */,
+				0AEF37C6292EEA260086514C /* ConnectionChecker.swift in Sources */,
 				0AC259D12917615B0047397E /* MeasurementData.swift in Sources */,
+				0AEF37BA292EE4B90086514C /* Localizables.swift in Sources */,
 				0ABB8759292D97DA00F7644E /* NetworkServiceEndpoints.swift in Sources */,
+				0AEF37C8292EEE4E0086514C /* AppConstants.swift in Sources */,
 				0ABB8754292D969600F7644E /* AireLibreRepository.swift in Sources */,
 				0A3B048A291733A90026D3DF /* AireLibreApp.swift in Sources */,
 				0AC259CD29175D6E0047397E /* AQIData.swift in Sources */,
@@ -352,6 +381,18 @@
 			targetProxy = 0A3B04A2291733AA0026D3DF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0AEF37C2292EE6100086514C /* Strings.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0AEF37C1292EE6100086514C /* en */,
+				0AEF37C3292EE6150086514C /* es */,
+			);
+			name = Strings.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		0A3B04A9291733AA0026D3DF /* Debug */ = {
@@ -404,6 +445,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -456,6 +498,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
