@@ -9,9 +9,19 @@ import SwiftUI
 
 @main
 struct AireLibreApp: App {
+    private let repository: AireLibreRepository
+    
+    init() {
+        let connectionChecker = NWPathMonitorConnectionChecker()
+        let endpoints = ProductionEndpoints()
+        let networkService = NetworkServiceImpl(endpoints: endpoints)
+        self.repository = AireLibreRepositoryImpl(networkService: networkService,
+                                                  connectionChecker: connectionChecker)
+    }
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Home(repository: repository)
         }
     }
 }

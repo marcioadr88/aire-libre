@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		0A3B048A291733A90026D3DF /* AireLibreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B0489291733A90026D3DF /* AireLibreApp.swift */; };
-		0A3B048C291733A90026D3DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B048B291733A90026D3DF /* ContentView.swift */; };
+		0A3B048C291733A90026D3DF /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B048B291733A90026D3DF /* Home.swift */; };
 		0A3B048E291733AA0026D3DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A3B048D291733AA0026D3DF /* Assets.xcassets */; };
 		0A3B0492291733AA0026D3DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A3B0491291733AA0026D3DF /* Preview Assets.xcassets */; };
 		0A3B049C291733AA0026D3DF /* AireLibreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B049B291733AA0026D3DF /* AireLibreTests.swift */; };
 		0A3B04A6291733AA0026D3DF /* AireLibreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B04A5291733AA0026D3DF /* AireLibreUITests.swift */; };
 		0A3B04A8291733AA0026D3DF /* AireLibreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B04A7291733AA0026D3DF /* AireLibreUITestsLaunchTests.swift */; };
+		0AB43F9D2936DD38005299AC /* Task+AutoRetry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB43F9C2936DD38005299AC /* Task+AutoRetry.swift */; };
+		0AB43FA02936EA66005299AC /* Samples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB43F9F2936EA66005299AC /* Samples.swift */; };
+		0AB43FA42936EE1A005299AC /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB43FA32936EE1A005299AC /* HomeViewModel.swift */; };
 		0ABB8754292D969600F7644E /* AireLibreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABB8753292D969600F7644E /* AireLibreRepository.swift */; };
 		0ABB8757292D96B000F7644E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABB8756292D96B000F7644E /* NetworkService.swift */; };
 		0ABB8759292D97DA00F7644E /* NetworkServiceEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABB8758292D97DA00F7644E /* NetworkServiceEndpoints.swift */; };
@@ -47,7 +50,7 @@
 /* Begin PBXFileReference section */
 		0A3B0486291733A90026D3DF /* Aire Libre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aire Libre.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A3B0489291733A90026D3DF /* AireLibreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AireLibreApp.swift; sourceTree = "<group>"; };
-		0A3B048B291733A90026D3DF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0A3B048B291733A90026D3DF /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		0A3B048D291733AA0026D3DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A3B048F291733AA0026D3DF /* AireLibre.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AireLibre.entitlements; sourceTree = "<group>"; };
 		0A3B0491291733AA0026D3DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -56,6 +59,9 @@
 		0A3B04A1291733AA0026D3DF /* Aire LibreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aire LibreUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A3B04A5291733AA0026D3DF /* AireLibreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AireLibreUITests.swift; sourceTree = "<group>"; };
 		0A3B04A7291733AA0026D3DF /* AireLibreUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AireLibreUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0AB43F9C2936DD38005299AC /* Task+AutoRetry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+AutoRetry.swift"; sourceTree = "<group>"; };
+		0AB43F9F2936EA66005299AC /* Samples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Samples.swift; sourceTree = "<group>"; };
+		0AB43FA32936EE1A005299AC /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		0ABB8753292D969600F7644E /* AireLibreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AireLibreRepository.swift; sourceTree = "<group>"; };
 		0ABB8756292D96B000F7644E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		0ABB8758292D97DA00F7644E /* NetworkServiceEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceEndpoints.swift; sourceTree = "<group>"; };
@@ -119,12 +125,14 @@
 		0A3B0488291733A90026D3DF /* Aire Libre */ = {
 			isa = PBXGroup;
 			children = (
+				0AB43F9E2936EA5C005299AC /* Samples */,
 				0A3B0489291733A90026D3DF /* AireLibreApp.swift */,
-				0A3B048B291733A90026D3DF /* ContentView.swift */,
+				0AB43FA12936EE09005299AC /* Views */,
 				0ABB875A292D9A1000F7644E /* AppError.swift */,
 				0A3B048D291733AA0026D3DF /* Assets.xcassets */,
 				0A3B048F291733AA0026D3DF /* AireLibre.entitlements */,
 				0AEF37C4292EEA160086514C /* Utils */,
+				0AB43F9B2936DD13005299AC /* Extensions */,
 				0AC259CB29175CC20047397E /* Models */,
 				0ABB8755292D969D00F7644E /* Services */,
 				0ACA398B291B434D0022DDC9 /* Repositories */,
@@ -156,6 +164,39 @@
 				0A3B04A7291733AA0026D3DF /* AireLibreUITestsLaunchTests.swift */,
 			);
 			path = "Aire LibreUITests";
+			sourceTree = "<group>";
+		};
+		0AB43F9B2936DD13005299AC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0AB43F9C2936DD38005299AC /* Task+AutoRetry.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0AB43F9E2936EA5C005299AC /* Samples */ = {
+			isa = PBXGroup;
+			children = (
+				0AB43F9F2936EA66005299AC /* Samples.swift */,
+			);
+			path = Samples;
+			sourceTree = "<group>";
+		};
+		0AB43FA12936EE09005299AC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0AB43FA22936EE11005299AC /* Home */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0AB43FA22936EE11005299AC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0A3B048B291733A90026D3DF /* Home.swift */,
+				0AB43FA32936EE1A005299AC /* HomeViewModel.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		0ABB8755292D969D00F7644E /* Services */ = {
@@ -335,17 +376,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A3B048C291733A90026D3DF /* ContentView.swift in Sources */,
+				0A3B048C291733A90026D3DF /* Home.swift in Sources */,
+				0AB43FA02936EA66005299AC /* Samples.swift in Sources */,
 				0AC259CF29175D760047397E /* Quality.swift in Sources */,
 				0ABB875B292D9A1000F7644E /* AppError.swift in Sources */,
 				0AEF37C6292EEA260086514C /* ConnectionChecker.swift in Sources */,
 				0AC259D12917615B0047397E /* MeasurementData.swift in Sources */,
+				0AB43F9D2936DD38005299AC /* Task+AutoRetry.swift in Sources */,
 				0AEF37BA292EE4B90086514C /* Localizables.swift in Sources */,
 				0ABB8759292D97DA00F7644E /* NetworkServiceEndpoints.swift in Sources */,
 				0AEF37C8292EEE4E0086514C /* AppConstants.swift in Sources */,
 				0ABB8754292D969600F7644E /* AireLibreRepository.swift in Sources */,
 				0A3B048A291733A90026D3DF /* AireLibreApp.swift in Sources */,
 				0AC259CD29175D6E0047397E /* AQIData.swift in Sources */,
+				0AB43FA42936EE1A005299AC /* HomeViewModel.swift in Sources */,
 				0ABB8757292D96B000F7644E /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -515,6 +559,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "../../rappi/ios-rappi-main/apps/Grability/Grability/Images.xcassets Preview\\ Content/Preview\\ Assets.xcassets";
+				DEVELOPMENT_TEAM = 69SFKN563E;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -553,6 +598,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "../../rappi/ios-rappi-main/apps/Grability/Grability/Images.xcassets Preview\\ Content/Preview\\ Assets.xcassets";
+				DEVELOPMENT_TEAM = 69SFKN563E;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;

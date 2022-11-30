@@ -12,7 +12,7 @@ protocol NetworkServiceEndpoints {
     var measurementEndpoint: URL { get }
 }
 
-final class NetworkServiceEndpointsImpl: NetworkServiceEndpoints {
+final class ProductionEndpoints: NetworkServiceEndpoints {
     private let baseUrl = URL(string: "https://rald-dev.greenbeep.com/api/v1")!
     
     var aqiEndpoint: URL {

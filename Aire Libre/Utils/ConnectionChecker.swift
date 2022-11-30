@@ -7,15 +7,30 @@
 
 import Foundation
 import Network
+import OSLog
 
 protocol ConnectionChecker {
     var isConnected: Bool { get }
 }
 
 final class NWPathMonitorConnectionChecker: ConnectionChecker {
-    private let monitor = NWPathMonitor()
+    private let log = Logger(subsystem: "connection_checker.re.airelib.ios",
+                             category: "NWPathMonitorConnectionChecker")
+    private let queue = DispatchQueue(label: "NWPathMonitorConnectionChecker.re.airelib.ios")
+    private let monitor: NWPathMonitor
+    
+    init() {
+        monitor = NWPathMonitor()
+        monitor.start(queue: queue)
+        log.debug("NWPathMonitor started")
+    }
     
     var isConnected: Bool {
-        return monitor.currentPath.status == .satisfied
+        let currentPath = monitor.currentPath
+        let isConnected = currentPath.status == .satisfied
+        
+        log.info("Current path \(currentPath.debugDescription), isConnected is \(isConnected)")
+        
+        return isConnected
     }
 }
