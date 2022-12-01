@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AQIData: Codable {
+struct AQIData: Codable, Sendable {
     let sensor, source, description: String
     let longitude, latitude: Double
     let quality: Quality

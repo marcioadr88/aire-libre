@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import OSLog
 
 // taken from https://www.swiftbysundell.com/articles/retrying-an-async-swift-task/
 extension Task where Failure == Error {
@@ -16,14 +17,19 @@ extension Task where Failure == Error {
         retryDelay: TimeInterval = 1,
         operation: @Sendable @escaping () async throws -> Success
     ) -> Task {
-        Task(priority: priority) {
-            for _ in 0..<maxRetryCount {
+        let log = Logger(subsystem: "com.swiftbysundell.www",
+                         category: "Task.retrying")
+        
+        return Task(priority: priority) {
+            for attempNumber in 0..<maxRetryCount {
                 do {
                     return try await operation()
                 } catch {
                     let oneSecond = TimeInterval(1_000_000_000)
                     let delay = UInt64(oneSecond * retryDelay)
                     try await Task<Never, Never>.sleep(nanoseconds: delay)
+                    
+                    log.debug("Retrying task - Attempt \(attempNumber + 1)")
                     
                     continue
                 }

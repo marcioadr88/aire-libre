@@ -31,7 +31,7 @@ protocol NetworkService {
 
 /// Concrete implementation of ``NetworkService``
 final class NetworkServiceImpl: NetworkService {
-    private let log = Logger(subsystem: "repository.re.airelib.ios",
+    private let log = Logger(subsystem: "service.re.airelib.ios",
                              category: "NetworkServiceImpl")
     private let endpoints: NetworkServiceEndpoints
     

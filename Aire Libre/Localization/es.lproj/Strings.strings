@@ -7,3 +7,4 @@
 */
 "invalidEndpoindURL" = "El endpoint proveído no es válido";
 "noConnection" = "No hay una conexión activa a la red";
+"unexpectedError" = "Ocurrió un error inesperado";

@@ -23,6 +23,12 @@ enum AppError: Error {
     
     /// Api returned an error
     case apiError(message: String)
+    
+    /// Unexpected condition
+    case unexpected(message: String?)
+    
+    /// From other type of Error
+    case wrappingError(cause: Error)
 }
 
 /// Provides an user friendly error message
@@ -39,6 +45,10 @@ extension AppError: LocalizedError {
             return message
         case .noConnection:
             return Localizables.noConnection
+        case .unexpected(let message):
+            return message ?? Localizables.unexpectedError
+        case .wrappingError(let cause):
+            return cause.localizedDescription
         }
     }
 }
@@ -56,8 +66,22 @@ extension AppError: Equatable {
             return lhsMessage == rhsMessage
         case (.noConnection, .noConnection):
             return true
+        case (.unexpected(let lhsMessage), .unexpected(let rhsMessage)):
+            return lhsMessage == rhsMessage
+        case (let .wrappingError(lhsCause), let .wrappingError(rhsCause)):
+            return lhsCause.localizedDescription == rhsCause.localizedDescription
         default:
             return false
+        }
+    }
+}
+
+extension AppError {
+    static func fromError(_ error: Error) -> AppError {
+        if let appError = error as? AppError {
+            return appError
+        } else {
+            return AppError.wrappingError(cause: error)
         }
     }
 }

@@ -13,6 +13,7 @@ final class HomeViewModel: ObservableObject {
     @Published var region = MKCoordinateRegion(center: AppConstants.asuncionCoordinates,
                                                span: AppConstants.defaultSpan)
     @Published var aqiData: [AQIData]
+    @Published var error: AppError?
     
     private let repository: AireLibreRepository
     
@@ -34,7 +35,9 @@ final class HomeViewModel: ObservableObject {
                     aqiData = data
                 }
             } catch {
-                
+                await MainActor.run {
+                    self.error = AppError.fromError(error)
+                }
             }
         }
     }

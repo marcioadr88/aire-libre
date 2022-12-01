@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import OSLog
 
 /// The repository fetches data either from network (online) or locally (offline)
 protocol AireLibreRepository {
@@ -30,6 +31,9 @@ protocol AireLibreRepository {
 }
 
 final class AireLibreRepositoryImpl: AireLibreRepository {
+    private let log = Logger(subsystem: "repository.re.airelib.ios",
+                             category: "AireLibreRepositoryImpl")
+    
     private let networkService: NetworkService
     private let connectionChecker: ConnectionChecker
     
@@ -47,12 +51,35 @@ final class AireLibreRepositoryImpl: AireLibreRepository {
         distance: Double?,
         source: String?
     ) async throws -> [AQIData] {
-        // check for an active connection
+        try await Task<[AQIData], Error>.retrying { [weak self] in
+            guard let self else {
+                self?.log.error("Error while unwrapping self")
+                throw AppError.unexpected(message: nil)
+            }
+            
+            return try await self.checkNetworkAndFetchAQI(start: start,
+                                                          end: end,
+                                                          latitude: latitude,
+                                                          longitude: longitude,
+                                                          distance: distance,
+                                                          source: source)
+        }.value
+    }
+    
+    private func checkNetworkAndFetchAQI(
+        start: Date?,
+        end: Date?,
+        latitude: Double?,
+        longitude: Double?,
+        distance: Double?,
+        source: String?
+    ) async throws -> [AQIData] {
         guard connectionChecker.isConnected else {
+            log.error("No connection detected")
             throw AppError.noConnection
         }
         
-        // we have a connection, then hit the network
+        log.debug("Fetching AQI data using network")
         return try await networkService.fetchAQI(start: start,
                                                  end: end,
                                                  latitude: latitude,
