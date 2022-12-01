@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import OSLog
 
 /// Abstracts calls to the network to retrieve data from Aire Libre's API
 protocol NetworkService {
@@ -19,20 +20,19 @@ protocol NetworkService {
     /// - Parameter latitude: Target latitude coordinate
     /// - Parameter longitude: Target longitude coordinate
     /// - Parameter distance: Include measurements that are this kilometers far from the target
-    /// - Parameter handler: Function called with the result of the network call
     func fetchAQI(
         start: Date?,
         end: Date?,
         latitude: Double?,
         longitude: Double?,
         distance: Double?,
-        source: String?,
-        handler: @escaping ((Result<[AQIData], AppError>) -> Void)
-    )
+        source: String?) async throws -> [AQIData]
 }
 
 /// Concrete implementation of ``NetworkService``
 final class NetworkServiceImpl: NetworkService {
+    private let log = Logger(subsystem: "repository.re.airelib.ios",
+                             category: "NetworkServiceImpl")
     private let endpoints: NetworkServiceEndpoints
     
     init(endpoints: NetworkServiceEndpoints) {
@@ -45,64 +45,88 @@ final class NetworkServiceImpl: NetworkService {
         latitude: Double? = nil,
         longitude: Double? = nil,
         distance: Double? = nil,
-        source: String? = nil,
-        handler: @escaping ((Result<[AQIData], AppError>) -> Void)
-    ) {
-        guard var urlComponents = URLComponents(url: endpoints.aqiEndpoint,
-                                                resolvingAgainstBaseURL: true) else {
-            handler(.failure(.invalidEndpoindURL))
-            return
-        }
-        
-        // Create a dictionary for query params
-        let queryParams: [String: String?] = [
-            "start": start?.formatted(.iso8601),
-            "end": end?.formatted(.iso8601),
-            "latitude": latitude?.formatted(.number),
-            "longitude": longitude?.formatted(.number),
-            "distance": distance?.formatted(.number),
-            "source": source
-        ]
-        
-        // Translate dictionary to actual URLQueryItems ignoring nil values
-        // in the dictionary
-        urlComponents.queryItems = queryParams.compactMap({ (key: String, value: String?) in
-            guard let value else {
-                return nil
-            }
-            
-            return URLQueryItem(name: key, value: value)
-        })
-
-        // Get the full url from components
-        guard let requestURL = urlComponents.url else {
-            handler(.failure(.invalidEndpoindURL))
-            return
-        }
-
-        var request = URLRequest(url: requestURL)
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
-        request.httpMethod = "GET"
-        
-        // perform the request
-        URLSession.shared.dataTask(with: request) { (data, _, error) in
-            guard let data = data else {
-                // according to apple's documentation if data == nil
-                // then error != nil
-                handler(.failure(.networkError(cause: error!)))
-                return
-            }
+        source: String? = nil
+    ) async throws -> [AQIData] {
+        let request = try buildGetAQIDataURLRequest(start: start,
+                                                    end: end,
+                                                    latitude: latitude,
+                                                    longitude: longitude,
+                                                    distance: distance,
+                                                    source: source)
+        do {
+            log.debug("Requesting AQI data")
+            // perform the request, ignore returned URLResponse
+            let (data, _) = try await URLSession.shared.data(for: request)
             
             // parse the response
             let decoder = JSONDecoder()
             
             do {
+                log.debug("Decoding response")
                 // decode the json response
-                let characters = try decoder.decode([AQIData].self, from: data)
-                handler(.success(characters))
+                let aqiData = try decoder.decode([AQIData].self, from: data)
+                
+                log.info("Returning \(aqiData.count) aqi data results")
+                return aqiData
             } catch let error {
-                handler(.failure(.networkError(cause: error)))
+                log.error("Error decoding AQI data response: \(error.localizedDescription)")
+                throw AppError.decodingError(cause: error)
             }
-        }.resume()
+        } catch let error {
+            log.error("Error requesting AQI data: \(error.localizedDescription)")
+            throw AppError.networkError(cause: error)
+        }
     }
+    
+    
+    private func buildGetAQIDataURLRequest(
+        start: Date? = nil,
+        end: Date? = nil,
+        latitude: Double? = nil,
+        longitude: Double? = nil,
+        distance: Double? = nil,
+        source: String? = nil) throws -> URLRequest {
+            guard var urlComponents = URLComponents(url: endpoints.aqiEndpoint,
+                                                    resolvingAgainstBaseURL: true) else {
+                log.error("Cannot create URLComponents from endpoint")
+                throw AppError.invalidEndpoindURL
+            }
+            
+            // Create a dictionary for query params
+            let queryParams: [String: String?] = [
+                "start": start?.formatted(.iso8601),
+                "end": end?.formatted(.iso8601),
+                "latitude": latitude?.formatted(.number),
+                "longitude": longitude?.formatted(.number),
+                "distance": distance?.formatted(.number),
+                "source": source
+            ]
+            
+            log.debug("Using params \(queryParams)")
+            
+            // Translate dictionary to actual URLQueryItems ignoring nil values
+            // in the dictionary
+            urlComponents.queryItems = queryParams
+                .compactMap({ (key: String, value: String?) in
+                    guard let value else {
+                        return nil
+                    }
+                    
+                    return URLQueryItem(name: key, value: value)
+                })
+            
+            // Get the full url from components
+            guard let requestURL = urlComponents.url else {
+                log.error("Cannot get url from urlComponents")
+                throw AppError.invalidEndpoindURL
+            }
+            
+            var request = URLRequest(url: requestURL)
+            request.addValue("application/json", forHTTPHeaderField: "Accept")
+            request.httpMethod = "GET"
+            
+            log.info("Built URLRequest for fetchAQIData \(request.debugDescription)")
+            
+            return request
+        }
 }

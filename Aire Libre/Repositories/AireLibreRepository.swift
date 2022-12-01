@@ -26,9 +26,7 @@ protocol AireLibreRepository {
         latitude: Double?,
         longitude: Double?,
         distance: Double?,
-        source: String?,
-        handler: @escaping ((Result<[AQIData], AppError>) -> Void)
-    )
+        source: String?) async throws -> [AQIData]
 }
 
 final class AireLibreRepositoryImpl: AireLibreRepository {
@@ -47,23 +45,19 @@ final class AireLibreRepositoryImpl: AireLibreRepository {
         latitude: Double?,
         longitude: Double?,
         distance: Double?,
-        source: String?,
-        handler: @escaping ((Result<[AQIData], AppError>) -> Void)
-    ) {
+        source: String?
+    ) async throws -> [AQIData] {
         // check for an active connection
         guard connectionChecker.isConnected else {
-            handler(.failure(.noConnection))
-            
-            return
+            throw AppError.noConnection
         }
         
         // we have a connection, then hit the network
-        networkService.fetchAQI(start: start,
-                                end: end,
-                                latitude: latitude,
-                                longitude: longitude,
-                                distance: distance,
-                                source: source,
-                                handler: handler)
+        return try await networkService.fetchAQI(start: start,
+                                                 end: end,
+                                                 latitude: latitude,
+                                                 longitude: longitude,
+                                                 distance: distance,
+                                                 source: source)
     }
 }

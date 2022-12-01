@@ -22,21 +22,19 @@ final class HomeViewModel: ObservableObject {
     }
     
     func loadAQI() {
-        repository.getAQI(start: Date.now,
-                          end: nil,
-                          latitude: region.center.latitude,
-                          longitude: region.center.longitude,
-                          distance: nil,
-                          source: nil) { result in
-            Task {
+        Task(priority: .background) {
+            do {
+                let data = try await repository.getAQI(start: Date.now,
+                                                       end: nil,
+                                                       latitude: region.center.latitude,
+                                                       longitude: region.center.longitude,
+                                                       distance: nil,
+                                                       source: nil)
                 await MainActor.run {
-                    switch result {
-                    case .success(let data):
-                        self.aqiData = data
-                    case .failure:
-                        break
-                    }
+                    aqiData = data
                 }
+            } catch {
+                
             }
         }
     }

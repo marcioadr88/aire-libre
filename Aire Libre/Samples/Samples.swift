@@ -27,9 +27,8 @@ final class SuccessfulAireLibreRepository: AireLibreRepository {
                 latitude: Double?,
                 longitude: Double?,
                 distance: Double?,
-                source: String?,
-                handler: @escaping ((Result<[AQIData], AppError>) -> Void)) {
-        handler(.success(aqiData))
+                source: String?) async throws -> [AQIData] {
+        return aqiData
     }
 }
 
@@ -39,8 +38,7 @@ final class FailureAireLibreRepository: AireLibreRepository {
                 latitude: Double?,
                 longitude: Double?,
                 distance: Double?,
-                source: String?,
-                handler: @escaping ((Result<[AQIData], AppError>) -> Void)) {
-        handler(.failure(.noConnection))
+                source: String?) async throws -> [AQIData] {
+        throw AppError.noConnection
     }
 }
