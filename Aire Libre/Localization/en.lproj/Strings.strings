@@ -8,3 +8,4 @@
 "invalidEndpoindURL" = "The provided endpoint path is not valid";
 "noConnection" = "There's no active connection to the network";
 "unexpectedError" = "Unexpected error occurred";
+"cantCalculateStart" = "Can't calculate 'start' parameter to fetch AQI data";

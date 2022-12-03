@@ -8,8 +8,12 @@
 import Foundation
 import Combine
 import MapKit
+import OSLog
 
 final class HomeViewModel: ObservableObject {
+    private let log = Logger(subsystem: "",
+                             category: "HomeViewModel")
+    
     @Published var region = MKCoordinateRegion(center: AppConstants.asuncionCoordinates,
                                                span: AppConstants.defaultSpan)
     @Published var aqiData: [AQIData]
@@ -22,13 +26,20 @@ final class HomeViewModel: ObservableObject {
         self.aqiData = []
     }
     
+    let minutesAgo: Int = 15
+    
     func loadAQI() {
         Task(priority: .background) {
             do {
-                let data = try await repository.getAQI(start: Date.now,
+                guard let startDate = dateMinutesAgoFromNow(minutesAgo: minutesAgo) else {
+                    log.error("Cannot calculate \(self.minutesAgo) minutes ago from now")
+                    throw AppError.unexpected(message: Localizables.cantCalculateStart)
+                }
+                
+                let data = try await repository.getAQI(start: startDate,
                                                        end: nil,
-                                                       latitude: region.center.latitude,
-                                                       longitude: region.center.longitude,
+                                                       latitude: nil,
+                                                       longitude: nil,
                                                        distance: nil,
                                                        source: nil)
                 await MainActor.run {
@@ -40,5 +51,9 @@ final class HomeViewModel: ObservableObject {
                 }
             }
         }
+    }
+    
+    private func dateMinutesAgoFromNow(minutesAgo value: Int) -> Date? {
+        Calendar.current.date(byAdding: .minute, value: -value, to: Date.now)
     }
 }
