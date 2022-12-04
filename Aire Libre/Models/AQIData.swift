@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct AQIData: Codable, Sendable {
+struct AQIData: Codable, Sendable, Identifiable {
+    let id = UUID()
     let sensor, source, description: String
     let longitude, latitude: Double
     let quality: Quality

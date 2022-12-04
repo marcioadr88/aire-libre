@@ -1,0 +1,222 @@
+[
+  {
+    "sensor": "PMS7003",
+    "source": "1781ae",
+    "description": "FCA-UNP, Sede Ayolas",
+    "longitude": -56.820182,
+    "latitude": -27.387026,
+    "quality": {
+      "category": "Good",
+      "index": 0
+    }
+  },
+  {
+    "sensor": "PMS7003",
+    "source": "216b9a",
+    "description": "Surubi-i, Mariano",
+    "longitude": -57.521369,
+    "latitude": -25.194156,
+    "quality": {
+      "category": "Good",
+      "index": 5
+    }
+  },
+  {
+    "sensor": "PMS7003",
+    "source": "219aa2",
+    "description": "SwitzerLuque",
+    "longitude": -57.500107,
+    "latitude": -25.252698,
+    "quality": {
+      "category": "Good",
+      "index": 9
+    }
+  },
+  {
+    "sensor": "PMS7003",
+    "source": "21d30a",
+    "description": "El CÃ¡ntaro",
+    "longitude": -57.3852339,
+    "latitude": -25.3129449,
+    "quality": {
+      "category": "Good",
+      "index": 6
+    }
+  },
+  {
+    "sensor": "PMS7003",
+    "source": "29c607",
+    "description": "SODEP",
+    "longitude": -57.583222,
+    "latitude": -25.308953,
+    "quality": {
+      "category": "Good",
+      "index": 4
+    }
+  },
+  {
+    "sensor": "PMS7003",
+    "source": "356690",
+    "description": "Barrio San Roque",
+    "longitude": -57.629712,
+    "latitude": -25.291214,
+    "quality": {
+      "category": "Good",
+      "index": 11
+    }
+  },
+  {
+    "sensor": "PMS7003",
+    "source": "4e86",
+    "description": "CapiatÃ¡-PDJ",
+    "longitude": -57.482567,
+    "latitude": -25.365339,
+    "quality": {
+      "category": "Good",
+      "index": 16
+    }
+  },
+  {
+    "sensor": "PMS7003",
+    "source": "8eb9",
+    "description": "Sodep,San Vicente ",
+    "longitude": -57.621712,
+    "latitude": -25.313345,
+    "quality": {
+      "category": "Good",
+      "index": 12
+    }
+  },
+  {
+    "sensor": "PMS7003",
+    "source": "991219",
+    "description": "Barrio Loma-Caacupe",
+    "longitude": -57.144951,
+    "latitude": -25.3789702,
+    "quality": {
+      "category": "Good",
+      "index": 10
+    }
+  },
+  {
+    "sensor": "PMS7003",
+    "source": "9b5c52",
+    "description": "Pilar",
+    "longitude": -58.2988,
+    "latitude": -26.8572,
+    "quality": {
+      "category": "Moderate",
+      "index": 51
+    }
+  },
+  {
+    "sensor": "PMS7003",
+    "source": "9cde79",
+    "description": "Ã‘emby, Villa Anita",
+    "longitude": -57.567596,
+    "latitude": -25.369802,
+    "quality": {
+      "category": "Good",
+      "index": 13
+    }
+  },
+  {
+    "sensor": "PMS7003",
+    "source": "b1c6e7",
+    "description": "QMR",
+    "longitude": -57.498,
+    "latitude": -25.287,
+    "quality": {
+      "category": "Good",
+      "index": 32
+    }
+  },
+  {
+    "sensor": "PMS7003",
+    "source": "b27800",
+    "description": "Mora Kue",
+    "longitude": -57.467,
+    "latitude": -25.234,
+    "quality": {
+      "category": "Good",
+      "index": 12
+    }
+  },
+  {
+    "sensor": "PMS7003",
+    "source": "d0caf2",
+    "description": "Roshka",
+    "longitude": -57.6100684,
+    "latitude": -25.2818691,
+    "quality": {
+      "category": "Good",
+      "index": 4
+    }
+  },
+  {
+    "sensor": "PMS7003",
+    "source": "d7410d",
+    "description": "Villa Adela - Luque",
+    "longitude": -57.514637,
+    "latitude": -25.265753,
+    "quality": {
+      "category": "Good",
+      "index": 10
+    }
+  },
+  {
+    "sensor": "PMS7003",
+    "source": "d87553",
+    "description": "FP-UNA SAN LORENZO",
+    "longitude": -57.513368,
+    "latitude": -25.3354,
+    "quality": {
+      "category": "Good",
+      "index": 7
+    }
+  },
+  {
+    "sensor": "PMS7003",
+    "source": "dab551",
+    "description": "CDS-Nazareth",
+    "longitude": -57.598298,
+    "latitude": -25.321224,
+    "quality": {
+      "category": "Good",
+      "index": 10
+    }
+  },
+  {
+    "sensor": "PMS7003",
+    "source": "e3be",
+    "description": "Aire puro,CaÃ±adita",
+    "longitude": -57.340805,
+    "latitude": -25.38468,
+    "quality": {
+      "category": "Good",
+      "index": 6
+    }
+  },
+  {
+    "sensor": "PMS7003",
+    "source": "e48b00",
+    "description": "San Cristobal",
+    "longitude": -57.564031,
+    "latitude": -25.296294,
+    "quality": {
+      "category": "Good",
+      "index": 6
+    }
+  },
+  {
+    "sensor": "PMS7003",
+    "source": "e48dde",
+    "description": "San Ignacio, Mnes.",
+    "longitude": -57.02099,
+    "latitude": -26.89224,
+    "quality": {
+      "category": "Good",
+      "index": 3
+    }
+  }
+]

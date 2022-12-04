@@ -24,9 +24,15 @@ struct Home: View {
     init(repository: AireLibreRepository) {
         _viewModel = StateObject(wrappedValue: HomeViewModel(repository: repository))
     }
-
+    
     var body: some View {
-        Map(coordinateRegion: region)
+        Map(coordinateRegion: region,
+            annotationItems: viewModel.aqiData) { item -> MapMarker in
+            let coordinate = CLLocationCoordinate2D(latitude: item.latitude,
+                                                    longitude: item.longitude)
+            
+            return MapMarker(coordinate: coordinate)
+        }
             .ignoresSafeArea()
             .onAppear {
                 viewModel.loadAQI()
