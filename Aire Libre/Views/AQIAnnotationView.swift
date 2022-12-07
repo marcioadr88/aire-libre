@@ -32,7 +32,7 @@ struct AQIAnnotationView: View {
     
     var body: some View {
         ZStack {
-            if #available(iOS 16.0, *) {
+            if #available(iOS 16.0, macOS 13.0, *) {
                 Circle()
                     .frame(width: size, height: size)
                     .foregroundStyle(
