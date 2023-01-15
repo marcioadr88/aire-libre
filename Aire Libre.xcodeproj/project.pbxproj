@@ -15,7 +15,8 @@
 		0A3B049C291733AA0026D3DF /* AireLibreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B049B291733AA0026D3DF /* AireLibreTests.swift */; };
 		0A3B04A6291733AA0026D3DF /* AireLibreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B04A5291733AA0026D3DF /* AireLibreUITests.swift */; };
 		0A3B04A8291733AA0026D3DF /* AireLibreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B04A7291733AA0026D3DF /* AireLibreUITestsLaunchTests.swift */; };
-		0A8FCDAA293EB3AF006022B9 /* AQICategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8FCDA9293EB3AF006022B9 /* AQICategory.swift */; };
+		0A427F512944CE5100832C3A /* SensorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A427F502944CE5100832C3A /* SensorInfo.swift */; };
+		0A8FCDAA293EB3AF006022B9 /* AQILevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8FCDA9293EB3AF006022B9 /* AQILevel.swift */; };
 		0A8FCDAC293EB4A5006022B9 /* AQIAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8FCDAB293EB4A5006022B9 /* AQIAnnotationView.swift */; };
 		0AB43F9D2936DD38005299AC /* Task+AutoRetry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB43F9C2936DD38005299AC /* Task+AutoRetry.swift */; };
 		0AB43FA02936EA66005299AC /* Samples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB43F9F2936EA66005299AC /* Samples.swift */; };
@@ -27,6 +28,7 @@
 		0AC259CD29175D6E0047397E /* AQIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC259CC29175D6E0047397E /* AQIData.swift */; };
 		0AC259CF29175D760047397E /* Quality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC259CE29175D760047397E /* Quality.swift */; };
 		0AC259D12917615B0047397E /* MeasurementData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC259D02917615B0047397E /* MeasurementData.swift */; };
+		0AE45B3329465B7B00A82228 /* AQIGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE45B3229465B7B00A82228 /* AQIGauge.swift */; };
 		0AE5C1E9293D3F390084E68C /* Decodable+JSONFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5C1E8293D3F390084E68C /* Decodable+JSONFile.swift */; };
 		0AE5C1EB293D3FD40084E68C /* JSONFileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5C1EA293D3FD40084E68C /* JSONFileLoader.swift */; };
 		0AE5C1ED293D408A0084E68C /* sample1.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AE5C1EC293D408A0084E68C /* sample1.json */; };
@@ -67,7 +69,8 @@
 		0A3B04A1291733AA0026D3DF /* Aire LibreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aire LibreUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A3B04A5291733AA0026D3DF /* AireLibreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AireLibreUITests.swift; sourceTree = "<group>"; };
 		0A3B04A7291733AA0026D3DF /* AireLibreUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AireLibreUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		0A8FCDA9293EB3AF006022B9 /* AQICategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQICategory.swift; sourceTree = "<group>"; };
+		0A427F502944CE5100832C3A /* SensorInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorInfo.swift; sourceTree = "<group>"; };
+		0A8FCDA9293EB3AF006022B9 /* AQILevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQILevel.swift; sourceTree = "<group>"; };
 		0A8FCDAB293EB4A5006022B9 /* AQIAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIAnnotationView.swift; sourceTree = "<group>"; };
 		0AB43F9C2936DD38005299AC /* Task+AutoRetry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+AutoRetry.swift"; sourceTree = "<group>"; };
 		0AB43F9F2936EA66005299AC /* Samples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Samples.swift; sourceTree = "<group>"; };
@@ -79,6 +82,7 @@
 		0AC259CC29175D6E0047397E /* AQIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIData.swift; sourceTree = "<group>"; };
 		0AC259CE29175D760047397E /* Quality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quality.swift; sourceTree = "<group>"; };
 		0AC259D02917615B0047397E /* MeasurementData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementData.swift; sourceTree = "<group>"; };
+		0AE45B3229465B7B00A82228 /* AQIGauge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIGauge.swift; sourceTree = "<group>"; };
 		0AE5C1E8293D3F390084E68C /* Decodable+JSONFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decodable+JSONFile.swift"; sourceTree = "<group>"; };
 		0AE5C1EA293D3FD40084E68C /* JSONFileLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFileLoader.swift; sourceTree = "<group>"; };
 		0AE5C1EC293D408A0084E68C /* sample1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample1.json; sourceTree = "<group>"; };
@@ -205,6 +209,8 @@
 			children = (
 				0AB43FA22936EE11005299AC /* Home */,
 				0A8FCDAB293EB4A5006022B9 /* AQIAnnotationView.swift */,
+				0A427F502944CE5100832C3A /* SensorInfo.swift */,
+				0AE45B3229465B7B00A82228 /* AQIGauge.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -233,7 +239,7 @@
 				0AC259CC29175D6E0047397E /* AQIData.swift */,
 				0AC259CE29175D760047397E /* Quality.swift */,
 				0AC259D02917615B0047397E /* MeasurementData.swift */,
-				0A8FCDA9293EB3AF006022B9 /* AQICategory.swift */,
+				0A8FCDA9293EB3AF006022B9 /* AQILevel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -402,6 +408,8 @@
 				0A3B048C291733A90026D3DF /* Home.swift in Sources */,
 				0AB43FA02936EA66005299AC /* Samples.swift in Sources */,
 				0AC259CF29175D760047397E /* Quality.swift in Sources */,
+				0A427F512944CE5100832C3A /* SensorInfo.swift in Sources */,
+				0AE45B3329465B7B00A82228 /* AQIGauge.swift in Sources */,
 				0A8FCDAC293EB4A5006022B9 /* AQIAnnotationView.swift in Sources */,
 				0ABB875B292D9A1000F7644E /* AppError.swift in Sources */,
 				0AEF37C6292EEA260086514C /* ConnectionChecker.swift in Sources */,
@@ -414,7 +422,7 @@
 				0ABB8754292D969600F7644E /* AireLibreRepository.swift in Sources */,
 				0AE5C1E9293D3F390084E68C /* Decodable+JSONFile.swift in Sources */,
 				0A3B048A291733A90026D3DF /* AireLibreApp.swift in Sources */,
-				0A8FCDAA293EB3AF006022B9 /* AQICategory.swift in Sources */,
+				0A8FCDAA293EB3AF006022B9 /* AQILevel.swift in Sources */,
 				0AC259CD29175D6E0047397E /* AQIData.swift in Sources */,
 				0AB43FA42936EE1A005299AC /* HomeViewModel.swift in Sources */,
 				0ABB8757292D96B000F7644E /* NetworkService.swift in Sources */,
@@ -606,10 +614,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = re.airelib.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -647,10 +655,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = re.airelib.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";

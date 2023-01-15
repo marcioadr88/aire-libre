@@ -16,17 +16,34 @@ struct Home: View {
     }
     
     var body: some View {
-        Map(
-            coordinateRegion: .constant(viewModel.region),
-            showsUserLocation: true,
-            userTrackingMode: .constant(.follow),
-            annotationItems: viewModel.aqiData
-        ) { item in
-            MapAnnotation(coordinate: item.coordinates) {
-                AQIAnnotationView(aqiData: item)
+        ZStack {
+            Map(
+                coordinateRegion: .constant(viewModel.region),
+                showsUserLocation: true,
+                userTrackingMode: .constant(.follow),
+                annotationItems: viewModel.aqiData
+            ) { item in
+                MapAnnotation(coordinate: item.coordinates) {
+                    AQIAnnotationView(aqiData: item)
+                        .onTapGesture {
+                            withAnimation {
+                                viewModel.selectedData = item
+                            }
+                        }
+                }
+            }
+            .ignoresSafeArea()
+            
+            VStack {
+                Spacer()
+                if let selectedData = viewModel.selectedData {
+                    SensorInfo(sensorName: selectedData.description,
+                               aqiIndex: selectedData.quality.index)
+                    .padding()
+                    .transition(.move(edge: .bottom))
+                }
             }
         }
-        .ignoresSafeArea()
         .onAppear {
             viewModel.loadAQI()
         }

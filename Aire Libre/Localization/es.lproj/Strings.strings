@@ -9,3 +9,19 @@
 "noConnection" = "No hay una conexión activa a la red";
 "unexpectedError" = "Ocurrió un error inesperado";
 "cantCalculateStart" = "No se pudo calcular el parámetro 'start' para la consulta de datos AQI";
+
+/*AQI Level Titles*/
+"aqiLevelTitleGood" = "Bueno";
+"aqiLevelTitleModerate" = "Moderado";
+"aqiLevelTitleSensitive" = "Insalubre para grupos sensibles";
+"aqiLevelTitleUnhealthy" = "Insalubre";
+"aqiLevelTitleVeryUnhealthy" = "Muy insalubre";
+"aqiLevelTitleHazardous" = "Peligroso";
+
+/* AQI Level Descriptions*/
+"aqiLevelDescriptionGood" = "Escaso riesgo de contaminación atmosférica, calidad de aire satisfactoria";
+"aqiLevelDescriptionModerate" = "Calidad de aire aceptable, riesgo moderado para la salud de personas sensibles a la contaminación ambiental";
+"aqiLevelDescriptionSensitive" = "Insalubre para personas sensibles";
+"aqiLevelDescriptionUnhealthy" = "Riesgo general para las personas, efectos más graves en personas sensibles";
+"aqiLevelDescriptionVeryUnhealthy" = "Condición de emergencia. Son mayores las probabilidades de que toda la población esté afectada";
+"aqiLevelDescriptionHazardous" = "Alerta sanitaria, efectos graves para toda la población";

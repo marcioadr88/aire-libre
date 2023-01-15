@@ -9,3 +9,19 @@
 "noConnection" = "There's no active connection to the network";
 "unexpectedError" = "Unexpected error occurred";
 "cantCalculateStart" = "Can't calculate 'start' parameter to fetch AQI data";
+
+/*AQI Level Titles*/
+"aqiLevelTitleGood" = "Good";
+"aqiLevelTitleModerate" = "Moderate";
+"aqiLevelTitleSensitive" = "Unhealthy for Sensitive Groups";
+"aqiLevelTitleUnhealthy" = "Unhealthy";
+"aqiLevelTitleVeryUnhealthy" = "Very Unhealthy";
+"aqiLevelTitleHazardous" = "Hazardous";
+
+/* AQI Level Descriptions*/
+"aqiLevelDescriptionGood" = "Air quality is satisfactory, and air pollution poses little or no risk";
+"aqiLevelDescriptionModerate" = "Air quality is acceptable. However, there may be a risk for some people, particularly those who are unusually sensitive to air pollution";
+"aqiLevelDescriptionSensitive" = "Members of sensitive groups may experience health effects. The general public is less likely to be affected";
+"aqiLevelDescriptionUnhealthy" = "Some members of the general public may experience health effects; members of sensitive groups may experience more serious health effects";
+"aqiLevelDescriptionVeryUnhealthy" = "Health alert: The risk of health effects is increased for everyone";
+"aqiLevelDescriptionHazardous" = "Health warning of emergency conditions: everyone is more likely to be affected";

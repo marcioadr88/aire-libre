@@ -11,7 +11,7 @@ import MapKit
 struct AQIAnnotationView: View {
     @ScaledMetric(relativeTo: .caption)
     private var size: CGFloat = 24
-
+    
     private let aqiIndex: Int
     private let color: Color
     
@@ -23,7 +23,7 @@ struct AQIAnnotationView: View {
     init?(aqiData: AQIData) {
         let aqiIndex = aqiData.quality.index
         
-        guard let aqiCategory = AQICategory.fromIndex(aqiIndex) else {
+        guard let aqiCategory = AQILevel.fromIndex(aqiIndex) else {
             return nil
         }
         
@@ -32,20 +32,13 @@ struct AQIAnnotationView: View {
     
     var body: some View {
         ZStack {
-            if #available(iOS 16.0, macOS 13.0, *) {
-                Circle()
-                    .frame(width: size, height: size)
-                    .foregroundStyle(
-                        color
-                            .gradient
-                            .shadow(.drop(radius: 1))
-                    )
-            } else {
-                Circle()
-                    .frame(width: size, height: size)
-                    .foregroundStyle(color)
-                    .shadow(radius: 1)
-            }
+            Circle()
+                .frame(width: size, height: size)
+                .foregroundStyle(
+                    color
+                        .gradient
+                        .shadow(.drop(radius: 1))
+                )
             
             Text("\(aqiIndex)")
                 .font(.caption)

@@ -122,7 +122,7 @@ final class NetworkServiceImpl: NetworkService {
             }
             
             var request = URLRequest(url: requestURL)
-            request.addValue("application/json", forHTTPHeaderField: "Accept")
+            request.addValue("application/json;charset=UTF-8", forHTTPHeaderField: "Accept")
             request.httpMethod = "GET"
             
             log.info("Built URLRequest for fetchAQIData \(request.debugDescription)")

@@ -18,6 +18,17 @@ final class HomeViewModel: ObservableObject {
                                                span: AppConstants.defaultSpan)
     @Published var aqiData: [AQIData]
     @Published var error: AppError?
+        
+    @Published var selectedData: AQIData? {
+        didSet {
+            guard let selectedData else {
+                return
+            }
+            
+            region = MKCoordinateRegion(center: selectedData.coordinates,
+                                        span: region.span)
+        }
+    }
     
     private let minutesAgo: Int = 60
     private let repository: AireLibreRepository
