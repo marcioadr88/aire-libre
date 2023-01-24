@@ -7,12 +7,16 @@
 
 import Foundation
 
-struct AQIData: Codable, Sendable, Identifiable {
-    let id = UUID()
+struct AQIData: Codable, Sendable, Identifiable, Equatable {
+    var id: String {
+        return source
+    }
+    
     let sensor, source, description: String
     let longitude, latitude: Double
     let quality: Quality
-
+    var isFavoriteSensor: Bool = false
+    
     enum CodingKeys: String, CodingKey {
         case sensor
         case source

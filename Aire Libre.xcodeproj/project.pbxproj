@@ -7,20 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A046415297A0AEF00DEF75E /* FavoriteSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A046414297A0AEF00DEF75E /* FavoriteSensor.swift */; };
+		0A046417297A249900DEF75E /* Binding+Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A046416297A249900DEF75E /* Binding+Optional.swift */; };
 		0A127CBE2940332B00D74240 /* AQIData+Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A127CBD2940332B00D74240 /* AQIData+Coordinates.swift */; };
 		0A3B048A291733A90026D3DF /* AireLibreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B0489291733A90026D3DF /* AireLibreApp.swift */; };
-		0A3B048C291733A90026D3DF /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B048B291733A90026D3DF /* Home.swift */; };
+		0A3B048C291733A90026D3DF /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B048B291733A90026D3DF /* HomeScreen.swift */; };
 		0A3B048E291733AA0026D3DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A3B048D291733AA0026D3DF /* Assets.xcassets */; };
 		0A3B0492291733AA0026D3DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A3B0491291733AA0026D3DF /* Preview Assets.xcassets */; };
 		0A3B049C291733AA0026D3DF /* AireLibreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B049B291733AA0026D3DF /* AireLibreTests.swift */; };
 		0A3B04A6291733AA0026D3DF /* AireLibreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B04A5291733AA0026D3DF /* AireLibreUITests.swift */; };
 		0A3B04A8291733AA0026D3DF /* AireLibreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B04A7291733AA0026D3DF /* AireLibreUITestsLaunchTests.swift */; };
 		0A427F512944CE5100832C3A /* SensorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A427F502944CE5100832C3A /* SensorInfo.swift */; };
+		0A6CCBAB2977835500751E5C /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6CCBAA2977835500751E5C /* AppViewModel.swift */; };
 		0A8FCDAA293EB3AF006022B9 /* AQILevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8FCDA9293EB3AF006022B9 /* AQILevel.swift */; };
 		0A8FCDAC293EB4A5006022B9 /* AQIAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8FCDAB293EB4A5006022B9 /* AQIAnnotationView.swift */; };
 		0AB43F9D2936DD38005299AC /* Task+AutoRetry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB43F9C2936DD38005299AC /* Task+AutoRetry.swift */; };
 		0AB43FA02936EA66005299AC /* Samples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB43F9F2936EA66005299AC /* Samples.swift */; };
-		0AB43FA42936EE1A005299AC /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB43FA32936EE1A005299AC /* HomeViewModel.swift */; };
 		0ABB8754292D969600F7644E /* AireLibreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABB8753292D969600F7644E /* AireLibreRepository.swift */; };
 		0ABB8757292D96B000F7644E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABB8756292D96B000F7644E /* NetworkService.swift */; };
 		0ABB8759292D97DA00F7644E /* NetworkServiceEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABB8758292D97DA00F7644E /* NetworkServiceEndpoints.swift */; };
@@ -28,6 +30,8 @@
 		0AC259CD29175D6E0047397E /* AQIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC259CC29175D6E0047397E /* AQIData.swift */; };
 		0AC259CF29175D760047397E /* Quality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC259CE29175D760047397E /* Quality.swift */; };
 		0AC259D12917615B0047397E /* MeasurementData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC259D02917615B0047397E /* MeasurementData.swift */; };
+		0AC9FDAC297ACA8200DBA5E1 /* MapScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9FDAB297ACA8200DBA5E1 /* MapScreen.swift */; };
+		0AC9FDAE297ACB7600DBA5E1 /* ListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9FDAD297ACB7600DBA5E1 /* ListScreen.swift */; };
 		0AE45B3329465B7B00A82228 /* AQIGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE45B3229465B7B00A82228 /* AQIGauge.swift */; };
 		0AE5C1E9293D3F390084E68C /* Decodable+JSONFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5C1E8293D3F390084E68C /* Decodable+JSONFile.swift */; };
 		0AE5C1EB293D3FD40084E68C /* JSONFileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5C1EA293D3FD40084E68C /* JSONFileLoader.swift */; };
@@ -57,10 +61,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A046414297A0AEF00DEF75E /* FavoriteSensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteSensor.swift; sourceTree = "<group>"; };
+		0A046416297A249900DEF75E /* Binding+Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Optional.swift"; sourceTree = "<group>"; };
 		0A127CBD2940332B00D74240 /* AQIData+Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AQIData+Coordinates.swift"; sourceTree = "<group>"; };
 		0A3B0486291733A90026D3DF /* Aire Libre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aire Libre.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A3B0489291733A90026D3DF /* AireLibreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AireLibreApp.swift; sourceTree = "<group>"; };
-		0A3B048B291733A90026D3DF /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		0A3B048B291733A90026D3DF /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		0A3B048D291733AA0026D3DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A3B048F291733AA0026D3DF /* AireLibre.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AireLibre.entitlements; sourceTree = "<group>"; };
 		0A3B0491291733AA0026D3DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -70,11 +76,11 @@
 		0A3B04A5291733AA0026D3DF /* AireLibreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AireLibreUITests.swift; sourceTree = "<group>"; };
 		0A3B04A7291733AA0026D3DF /* AireLibreUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AireLibreUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0A427F502944CE5100832C3A /* SensorInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorInfo.swift; sourceTree = "<group>"; };
+		0A6CCBAA2977835500751E5C /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 		0A8FCDA9293EB3AF006022B9 /* AQILevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQILevel.swift; sourceTree = "<group>"; };
 		0A8FCDAB293EB4A5006022B9 /* AQIAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIAnnotationView.swift; sourceTree = "<group>"; };
 		0AB43F9C2936DD38005299AC /* Task+AutoRetry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+AutoRetry.swift"; sourceTree = "<group>"; };
 		0AB43F9F2936EA66005299AC /* Samples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Samples.swift; sourceTree = "<group>"; };
-		0AB43FA32936EE1A005299AC /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		0ABB8753292D969600F7644E /* AireLibreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AireLibreRepository.swift; sourceTree = "<group>"; };
 		0ABB8756292D96B000F7644E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		0ABB8758292D97DA00F7644E /* NetworkServiceEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceEndpoints.swift; sourceTree = "<group>"; };
@@ -82,6 +88,8 @@
 		0AC259CC29175D6E0047397E /* AQIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIData.swift; sourceTree = "<group>"; };
 		0AC259CE29175D760047397E /* Quality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quality.swift; sourceTree = "<group>"; };
 		0AC259D02917615B0047397E /* MeasurementData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementData.swift; sourceTree = "<group>"; };
+		0AC9FDAB297ACA8200DBA5E1 /* MapScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreen.swift; sourceTree = "<group>"; };
+		0AC9FDAD297ACB7600DBA5E1 /* ListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListScreen.swift; sourceTree = "<group>"; };
 		0AE45B3229465B7B00A82228 /* AQIGauge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIGauge.swift; sourceTree = "<group>"; };
 		0AE5C1E8293D3F390084E68C /* Decodable+JSONFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decodable+JSONFile.swift"; sourceTree = "<group>"; };
 		0AE5C1EA293D3FD40084E68C /* JSONFileLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFileLoader.swift; sourceTree = "<group>"; };
@@ -155,6 +163,7 @@
 				0ACA398B291B434D0022DDC9 /* Repositories */,
 				0AB43F9E2936EA5C005299AC /* Samples */,
 				0AEF37BF292EE5F00086514C /* Localization */,
+				0A6CCBAA2977835500751E5C /* AppViewModel.swift */,
 			);
 			path = "Aire Libre";
 			sourceTree = "<group>";
@@ -191,6 +200,7 @@
 				0AE5C1E8293D3F390084E68C /* Decodable+JSONFile.swift */,
 				0AE5C1EE293D59700084E68C /* Color+Hex.swift */,
 				0A127CBD2940332B00D74240 /* AQIData+Coordinates.swift */,
+				0A046416297A249900DEF75E /* Binding+Optional.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -207,21 +217,14 @@
 		0AB43FA12936EE09005299AC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0AB43FA22936EE11005299AC /* Home */,
+				0A3B048B291733A90026D3DF /* HomeScreen.swift */,
 				0A8FCDAB293EB4A5006022B9 /* AQIAnnotationView.swift */,
 				0A427F502944CE5100832C3A /* SensorInfo.swift */,
 				0AE45B3229465B7B00A82228 /* AQIGauge.swift */,
+				0AC9FDAB297ACA8200DBA5E1 /* MapScreen.swift */,
+				0AC9FDAD297ACB7600DBA5E1 /* ListScreen.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		0AB43FA22936EE11005299AC /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				0A3B048B291733A90026D3DF /* Home.swift */,
-				0AB43FA32936EE1A005299AC /* HomeViewModel.swift */,
-			);
-			path = Home;
 			sourceTree = "<group>";
 		};
 		0ABB8755292D969D00F7644E /* Services */ = {
@@ -240,6 +243,7 @@
 				0AC259CE29175D760047397E /* Quality.swift */,
 				0AC259D02917615B0047397E /* MeasurementData.swift */,
 				0A8FCDA9293EB3AF006022B9 /* AQILevel.swift */,
+				0A046414297A0AEF00DEF75E /* FavoriteSensor.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -405,10 +409,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A127CBE2940332B00D74240 /* AQIData+Coordinates.swift in Sources */,
-				0A3B048C291733A90026D3DF /* Home.swift in Sources */,
+				0A3B048C291733A90026D3DF /* HomeScreen.swift in Sources */,
+				0A6CCBAB2977835500751E5C /* AppViewModel.swift in Sources */,
 				0AB43FA02936EA66005299AC /* Samples.swift in Sources */,
 				0AC259CF29175D760047397E /* Quality.swift in Sources */,
+				0A046415297A0AEF00DEF75E /* FavoriteSensor.swift in Sources */,
 				0A427F512944CE5100832C3A /* SensorInfo.swift in Sources */,
+				0AC9FDAC297ACA8200DBA5E1 /* MapScreen.swift in Sources */,
 				0AE45B3329465B7B00A82228 /* AQIGauge.swift in Sources */,
 				0A8FCDAC293EB4A5006022B9 /* AQIAnnotationView.swift in Sources */,
 				0ABB875B292D9A1000F7644E /* AppError.swift in Sources */,
@@ -418,13 +425,14 @@
 				0AEF37BA292EE4B90086514C /* Localizables.swift in Sources */,
 				0ABB8759292D97DA00F7644E /* NetworkServiceEndpoints.swift in Sources */,
 				0AE5C1EB293D3FD40084E68C /* JSONFileLoader.swift in Sources */,
+				0AC9FDAE297ACB7600DBA5E1 /* ListScreen.swift in Sources */,
 				0AEF37C8292EEE4E0086514C /* AppConstants.swift in Sources */,
+				0A046417297A249900DEF75E /* Binding+Optional.swift in Sources */,
 				0ABB8754292D969600F7644E /* AireLibreRepository.swift in Sources */,
 				0AE5C1E9293D3F390084E68C /* Decodable+JSONFile.swift in Sources */,
 				0A3B048A291733A90026D3DF /* AireLibreApp.swift in Sources */,
 				0A8FCDAA293EB3AF006022B9 /* AQILevel.swift in Sources */,
 				0AC259CD29175D6E0047397E /* AQIData.swift in Sources */,
-				0AB43FA42936EE1A005299AC /* HomeViewModel.swift in Sources */,
 				0ABB8757292D96B000F7644E /* NetworkService.swift in Sources */,
 				0AE5C1EF293D59700084E68C /* Color+Hex.swift in Sources */,
 			);

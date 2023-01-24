@@ -21,7 +21,8 @@ struct AireLibreApp: App {
     
     var body: some Scene {
         WindowGroup {
-            Home(repository: repository)
+            HomeScreen()
+                .environmentObject(AppViewModel(repository: repository))
         }
     }
 }

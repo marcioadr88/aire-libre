@@ -1,35 +1,22 @@
 //
-//  HomeViewModel.swift
+//  AppViewModel.swift
 //  Aire Libre
 //
-//  Created by Marcio Duarte on 2022-11-29.
+//  Created by Marcio Duarte on 2023-01-17.
 //
 
 import Foundation
 import Combine
-import MapKit
 import OSLog
 
-final class HomeViewModel: ObservableObject {
-    private let log = Logger(subsystem: "home.re.airelib.ios",
-                             category: "HomeViewModel")
+final class AppViewModel: ObservableObject {
+    private let log = Logger(subsystem: "appvm.re.airelib.ios",
+                             category: "AppViewModel")
     
-    @Published var region = MKCoordinateRegion(center: AppConstants.asuncionCoordinates,
-                                               span: AppConstants.defaultSpan)
     @Published var aqiData: [AQIData]
     @Published var error: AppError?
-        
-    @Published var selectedData: AQIData? {
-        didSet {
-            guard let selectedData else {
-                return
-            }
-            
-            region = MKCoordinateRegion(center: selectedData.coordinates,
-                                        span: region.span)
-        }
-    }
-    
+    private var favorites: Set<FavoriteSensor>
+ 
     private let minutesAgo: Int = 60
     private let repository: AireLibreRepository
     
@@ -38,8 +25,21 @@ final class HomeViewModel: ObservableObject {
     init(repository: AireLibreRepository) {
         self.repository = repository
         self.aqiData = []
+        self.favorites = []
     }
 
+    func update(newValue: AQIData) {
+        // find index to update and check it's distinct from newValue
+        guard let index = aqiData.firstIndex(where: { $0.source == newValue.source }),
+              aqiData[index] != newValue else {
+            return
+        }
+
+        log.debug("Updating data of \(newValue.source)")
+        
+        aqiData[index] = newValue
+    }
+    
     func loadAQI() {
         Task(priority: .background) {
             do {
