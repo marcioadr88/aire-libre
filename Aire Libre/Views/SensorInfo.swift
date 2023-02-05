@@ -72,10 +72,6 @@ struct SensorInfo: View {
             }
         }
         .padding()
-        .background(
-            RoundedRectangle(cornerRadius: 10)
-                .foregroundColor(Color.white)
-        )
         .animation(nil, value: UUID())
     }
     

@@ -13,6 +13,8 @@ final class Samples {
     static let aqiData: [AQIData] = JSONFileLoader.loadJsonFileOrFail("sample1")
     static let successfulAireLibreRepository = SuccessfulAireLibreRepository(aqiData: aqiData)
     static let failureAireLibreRepository = FailureAireLibreRepository()
+    
+    static let appViewModel = AppViewModel(repository: successfulAireLibreRepository)
 }
 
 final class SuccessfulAireLibreRepository: AireLibreRepository {

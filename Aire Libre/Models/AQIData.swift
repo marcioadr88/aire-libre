@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AQIData: Codable, Sendable, Identifiable, Equatable {
+struct AQIData: Codable, Sendable, Identifiable, Equatable, Hashable {
     var id: String {
         return source
     }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Quality: Codable, Equatable {
+struct Quality: Codable, Equatable, Hashable {
     let category: String
     let index: Int
 }

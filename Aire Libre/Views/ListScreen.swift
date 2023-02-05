@@ -9,10 +9,10 @@ import SwiftUI
 
 struct ListScreen: View {
     @EnvironmentObject private var appViewModel: AppViewModel
-    
+
     var body: some View {
-        List {
-            ForEach(appViewModel.aqiData) { data in
+        List(appViewModel.aqiData, id: \.self) { data in
+            NavigationLink(value: Screens.map(source: data.source)) {
                 SensorInfo(aqiData: data)
             }
         }
@@ -23,5 +23,9 @@ struct ListScreen: View {
 struct ListScreen_Previews: PreviewProvider {
     static var previews: some View {
         ListScreen()
+            .environmentObject(Samples.appViewModel)
+            .onAppear {
+                Samples.appViewModel.loadAQI()
+            }
     }
 }

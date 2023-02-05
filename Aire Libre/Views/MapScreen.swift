@@ -13,8 +13,14 @@ struct MapScreen: View {
     
     @State private var selectedData: AQIData?
     
+    private var selectedSourceId: String?
+    
     @State var region = MKCoordinateRegion(center: AppConstants.asuncionCoordinates,
                                            span: AppConstants.defaultSpan)
+    
+    init(selectedSourceId: String? = nil) {
+        self.selectedSourceId = selectedSourceId
+    }
     
     var body: some View {
         ZStack {
@@ -38,10 +44,14 @@ struct MapScreen: View {
             VStack {
                 Spacer()
                 if let selectedData,
-                   let aqiDataBinding = Binding<AQIData>($selectedData)  {
+                   let aqiDataBinding = Binding<AQIData>($selectedData) {
                     SensorInfo(sensorName: selectedData.description,
                                aqiIndex: selectedData.quality.index,
                                favorited: aqiDataBinding.isFavoriteSensor)
+                    .background(
+                        RoundedRectangle(cornerRadius: 10)
+                            .foregroundColor(Color(uiColor: UIColor.secondarySystemGroupedBackground))
+                    )
                     .padding()
                     .transition(.move(edge: .bottom))
                     .onChange(of: aqiDataBinding.isFavoriteSensor.wrappedValue) { newValue in
@@ -56,7 +66,15 @@ struct MapScreen: View {
             }
         }
         .onAppear {
-            appViewModel.loadAQI()
+            if let selectedSourceId {
+                let targetData = appViewModel
+                    .aqiData
+                    .first(where: { $0.source == selectedSourceId })
+                
+                withAnimation {
+                    selectedData = targetData
+                }
+            }
         }
     }
 }
