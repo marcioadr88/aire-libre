@@ -15,7 +15,6 @@ final class AppViewModel: ObservableObject {
     
     @Published var aqiData: [AQIData]
     @Published var error: AppError?
-    private var favorites: Set<FavoriteSensor>
  
     private let minutesAgo: Int = 60
     private let repository: AireLibreRepository
@@ -25,7 +24,6 @@ final class AppViewModel: ObservableObject {
     init(repository: AireLibreRepository) {
         self.repository = repository
         self.aqiData = []
-        self.favorites = []
     }
 
     func update(newValue: AQIData) {
@@ -35,7 +33,7 @@ final class AppViewModel: ObservableObject {
             return
         }
 
-        log.debug("Updating data of \(newValue.source)")
+        log.debug("Updating data of \(newValue.source) at index \(index)")
         
         aqiData[index] = newValue
     }

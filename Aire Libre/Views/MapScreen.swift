@@ -51,6 +51,7 @@ struct MapScreen: View {
                     .background(
                         RoundedRectangle(cornerRadius: 10)
                             .foregroundColor(Color(uiColor: UIColor.secondarySystemGroupedBackground))
+                            .animation(nil, value: UUID())
                     )
                     .padding()
                     .transition(.move(edge: .bottom))

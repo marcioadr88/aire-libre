@@ -6,17 +6,32 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ListScreen: View {
     @EnvironmentObject private var appViewModel: AppViewModel
-
+    
+    @State private var favorites: [AQIData] = []
+    
     var body: some View {
-        List(appViewModel.aqiData, id: \.self) { data in
+        List($favorites) { $data in
             NavigationLink(value: Screens.map(source: data.source)) {
-                SensorInfo(aqiData: data)
+                SensorInfo(sensorName: data.description,
+                           aqiIndex: data.quality.index,
+                           favorited: $data.isFavoriteSensor)
+                .onChange(of: data.isFavoriteSensor) { newValue in
+                    appViewModel.update(newValue: data)
+                }
             }
         }
-        .navigationTitle("Aire Libre")
+        .navigationTitle(Localizables.favorites)
+        .onAppear {
+            updateFavorites()
+        }
+    }
+    
+    private func updateFavorites() {
+        favorites = appViewModel.aqiData.filter { $0.isFavoriteSensor }
     }
 }
 

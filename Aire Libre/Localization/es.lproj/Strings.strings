@@ -5,6 +5,7 @@
   Created by Marcio Duarte on 2022-11-23.
   
 */
+/* Errors */
 "invalidEndpoindURL" = "El endpoint proveído no es válido";
 "noConnection" = "No hay una conexión activa a la red";
 "unexpectedError" = "Ocurrió un error inesperado";
@@ -25,3 +26,6 @@
 "aqiLevelDescriptionUnhealthy" = "Riesgo general para las personas, efectos más graves en personas sensibles";
 "aqiLevelDescriptionVeryUnhealthy" = "Condición de emergencia. Son mayores las probabilidades de que toda la población esté afectada";
 "aqiLevelDescriptionHazardous" = "Alerta sanitaria, efectos graves para toda la población";
+
+/* Misc */
+"favorites" = "Favoritos";

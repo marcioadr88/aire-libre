@@ -5,6 +5,7 @@
   Created by Marcio Duarte on 2022-11-23.
   
 */
+/* Errors */
 "invalidEndpoindURL" = "The provided endpoint path is not valid";
 "noConnection" = "There's no active connection to the network";
 "unexpectedError" = "Unexpected error occurred";
@@ -25,3 +26,6 @@
 "aqiLevelDescriptionUnhealthy" = "Some members of the general public may experience health effects; members of sensitive groups may experience more serious health effects";
 "aqiLevelDescriptionVeryUnhealthy" = "Health alert: The risk of health effects is increased for everyone";
 "aqiLevelDescriptionHazardous" = "Health warning of emergency conditions: everyone is more likely to be affected";
+
+/* Misc */
+"favorites" = "Favorites";
