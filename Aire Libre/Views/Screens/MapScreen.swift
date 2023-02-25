@@ -18,6 +18,8 @@ struct MapScreen: View {
     @State var region = MKCoordinateRegion(center: AppConstants.asuncionCoordinates,
                                            span: AppConstants.defaultSpan)
     
+    let sensorInfoBackgroundColor = Color("SensorInfoBackgroundColor")
+    
     init(selectedSourceId: String? = nil) {
         self.selectedSourceId = selectedSourceId
     }
@@ -48,9 +50,10 @@ struct MapScreen: View {
                     SensorInfo(sensorName: selectedData.description,
                                aqiIndex: selectedData.quality.index,
                                favorited: aqiDataBinding.isFavoriteSensor)
+                    .frame(maxWidth: 500)
                     .background(
                         RoundedRectangle(cornerRadius: 10)
-                            .foregroundColor(Color(uiColor: UIColor.secondarySystemGroupedBackground))
+                            .foregroundColor(sensorInfoBackgroundColor)
                             .animation(nil, value: UUID())
                     )
                     .padding()
@@ -63,6 +66,17 @@ struct MapScreen: View {
                         
                         appViewModel.update(newValue: updatedSelectedData)
                     }
+                }
+            }
+        }
+        .onChange(of: selectedSourceId) { selectedSourceId in
+            if let selectedSourceId {
+                let targetData = appViewModel
+                    .aqiData
+                    .first(where: { $0.source == selectedSourceId })
+                
+                withAnimation {
+                    selectedData = targetData
                 }
             }
         }

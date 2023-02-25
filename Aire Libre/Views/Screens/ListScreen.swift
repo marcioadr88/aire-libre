@@ -11,27 +11,28 @@ import Combine
 struct ListScreen: View {
     @EnvironmentObject private var appViewModel: AppViewModel
     
-    @State private var favorites: [AQIData] = []
-    
     var body: some View {
-        List($favorites) { $data in
+        List(appViewModel.aqiData.filter { $0.isFavoriteSensor }) { data in
             NavigationLink(value: Screens.map(source: data.source)) {
                 SensorInfo(sensorName: data.description,
                            aqiIndex: data.quality.index,
-                           favorited: $data.isFavoriteSensor)
-                .onChange(of: data.isFavoriteSensor) { newValue in
-                    appViewModel.update(newValue: data)
-                }
+                           favorited: Binding<Bool>(get: {
+                    data.isFavoriteSensor
+                }, set: { value in
+                    appViewModel
+                        .update(newValue: data.copy(isFavoriteSensor: value))
+                }))
             }
         }
         .navigationTitle(Localizables.favorites)
-        .onAppear {
-            updateFavorites()
+        .navigationDestination(for: Screens.self) { screen in
+            switch screen {
+            case .map(let source):
+                MapScreen(selectedSourceId: source)
+            case .list:
+                ListScreen()
+            }
         }
-    }
-    
-    private func updateFavorites() {
-        favorites = appViewModel.aqiData.filter { $0.isFavoriteSensor }
     }
 }
 

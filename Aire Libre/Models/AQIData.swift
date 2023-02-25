@@ -26,3 +26,21 @@ struct AQIData: Codable, Sendable, Identifiable, Equatable, Hashable {
         case quality
     }
 }
+
+extension AQIData {
+    func copy(sensor: String? = nil,
+              source: String? = nil,
+              description: String? = nil,
+              longitude: Double? = nil,
+              latitude: Double? = nil,
+              quality: Quality? = nil,
+              isFavoriteSensor: Bool? = nil) -> AQIData {
+        return AQIData(sensor: sensor ?? self.sensor,
+                       source: source ?? self.source,
+                       description: description ?? self.description,
+                       longitude: longitude ?? self.longitude,
+                       latitude: latitude ?? self.latitude,
+                       quality: quality ?? self.quality.copy(),
+                       isFavoriteSensor: isFavoriteSensor ?? self.isFavoriteSensor)
+    }
+}

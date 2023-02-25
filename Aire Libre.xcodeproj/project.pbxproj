@@ -125,6 +125,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A1C3F4829A81946003B3ED8 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				0A3B048B291733A90026D3DF /* HomeScreen.swift */,
+				0AC9FDAB297ACA8200DBA5E1 /* MapScreen.swift */,
+				0AC9FDAD297ACB7600DBA5E1 /* ListScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		0A1C3F4929A8196C003B3ED8 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				0A6CCBAA2977835500751E5C /* AppViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
 		0A3B047D291733A90026D3DF = {
 			isa = PBXGroup;
 			children = (
@@ -154,14 +172,14 @@
 				0A3B048D291733AA0026D3DF /* Assets.xcassets */,
 				0A3B048F291733AA0026D3DF /* AireLibre.entitlements */,
 				0AB43FA12936EE09005299AC /* Views */,
+				0A1C3F4929A8196C003B3ED8 /* View Models */,
+				0AC259CB29175CC20047397E /* Models */,
 				0AEF37C4292EEA160086514C /* Utils */,
 				0AB43F9B2936DD13005299AC /* Extensions */,
-				0AC259CB29175CC20047397E /* Models */,
 				0ABB8755292D969D00F7644E /* Services */,
 				0ACA398B291B434D0022DDC9 /* Repositories */,
-				0AB43F9E2936EA5C005299AC /* Samples */,
 				0AEF37BF292EE5F00086514C /* Localization */,
-				0A6CCBAA2977835500751E5C /* AppViewModel.swift */,
+				0AB43F9E2936EA5C005299AC /* Samples */,
 			);
 			path = "Aire Libre";
 			sourceTree = "<group>";
@@ -214,12 +232,10 @@
 		0AB43FA12936EE09005299AC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0A3B048B291733A90026D3DF /* HomeScreen.swift */,
+				0A1C3F4829A81946003B3ED8 /* Screens */,
 				0A8FCDAB293EB4A5006022B9 /* AQIAnnotationView.swift */,
 				0A427F502944CE5100832C3A /* SensorInfo.swift */,
 				0AE45B3229465B7B00A82228 /* AQIGauge.swift */,
-				0AC9FDAB297ACA8200DBA5E1 /* MapScreen.swift */,
-				0AC9FDAD297ACB7600DBA5E1 /* ListScreen.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
