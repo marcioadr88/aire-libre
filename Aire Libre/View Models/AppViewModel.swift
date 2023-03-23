@@ -8,14 +8,20 @@
 import Foundation
 import Combine
 import OSLog
+import CoreLocation
 
-final class AppViewModel: ObservableObject {
+final class AppViewModel: NSObject, ObservableObject {
     private let log = Logger(subsystem: "appvm.re.airelib.ios",
                              category: "AppViewModel")
     
     @Published var aqiData: [AQIData]
     @Published var error: AppError?
- 
+    @Published var isLoading: Bool
+    
+    var favorites: [AQIData] {
+        aqiData.filter { $0.isFavoriteSensor }
+    }
+    
     private let minutesAgo: Int = 60
     private let repository: AireLibreRepository
     
@@ -24,8 +30,9 @@ final class AppViewModel: ObservableObject {
     init(repository: AireLibreRepository) {
         self.repository = repository
         self.aqiData = []
+        self.isLoading = false
     }
-
+    
     func update(newValue: AQIData) {
         // find index to update and check it's distinct from newValue
         guard let index = aqiData.firstIndex(where: { $0.source == newValue.source }),
@@ -39,6 +46,8 @@ final class AppViewModel: ObservableObject {
     }
     
     func loadAQI() {
+        isLoading = true
+        
         Task(priority: .background) {
             do {
                 guard let startDate = dateMinutesAgoFromNow(minutesAgo: minutesAgo) else {
@@ -53,11 +62,13 @@ final class AppViewModel: ObservableObject {
                                                        distance: nil,
                                                        source: nil)
                 await MainActor.run {
-                    aqiData = data
+                    self.aqiData = data
+                    self.isLoading = false
                 }
             } catch {
                 await MainActor.run {
                     self.error = AppError.fromError(error)
+                    self.isLoading = false
                 }
             }
         }

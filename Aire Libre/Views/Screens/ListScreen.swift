@@ -12,7 +12,43 @@ struct ListScreen: View {
     @EnvironmentObject private var appViewModel: AppViewModel
     
     var body: some View {
-        List(appViewModel.aqiData.filter { $0.isFavoriteSensor }) { data in
+        favoritesView
+            .navigationTitle(Localizables.favorites)
+            .navigationDestination(for: Screens.self) { screen in
+                switch screen {
+                case .map(let source):
+                    MapScreen(selectedSourceId: source)
+                case .list:
+                    ListScreen()
+                }
+            }
+    }
+    
+    @ViewBuilder
+    private var favoritesView: some View {
+        if appViewModel.favorites.isEmpty {
+            emptyFavoritesView
+        } else {
+            populatedFavoritesView
+        }
+    }
+    
+    @ViewBuilder
+    private var emptyFavoritesView: some View {
+        VStack(spacing: 8) {
+            Text("No hay favoritos")
+            
+            #if !os(macOS)
+            NavigationLink(value: Screens.map(source: nil)) {
+                Text("Ver mapa")
+            }
+            #endif
+        }
+    }
+    
+    @ViewBuilder
+    private var populatedFavoritesView: some View {
+        List(appViewModel.favorites) { data in
             NavigationLink(value: Screens.map(source: data.source)) {
                 SensorInfo(sensorName: data.description,
                            aqiIndex: data.quality.index,
@@ -22,15 +58,6 @@ struct ListScreen: View {
                     appViewModel
                         .update(newValue: data.copy(isFavoriteSensor: value))
                 }))
-            }
-        }
-        .navigationTitle(Localizables.favorites)
-        .navigationDestination(for: Screens.self) { screen in
-            switch screen {
-            case .map(let source):
-                MapScreen(selectedSourceId: source)
-            case .list:
-                ListScreen()
             }
         }
     }

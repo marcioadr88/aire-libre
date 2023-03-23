@@ -10,60 +10,71 @@ import MapKit
 
 struct MapScreen: View {
     @EnvironmentObject private var appViewModel: AppViewModel
-    
-    @State private var selectedData: AQIData?
+    @StateObject private var mapViewModel = MapScreenViewModel()
     
     private var selectedSourceId: String?
-    
-    @State var region = MKCoordinateRegion(center: AppConstants.asuncionCoordinates,
-                                           span: AppConstants.defaultSpan)
-    
-    let sensorInfoBackgroundColor = Color("SensorInfoBackgroundColor")
     
     init(selectedSourceId: String? = nil) {
         self.selectedSourceId = selectedSourceId
     }
     
     var body: some View {
-        ZStack {
+        ZStack(alignment: .top) {
             Map(
-                coordinateRegion: .constant(region),
+                coordinateRegion: $mapViewModel.region,
                 showsUserLocation: true,
-                userTrackingMode: .constant(.follow),
+                userTrackingMode: .constant(.none),
                 annotationItems: appViewModel.aqiData
             ) { item in
                 MapAnnotation(coordinate: item.coordinates) {
                     AQIAnnotationView(aqiData: item)
                         .onTapGesture {
                             withAnimation {
-                                selectedData = item
+                                mapViewModel.selectedData = item
                             }
                         }
                 }
             }
             .ignoresSafeArea()
             
+            HStack {
+                Spacer()
+                ZoomControls(plusButtonCallback: {
+                    withAnimation {
+                        mapViewModel.zoomIn()
+                    }
+                }, minusButtonCallback: {
+                    withAnimation {
+                        mapViewModel.zoomOut()
+                    }
+                })
+                .background(CustomColors.viewBackgroundColor)
+                .cornerRadius(8)
+            }
+            .padding()
+
             VStack {
                 Spacer()
-                if let selectedData,
-                   let aqiDataBinding = Binding<AQIData>($selectedData) {
+                if let selectedData = mapViewModel.selectedData,
+                    let selectedDataBinding = Binding<AQIData>($mapViewModel.selectedData) {
                     SensorInfo(sensorName: selectedData.description,
                                aqiIndex: selectedData.quality.index,
-                               favorited: aqiDataBinding.isFavoriteSensor)
+                               favorited: selectedDataBinding.isFavoriteSensor)
                     .frame(maxWidth: 500)
                     .background(
                         RoundedRectangle(cornerRadius: 10)
-                            .foregroundColor(sensorInfoBackgroundColor)
+                            .foregroundColor(CustomColors.viewBackgroundColor)
                             .animation(nil, value: UUID())
                     )
                     .padding()
                     .transition(.move(edge: .bottom))
-                    .onChange(of: aqiDataBinding.isFavoriteSensor.wrappedValue) { newValue in
+                    .onChange(of: selectedDataBinding.isFavoriteSensor.wrappedValue) { newValue in
+                        print("changeOf \(selectedDataBinding.wrappedValue.description) \(newValue)")
                         //update view model with the updated selectedData values
-                        guard let updatedSelectedData = self.selectedData else {
+                        guard let updatedSelectedData = self.mapViewModel.selectedData else {
                             return
                         }
-                        
+
                         appViewModel.update(newValue: updatedSelectedData)
                     }
                 }
@@ -76,7 +87,7 @@ struct MapScreen: View {
                     .first(where: { $0.source == selectedSourceId })
                 
                 withAnimation {
-                    selectedData = targetData
+                    mapViewModel.selectedData = targetData
                 }
             }
         }
@@ -87,7 +98,32 @@ struct MapScreen: View {
                     .first(where: { $0.source == selectedSourceId })
                 
                 withAnimation {
-                    selectedData = targetData
+                    mapViewModel.selectedData = targetData
+                }
+            }
+        }
+        .toolbar {
+            ToolbarItem {
+                Button {
+                    mapViewModel.centerToUserLocation()
+                } label: {
+                    Image(systemName: "location")
+                }
+            }
+            
+            ToolbarItem {
+                Button {
+                    appViewModel.loadAQI()
+                } label: {
+                    if appViewModel.isLoading {
+                        ProgressView()
+                            .tint(Color.accentColor)
+                        #if os(macOS)
+                            .controlSize(.small)
+                        #endif
+                    } else {
+                        Image(systemName: "arrow.clockwise")
+                    }
                 }
             }
         }

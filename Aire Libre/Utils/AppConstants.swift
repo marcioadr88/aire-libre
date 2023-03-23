@@ -14,3 +14,5 @@ final class AppConstants {
                                                             longitude: -57.601522)
     static let defaultSpan = MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
 }
+
+typealias VoidCallback = () -> Void
