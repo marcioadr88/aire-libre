@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+// Dark color cheat sheet
+// https://sarunw.com/posts/dark-color-cheat-sheet/
+
 struct CustomColors {
     static let viewBackgroundColor = Color("ViewBackgroundColor")
 }

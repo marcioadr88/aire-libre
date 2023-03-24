@@ -19,7 +19,7 @@ struct ZoomControls: View {
     }
     
     var body: some View {
-        VStack(spacing: 2) {
+        VStack(spacing: 0) {
             Button {
                 plusButtonCallback?()
             } label: {
@@ -38,6 +38,7 @@ struct ZoomControls: View {
                     .contentShape(Rectangle())
             }
         }
+        .buttonStyle(.borderless)
         .frame(width: buttonSize)
     }
 }
