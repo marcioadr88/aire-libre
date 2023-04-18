@@ -42,7 +42,21 @@ final class AppViewModel: NSObject, ObservableObject {
 
         log.debug("Updating data of \(newValue.source) at index \(index)")
         
-        aqiData[index] = newValue
+        Task {
+            do {
+                if newValue.isFavoriteSensor {
+                    try await repository.saveFavorite(source: newValue.source)
+                } else {
+                    try await repository.deleteFavorite(source: newValue.source)
+                }
+                
+                await MainActor.run {
+                    self.aqiData[index] = newValue
+                }
+            } catch {
+                log.error("Error while updateing favorite \(error.localizedDescription)")
+            }
+        }
     }
     
     func loadAQI() {

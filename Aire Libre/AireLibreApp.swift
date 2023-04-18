@@ -15,7 +15,9 @@ struct AireLibreApp: App {
         let connectionChecker = NWPathMonitorConnectionChecker()
         let endpoints = ProductionEndpoints()
         let networkService = NetworkServiceImpl(endpoints: endpoints)
+        let persistenceService = PersistenceServiceImpl()
         self.repository = AireLibreRepositoryImpl(networkService: networkService,
+                                                  persistenceService: persistenceService,
                                                   connectionChecker: connectionChecker)
     }
     

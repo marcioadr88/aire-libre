@@ -10,6 +10,7 @@
 "noConnection" = "There's no active connection to the network";
 "unexpectedError" = "Unexpected error occurred";
 "cantCalculateStart" = "Can't calculate 'start' parameter to fetch AQI data";
+"failedPersistenceStoreInit" = "Failed to initialize persistence store";
 
 /*AQI Level Titles*/
 "aqiLevelTitleGood" = "Good";

@@ -18,6 +18,10 @@ final class Samples {
 }
 
 final class SuccessfulAireLibreRepository: AireLibreRepository {
+    func saveFavorite(source: String) throws {}
+    
+    func deleteFavorite(source: String) throws {}
+    
     private let aqiData: [AQIData]
     
     init(aqiData: [AQIData]) {
@@ -35,6 +39,10 @@ final class SuccessfulAireLibreRepository: AireLibreRepository {
 }
 
 final class FailureAireLibreRepository: AireLibreRepository {
+    func saveFavorite(source: String) throws {}
+    
+    func deleteFavorite(source: String) throws {}
+    
     func getAQI(start: Date?,
                 end: Date?,
                 latitude: Double?,

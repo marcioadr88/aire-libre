@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A046415297A0AEF00DEF75E /* FavoriteSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A046414297A0AEF00DEF75E /* FavoriteSensor.swift */; };
 		0A127CBE2940332B00D74240 /* AQIData+Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A127CBD2940332B00D74240 /* AQIData+Coordinates.swift */; };
 		0A27E4D629C3FCD000576F7F /* MapScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A27E4D529C3FCD000576F7F /* MapScreenViewModel.swift */; };
 		0A3B048A291733A90026D3DF /* AireLibreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B0489291733A90026D3DF /* AireLibreApp.swift */; };
@@ -22,6 +21,7 @@
 		0A8FCDAA293EB3AF006022B9 /* AQILevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8FCDA9293EB3AF006022B9 /* AQILevel.swift */; };
 		0A8FCDAC293EB4A5006022B9 /* AQIAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8FCDAB293EB4A5006022B9 /* AQIAnnotationView.swift */; };
 		0AAFF68D29C9480A008694A9 /* ZoomControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAFF68C29C9480A008694A9 /* ZoomControls.swift */; };
+		0AB43DD629EB294800AB45CE /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB43DD529EB294800AB45CE /* PersistenceService.swift */; };
 		0AB43F9D2936DD38005299AC /* Task+AutoRetry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB43F9C2936DD38005299AC /* Task+AutoRetry.swift */; };
 		0AB43FA02936EA66005299AC /* Samples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB43F9F2936EA66005299AC /* Samples.swift */; };
 		0ABB8754292D969600F7644E /* AireLibreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABB8753292D969600F7644E /* AireLibreRepository.swift */; };
@@ -42,6 +42,8 @@
 		0AEF37C0292EE6100086514C /* Strings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF37C2292EE6100086514C /* Strings.strings */; };
 		0AEF37C6292EEA260086514C /* ConnectionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF37C5292EEA260086514C /* ConnectionChecker.swift */; };
 		0AEF37C8292EEE4E0086514C /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF37C7292EEE4E0086514C /* AppConstants.swift */; };
+		0AFA4EA929E3760000C6CEE9 /* FavoriteSensorStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFA4EA829E3760000C6CEE9 /* FavoriteSensorStore.swift */; };
+		0AFA4EAF29E376D400C6CEE9 /* Entities.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0AFA4EAD29E376D400C6CEE9 /* Entities.xcdatamodeld */; };
 		0AFC850B29CBD22B00D201E7 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFC850A29CBD22B00D201E7 /* CustomColors.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,7 +65,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A046414297A0AEF00DEF75E /* FavoriteSensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteSensor.swift; sourceTree = "<group>"; };
 		0A127CBD2940332B00D74240 /* AQIData+Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AQIData+Coordinates.swift"; sourceTree = "<group>"; };
 		0A27E4D529C3FCD000576F7F /* MapScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenViewModel.swift; sourceTree = "<group>"; };
 		0A3B0486291733A90026D3DF /* Aire Libre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aire Libre.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +84,7 @@
 		0A8FCDA9293EB3AF006022B9 /* AQILevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQILevel.swift; sourceTree = "<group>"; };
 		0A8FCDAB293EB4A5006022B9 /* AQIAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIAnnotationView.swift; sourceTree = "<group>"; };
 		0AAFF68C29C9480A008694A9 /* ZoomControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomControls.swift; sourceTree = "<group>"; };
+		0AB43DD529EB294800AB45CE /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		0AB43F9C2936DD38005299AC /* Task+AutoRetry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+AutoRetry.swift"; sourceTree = "<group>"; };
 		0AB43F9F2936EA66005299AC /* Samples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Samples.swift; sourceTree = "<group>"; };
 		0ABB8753292D969600F7644E /* AireLibreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AireLibreRepository.swift; sourceTree = "<group>"; };
@@ -104,6 +106,8 @@
 		0AEF37C3292EE6150086514C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Strings.strings; sourceTree = "<group>"; };
 		0AEF37C5292EEA260086514C /* ConnectionChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionChecker.swift; sourceTree = "<group>"; };
 		0AEF37C7292EEE4E0086514C /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		0AFA4EA829E3760000C6CEE9 /* FavoriteSensorStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteSensorStore.swift; sourceTree = "<group>"; };
+		0AFA4EAE29E376D400C6CEE9 /* Entities.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Entities.xcdatamodel; sourceTree = "<group>"; };
 		0AFC850A29CBD22B00D201E7 /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -187,6 +191,7 @@
 				0AB43F9B2936DD13005299AC /* Extensions */,
 				0ABB8755292D969D00F7644E /* Services */,
 				0ACA398B291B434D0022DDC9 /* Repositories */,
+				0AFA4EA729E375F100C6CEE9 /* Stores */,
 				0AEF37BF292EE5F00086514C /* Localization */,
 				0AB43F9E2936EA5C005299AC /* Samples */,
 			);
@@ -255,6 +260,7 @@
 			children = (
 				0ABB8756292D96B000F7644E /* NetworkService.swift */,
 				0ABB8758292D97DA00F7644E /* NetworkServiceEndpoints.swift */,
+				0AB43DD529EB294800AB45CE /* PersistenceService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -266,7 +272,6 @@
 				0AC259CE29175D760047397E /* Quality.swift */,
 				0AC259D02917615B0047397E /* MeasurementData.swift */,
 				0A8FCDA9293EB3AF006022B9 /* AQILevel.swift */,
-				0A046414297A0AEF00DEF75E /* FavoriteSensor.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -297,6 +302,15 @@
 				0AFC850A29CBD22B00D201E7 /* CustomColors.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		0AFA4EA729E375F100C6CEE9 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				0AFA4EAD29E376D400C6CEE9 /* Entities.xcdatamodeld */,
+				0AFA4EA829E3760000C6CEE9 /* FavoriteSensorStore.swift */,
+			);
+			path = Stores;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -440,8 +454,8 @@
 				0AFC850B29CBD22B00D201E7 /* CustomColors.swift in Sources */,
 				0AC259CF29175D760047397E /* Quality.swift in Sources */,
 				0AAFF68D29C9480A008694A9 /* ZoomControls.swift in Sources */,
-				0A046415297A0AEF00DEF75E /* FavoriteSensor.swift in Sources */,
 				0A427F512944CE5100832C3A /* SensorInfo.swift in Sources */,
+				0AFA4EAF29E376D400C6CEE9 /* Entities.xcdatamodeld in Sources */,
 				0AC9FDAC297ACA8200DBA5E1 /* MapScreen.swift in Sources */,
 				0AE45B3329465B7B00A82228 /* AQIGauge.swift in Sources */,
 				0A8FCDAC293EB4A5006022B9 /* AQIAnnotationView.swift in Sources */,
@@ -458,6 +472,8 @@
 				0AE5C1E9293D3F390084E68C /* Decodable+JSONFile.swift in Sources */,
 				0A3B048A291733A90026D3DF /* AireLibreApp.swift in Sources */,
 				0A8FCDAA293EB3AF006022B9 /* AQILevel.swift in Sources */,
+				0AFA4EA929E3760000C6CEE9 /* FavoriteSensorStore.swift in Sources */,
+				0AB43DD629EB294800AB45CE /* PersistenceService.swift in Sources */,
 				0AC259CD29175D6E0047397E /* AQIData.swift in Sources */,
 				0ABB8757292D96B000F7644E /* NetworkService.swift in Sources */,
 				0AE5C1EF293D59700084E68C /* Color+Hex.swift in Sources */,
@@ -840,6 +856,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0AFA4EAD29E376D400C6CEE9 /* Entities.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0AFA4EAE29E376D400C6CEE9 /* Entities.xcdatamodel */,
+			);
+			currentVersion = 0AFA4EAE29E376D400C6CEE9 /* Entities.xcdatamodel */;
+			path = Entities.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0A3B047E291733A90026D3DF /* Project object */;
 }

@@ -29,6 +29,9 @@ enum AppError: Error {
     
     /// From other type of Error
     case wrappingError(cause: Error)
+    
+    /// Persistence error
+    case persistence(cause: Error)
 }
 
 /// Provides an user friendly error message
@@ -48,6 +51,8 @@ extension AppError: LocalizedError {
         case .unexpected(let message):
             return message ?? Localizables.unexpectedError
         case .wrappingError(let cause):
+            return cause.localizedDescription
+        case .persistence(let cause):
             return cause.localizedDescription
         }
     }
@@ -69,6 +74,8 @@ extension AppError: Equatable {
         case (.unexpected(let lhsMessage), .unexpected(let rhsMessage)):
             return lhsMessage == rhsMessage
         case (let .wrappingError(lhsCause), let .wrappingError(rhsCause)):
+            return lhsCause.localizedDescription == rhsCause.localizedDescription
+        case (let .persistence(lhsCause), let .persistence(rhsCause)):
             return lhsCause.localizedDescription == rhsCause.localizedDescription
         default:
             return false
