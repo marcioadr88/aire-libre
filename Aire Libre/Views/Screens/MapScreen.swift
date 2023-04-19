@@ -52,7 +52,7 @@ struct MapScreen: View {
                 .cornerRadius(8)
             }
             .padding()
-
+            
             VStack {
                 Spacer()
                 if let selectedData = mapViewModel.selectedData,
@@ -82,24 +82,12 @@ struct MapScreen: View {
         }
         .onChange(of: selectedSourceId) { selectedSourceId in
             if let selectedSourceId {
-                let targetData = appViewModel
-                    .aqiData
-                    .first(where: { $0.source == selectedSourceId })
-                
-                withAnimation {
-                    mapViewModel.selectedData = targetData
-                }
+                showSelectedSource(selectedSourceId)
             }
         }
         .onAppear {
             if let selectedSourceId {
-                let targetData = appViewModel
-                    .aqiData
-                    .first(where: { $0.source == selectedSourceId })
-                
-                withAnimation {
-                    mapViewModel.selectedData = targetData
-                }
+                showSelectedSource(selectedSourceId)
             }
         }
         .toolbar {
@@ -125,6 +113,23 @@ struct MapScreen: View {
                         Image(systemName: "arrow.clockwise")
                     }
                 }
+            }
+        }
+        #if os(iOS)
+        .navigationBarTitleDisplayMode(.inline)
+        #endif
+    }
+    
+    private func showSelectedSource(_ source: String) {
+        let targetData = appViewModel
+            .aqiData
+            .first(where: { $0.source == source })
+        
+        withAnimation {
+            mapViewModel.selectedData = targetData
+            
+            if let targetData {
+                mapViewModel.region.center = targetData.coordinates
             }
         }
     }

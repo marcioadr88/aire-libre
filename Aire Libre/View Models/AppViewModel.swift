@@ -54,7 +54,7 @@ final class AppViewModel: NSObject, ObservableObject {
                     self.aqiData[index] = newValue
                 }
             } catch {
-                log.error("Error while updateing favorite \(error.localizedDescription)")
+                log.error("Error while updating favorite \(error.localizedDescription)")
             }
         }
     }

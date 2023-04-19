@@ -8,43 +8,33 @@
 import SwiftUI
 
 struct SensorInfo: View {
-    enum Style {
-        case compact
-        case regular
-    }
-    
     private let sensorName: String
     private let aqiIndex: Int
     private let level: AQILevel?
-    private let style: Style
+    private let showFavoriteIcon: Bool
     
     @Binding var favorited: Bool
     
     init(sensorName: String,
          aqiIndex: Int,
          favorited: Binding<Bool>,
-         style: Style = .regular) {
+         showFavoriteIcon: Bool = true) {
         self.sensorName = sensorName
         self.aqiIndex = aqiIndex
         self.level = AQILevel.fromIndex(aqiIndex)
         self._favorited = favorited
-        self.style = style
+        self.showFavoriteIcon = showFavoriteIcon
     }
     
     init(aqiData: AQIData) {
         self.init(sensorName: aqiData.description,
                   aqiIndex: aqiData.quality.index,
-                  favorited: .constant(aqiData.isFavoriteSensor),
-                  style: .regular)
+                  favorited: .constant(aqiData.isFavoriteSensor))
     }
-    
-    var verticalAligment: VerticalAlignment {
-        style == .compact ? .center : .top
-    }
-    
+
     var body: some View {
         VStack(alignment: .leading) {
-            HStack(alignment: verticalAligment, spacing: 24) {
+            HStack(alignment: .top, spacing: 24) {
                 AQIGauge(index: aqiIndex)
                 
                 VStack(alignment: .leading, spacing: 4) {
@@ -60,13 +50,15 @@ struct SensorInfo: View {
                 
                 Spacer()
                 
-                favoriteIcon
-                    .onTapGesture {
-                        favorited.toggle()
-                    }
+                if showFavoriteIcon {
+                    favoriteIcon
+                        .onTapGesture {
+                            favorited.toggle()
+                        }
+                }
             }
             
-            if let level, style == .regular {
+            if let level {
                 Text(level.description)
                     .font(.caption.weight(.regular))
             }

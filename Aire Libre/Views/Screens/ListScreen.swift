@@ -10,6 +10,15 @@ import Combine
 
 struct ListScreen: View {
     @EnvironmentObject private var appViewModel: AppViewModel
+    @Binding private var selectedSensor: AQIData?
+    
+    init() {
+        _selectedSensor = .constant(nil)
+    }
+    
+    init(selectedSensor: Binding<AQIData?>) {
+        _selectedSensor = selectedSensor
+    }
     
     var body: some View {
         favoritesView
@@ -21,6 +30,19 @@ struct ListScreen: View {
                 case .list:
                     ListScreen()
                 }
+            }
+            #if os(iOS)
+            .navigationBarTitleDisplayMode(.large)
+            .toolbar {
+                if UIDevice.current.userInterfaceIdiom == .phone {
+                    NavigationLink(value: Screens.map(source: nil)) {
+                        Text("Ver mapa")
+                    }
+                }
+            }
+            #endif
+            .refreshable {
+                appViewModel.loadAQI()
             }
     }
     
@@ -37,29 +59,49 @@ struct ListScreen: View {
     private var emptyFavoritesView: some View {
         VStack(spacing: 8) {
             Text("No hay favoritos")
-            
-            #if !os(macOS)
-            NavigationLink(value: Screens.map(source: nil)) {
-                Text("Ver mapa")
-            }
-            #endif
         }
     }
     
     @ViewBuilder
     private var populatedFavoritesView: some View {
-        List(appViewModel.favorites) { data in
-            NavigationLink(value: Screens.map(source: data.source)) {
-                SensorInfo(sensorName: data.description,
-                           aqiIndex: data.quality.index,
-                           favorited: Binding<Bool>(get: {
-                    data.isFavoriteSensor
-                }, set: { value in
+        List(selection: $selectedSensor) {
+            ForEach(appViewModel.favorites, id: \.self) { data in
+                #if os(macOS)
+                    SensorInfo(sensorName: data.description,
+                               aqiIndex: data.quality.index,
+                               favorited: .constant(data.isFavoriteSensor),
+                               showFavoriteIcon: false)
+                #else
+                    if UIDevice.current.userInterfaceIdiom == .phone {
+                        NavigationLink(value: Screens.map(source: data.source)) {
+                            SensorInfo(sensorName: data.description,
+                                       aqiIndex: data.quality.index,
+                                       favorited: .constant(data.isFavoriteSensor),
+                                       showFavoriteIcon: false)
+                        }
+                    } else {
+                        SensorInfo(sensorName: data.description,
+                                   aqiIndex: data.quality.index,
+                                   favorited: .constant(data.isFavoriteSensor),
+                                   showFavoriteIcon: false)
+                    }
+                #endif
+            }
+            .onDelete { offsets in
+                offsets.forEach { index in
+                    let aqi = appViewModel.favorites[index]
                     appViewModel
-                        .update(newValue: data.copy(isFavoriteSensor: value))
-                }))
+                        .update(newValue: aqi.copy(isFavoriteSensor: false))
+                }
             }
         }
+        #if os(macOS)
+        .onDeleteCommand(perform: {
+            if let selectedSensor {
+                appViewModel.update(newValue: selectedSensor.copy(isFavoriteSensor: false))
+            }
+        })
+        #endif
     }
 }
 

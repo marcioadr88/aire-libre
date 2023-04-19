@@ -20,12 +20,13 @@ class PersistentFavoriteSensorStore: FavoriteSensorStore {
     
     init() async throws {
         container = NSPersistentContainer(name: "Entities")
-        
+
         try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<Void, Error>) in
-            container.loadPersistentStores { (description, error) in
+            container.loadPersistentStores { [weak self] (description, error) in
                 if let error  {
                     continuation.resume(throwing: error)
                 } else {
+                    self?.container.viewContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
                     continuation.resume()
                 }
             }
@@ -55,8 +56,16 @@ class PersistentFavoriteSensorStore: FavoriteSensorStore {
         let result = try container.viewContext.fetch(fetchRequest)
         
         if let sensor = result.first {
+            print("Store: sensor to delete \(sensor)")
             container.viewContext.delete(sensor)
-            try container.viewContext.save()
+            
+            do {
+                try container.viewContext.save()
+            } catch {
+                print("Error deleting \(source): \(error.localizedDescription)")
+                
+                throw error
+            }
         }
     }
     

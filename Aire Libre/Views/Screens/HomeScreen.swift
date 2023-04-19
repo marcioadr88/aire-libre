@@ -15,6 +15,8 @@ enum Screens: Hashable {
 
 struct HomeScreen: View {
     @State private var path = NavigationPath()
+    @State private var selectedSensor: AQIData?
+    
     @EnvironmentObject private var appViewModel: AppViewModel
     
     var body: some View {
@@ -28,10 +30,14 @@ struct HomeScreen: View {
     
     @ViewBuilder
     private var navigationView: some View {
-        #if os(iOS)
-            smallScreenNavigation
-        #else
+        #if os(macOS)
             largeScreenNavigation
+        #else
+            if UIDevice.current.userInterfaceIdiom == .phone {
+                smallScreenNavigation
+            } else {
+                largeScreenNavigation
+            }
         #endif
     }
     
@@ -45,10 +51,10 @@ struct HomeScreen: View {
     @ViewBuilder
     private var largeScreenNavigation: some View {
         NavigationSplitView {
-            ListScreen()
-                .navigationSplitViewColumnWidth(ideal: 300)
+            ListScreen(selectedSensor: $selectedSensor)
+                .navigationSplitViewColumnWidth(ideal: 560)
         } detail: {
-            MapScreen()
+            MapScreen(selectedSourceId: selectedSensor?.source)
         }
     }
 }

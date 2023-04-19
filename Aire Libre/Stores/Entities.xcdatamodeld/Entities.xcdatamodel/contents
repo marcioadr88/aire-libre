@@ -2,5 +2,10 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22E261" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="FavoriteSensor" representedClassName="FavoriteSensor" syncable="YES" codeGenerationType="class">
         <attribute name="source" optional="YES" attributeType="String"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="source"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
 </model>
