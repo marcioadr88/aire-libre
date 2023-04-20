@@ -113,6 +113,7 @@ struct MapScreen: View {
                         Image(systemName: "arrow.clockwise")
                     }
                 }
+                .keyboardShortcut("r", modifiers: [.command])
             }
         }
         #if os(iOS)

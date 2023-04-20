@@ -30,3 +30,6 @@
 
 /* Misc */
 "favorites" = "Favoritos";
+"viewMap" = "View map";
+"loading" = "Loading";
+"noFavorites" = "No favorites";

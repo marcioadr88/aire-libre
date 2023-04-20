@@ -9,22 +9,34 @@ import Foundation
 import CoreLocation
 import MapKit
 import SwiftUI
+import OSLog
 
 class MapScreenViewModel: NSObject, ObservableObject {
+    private let log = Logger(subsystem: "mapvm.re.airelib.ios",
+                             category: String(describing: MapScreenViewModel.self))
+    
     private let locationManager: CLLocationManager
     private var updateRegionWithUserLocationOnNextUpdate = false
     private let zoomFactor: CGFloat = 1.5
+    private let savePath = URL.documentsDirectory.appending(path: MapScreenViewModel.regionStoreKey)
     
     @Published var region = MKCoordinateRegion(center: AppConstants.asuncionCoordinates,
-                                               span: AppConstants.defaultSpan)
-    @Published var selectedData: AQIData?
+                                               span: AppConstants.defaultSpan) {
+        didSet {
+            saveRegion()
+        }
+    }
     
+    @Published var selectedData: AQIData?
+
     override init() {
         self.locationManager = CLLocationManager()
         
         super.init()
         
         self.locationManager.delegate = self
+        
+        loadRegion()
     }
     
     func centerToUserLocation() {
@@ -45,7 +57,7 @@ class MapScreenViewModel: NSObject, ObservableObject {
     }
 }
 
-
+// MARK: User location permissions
 extension MapScreenViewModel: CLLocationManagerDelegate {
     func determineUserAuthorizationStatus() {
         switch locationManager.authorizationStatus {
@@ -82,10 +94,31 @@ extension MapScreenViewModel: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("location with error")
+        log.error("Could not get location: \(error.localizedDescription)")
     }
     
     func updateLocations() {
         locationManager.requestLocation()
+    }
+}
+
+// MARK: Last used region persistence
+extension MapScreenViewModel {
+    private static let regionStoreKey = "MapScreenRegion"
+    
+    func loadRegion() {
+        if let data = try? Data(contentsOf: savePath) {
+            if let decoded = try? JSONDecoder()
+                .decode(MKCoordinateRegion.self, from: data) {
+                region = decoded
+            }
+        }
+    }
+    
+    func saveRegion() {
+        DispatchQueue.global(qos: .background).async { [savePath, region] in
+            let data = try? JSONEncoder().encode(region)
+            try? data?.write(to: savePath)
+        }
     }
 }

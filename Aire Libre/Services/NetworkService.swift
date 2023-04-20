@@ -32,7 +32,7 @@ protocol NetworkService {
 /// Concrete implementation of ``NetworkService``
 final class NetworkServiceImpl: NetworkService {
     private let log = Logger(subsystem: "service.re.airelib.ios",
-                             category: "NetworkServiceImpl")
+                             category: String(describing: NetworkServiceImpl.self))
     private let endpoints: NetworkServiceEndpoints
     
     init(endpoints: NetworkServiceEndpoints) {

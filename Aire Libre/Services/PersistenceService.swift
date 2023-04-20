@@ -18,7 +18,7 @@ protocol FavoritesPersistenceServices {
 
 final class PersistenceServiceImpl: PersistenceService {
     private let log = Logger(subsystem: "persistence.re.airelib.ios",
-                             category: "PersistenceServiceImpl")
+                             category: String(describing: PersistenceServiceImpl.self))
     
     private var favoritesStoreInstace: FavoriteSensorStore?
 }

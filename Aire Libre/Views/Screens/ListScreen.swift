@@ -35,15 +35,20 @@ struct ListScreen: View {
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
                 if UIDevice.current.userInterfaceIdiom == .phone {
-                    NavigationLink(value: Screens.map(source: nil)) {
-                        Text("Ver mapa")
+                    ToolbarItem {
+                        NavigationLink(value: Screens.map(source: nil)) {
+                            Text(Localizables.viewMap)
+                        }
+                    }
+                }
+                
+                if appViewModel.isLoading {
+                    ToolbarItem(placement: .status) {
+                        Text(Localizables.loading)
                     }
                 }
             }
             #endif
-            .refreshable {
-                appViewModel.loadAQI()
-            }
     }
     
     @ViewBuilder
@@ -58,7 +63,7 @@ struct ListScreen: View {
     @ViewBuilder
     private var emptyFavoritesView: some View {
         VStack(spacing: 8) {
-            Text("No hay favoritos")
+            Text(Localizables.noFavorites)
         }
     }
     
@@ -94,6 +99,9 @@ struct ListScreen: View {
                         .update(newValue: aqi.copy(isFavoriteSensor: false))
                 }
             }
+        }
+        .refreshable {
+            appViewModel.loadAQI()
         }
         #if os(macOS)
         .onDeleteCommand(perform: {

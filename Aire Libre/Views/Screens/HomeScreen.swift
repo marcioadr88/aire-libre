@@ -8,21 +8,22 @@
 import SwiftUI
 import MapKit
 
-enum Screens: Hashable {
+enum Screens: Hashable, Codable {
     case list
     case map(source: String?)
 }
 
 struct HomeScreen: View {
-    @State private var path = NavigationPath()
+    //    @State private var path = NavigationPath()
     @State private var selectedSensor: AQIData?
+    @StateObject private var pathStore = NavigationPathStore()
     
     @EnvironmentObject private var appViewModel: AppViewModel
     
     var body: some View {
         navigationView
             .onAppear {
-                path.append(Screens.map(source: nil))
+                //                path.append(Screens.map(source: nil))
                 
                 appViewModel.loadAQI()
             }
@@ -30,20 +31,20 @@ struct HomeScreen: View {
     
     @ViewBuilder
     private var navigationView: some View {
-        #if os(macOS)
+#if os(macOS)
+        largeScreenNavigation
+#else
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            smallScreenNavigation
+        } else {
             largeScreenNavigation
-        #else
-            if UIDevice.current.userInterfaceIdiom == .phone {
-                smallScreenNavigation
-            } else {
-                largeScreenNavigation
-            }
-        #endif
+        }
+#endif
     }
     
     @ViewBuilder
     private var smallScreenNavigation: some View {
-        NavigationStack(path: $path) {
+        NavigationStack(path: $pathStore.path) {
             ListScreen()
         }
     }

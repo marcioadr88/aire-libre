@@ -15,7 +15,7 @@ protocol ConnectionChecker {
 
 final class NWPathMonitorConnectionChecker: ConnectionChecker {
     private let log = Logger(subsystem: "connection_checker.re.airelib.ios",
-                             category: "NWPathMonitorConnectionChecker")
+                             category: String(describing: NWPathMonitorConnectionChecker.self))
     private let queue = DispatchQueue(label: "NWPathMonitorConnectionChecker.re.airelib.ios")
     private let monitor: NWPathMonitor
     

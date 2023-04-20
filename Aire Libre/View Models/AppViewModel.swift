@@ -12,7 +12,7 @@ import CoreLocation
 
 final class AppViewModel: NSObject, ObservableObject {
     private let log = Logger(subsystem: "appvm.re.airelib.ios",
-                             category: "AppViewModel")
+                             category: String(describing: AppViewModel.self))
     
     @Published var aqiData: [AQIData]
     @Published var error: AppError?
