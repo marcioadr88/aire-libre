@@ -16,6 +16,7 @@ struct AQIData: Codable, Sendable, Identifiable, Equatable, Hashable {
     let longitude, latitude: Double
     let quality: Quality
     var isFavoriteSensor: Bool = false
+    var isNearestToUser: Bool = false
     
     enum CodingKeys: String, CodingKey {
         case sensor
@@ -34,13 +35,15 @@ extension AQIData {
               longitude: Double? = nil,
               latitude: Double? = nil,
               quality: Quality? = nil,
-              isFavoriteSensor: Bool? = nil) -> AQIData {
+              isFavoriteSensor: Bool? = nil,
+              isNearestToUser: Bool? = nil) -> AQIData {
         return AQIData(sensor: sensor ?? self.sensor,
                        source: source ?? self.source,
                        description: description ?? self.description,
                        longitude: longitude ?? self.longitude,
                        latitude: latitude ?? self.latitude,
                        quality: quality ?? self.quality.copy(),
-                       isFavoriteSensor: isFavoriteSensor ?? self.isFavoriteSensor)
+                       isFavoriteSensor: isFavoriteSensor ?? self.isFavoriteSensor,
+                       isNearestToUser: isNearestToUser ?? self.isNearestToUser)
     }
 }

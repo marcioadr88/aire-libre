@@ -28,7 +28,13 @@ class MapScreenViewModel: NSObject, ObservableObject {
     }
     
     @Published var selectedData: AQIData?
-
+    
+    @Published var location: CLLocation? {
+        didSet {
+            log.debug("User location updated to \(self.location)")
+        }
+    }
+    
     override init() {
         self.locationManager = CLLocationManager()
         
@@ -36,7 +42,7 @@ class MapScreenViewModel: NSObject, ObservableObject {
         
         self.locationManager.delegate = self
         
-        loadRegion()
+        loadSavedRegion()
     }
     
     func centerToUserLocation() {
@@ -82,6 +88,8 @@ extension MapScreenViewModel: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        location = locations.last
+        
         if updateRegionWithUserLocationOnNextUpdate {
             updateRegionWithUserLocationOnNextUpdate.toggle()
             
@@ -106,7 +114,7 @@ extension MapScreenViewModel: CLLocationManagerDelegate {
 extension MapScreenViewModel {
     private static let regionStoreKey = "MapScreenRegion"
     
-    func loadRegion() {
+    func loadSavedRegion() {
         if let data = try? Data(contentsOf: savePath) {
             if let decoded = try? JSONDecoder()
                 .decode(MKCoordinateRegion.self, from: data) {

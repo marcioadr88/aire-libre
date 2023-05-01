@@ -14,12 +14,31 @@ final class AppViewModel: NSObject, ObservableObject {
     private let log = Logger(subsystem: "appvm.re.airelib.ios",
                              category: String(describing: AppViewModel.self))
     
-    @Published var aqiData: [AQIData]
+    @Published var aqiData: [AQIData] {
+        didSet {
+            updateNearestSensorToUser()
+        }
+    }
+    
     @Published var error: AppError?
     @Published var isLoading: Bool
     
+    @Published var userLocation: CLLocation? {
+        didSet {
+            updateNearestSensorToUser()
+        }
+    }
+    
+    @Published var nearestSensorToUser: AQIData?
+    
     var favorites: [AQIData] {
-        aqiData.filter { $0.isFavoriteSensor }
+        let favorites = aqiData.filter { $0.isFavoriteSensor }
+        
+        if let nearestSensorToUser {
+            return [nearestSensorToUser.copy(isNearestToUser: true)] + favorites
+        } else {
+            return favorites
+        }
     }
     
     private let minutesAgo: Int = 60
@@ -86,6 +105,19 @@ final class AppViewModel: NSObject, ObservableObject {
                 }
             }
         }
+    }
+    
+    private func updateNearestSensorToUser() {
+        if let userLocation {
+            nearestSensorToUser = nearestSensorToUser(userLocation, data: aqiData)
+        } else {
+            nearestSensorToUser = nil
+        }
+    }
+    
+    private func nearestSensorToUser(_ location: CLLocation,
+                                     data: [AQIData]) -> AQIData? {
+        return data.first
     }
     
     private func dateMinutesAgoFromNow(minutesAgo value: Int) -> Date? {

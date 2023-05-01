@@ -71,26 +71,8 @@ struct ListScreen: View {
     private var populatedFavoritesView: some View {
         List(selection: $selectedSensor) {
             ForEach(appViewModel.favorites, id: \.self) { data in
-                #if os(macOS)
-                    SensorInfo(sensorName: data.description,
-                               aqiIndex: data.quality.index,
-                               favorited: .constant(data.isFavoriteSensor),
-                               showFavoriteIcon: false)
-                #else
-                    if UIDevice.current.userInterfaceIdiom == .phone {
-                        NavigationLink(value: Screens.map(source: data.source)) {
-                            SensorInfo(sensorName: data.description,
-                                       aqiIndex: data.quality.index,
-                                       favorited: .constant(data.isFavoriteSensor),
-                                       showFavoriteIcon: false)
-                        }
-                    } else {
-                        SensorInfo(sensorName: data.description,
-                                   aqiIndex: data.quality.index,
-                                   favorited: .constant(data.isFavoriteSensor),
-                                   showFavoriteIcon: false)
-                    }
-                #endif
+                sensorInfo(for: data)
+                    .deleteDisabled(data.isNearestToUser)
             }
             .onDelete { offsets in
                 offsets.forEach { index in
@@ -105,10 +87,34 @@ struct ListScreen: View {
         }
         #if os(macOS)
         .onDeleteCommand(perform: {
-            if let selectedSensor {
+            if let selectedSensor, !selectedSensor.isNearestToUser {
                 appViewModel.update(newValue: selectedSensor.copy(isFavoriteSensor: false))
             }
         })
+        #endif
+    }
+    
+    @ViewBuilder
+    private func sensorInfo(for data: AQIData) -> some View {
+        #if os(macOS)
+        SensorInfo(sensorName: data.description,
+                   aqiIndex: data.quality.index,
+                   favorited: .constant(data.isFavoriteSensor),
+                   showFavoriteIcon: false)
+        #else
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            NavigationLink(value: Screens.map(source: data.source)) {
+                SensorInfo(sensorName: data.description,
+                           aqiIndex: data.quality.index,
+                           favorited: .constant(data.isFavoriteSensor),
+                           showFavoriteIcon: false)
+            }
+        } else {
+            SensorInfo(sensorName: data.description,
+                       aqiIndex: data.quality.index,
+                       favorited: .constant(data.isFavoriteSensor),
+                       showFavoriteIcon: false)
+        }
         #endif
     }
 }

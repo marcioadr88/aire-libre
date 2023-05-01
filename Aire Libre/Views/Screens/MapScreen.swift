@@ -85,6 +85,9 @@ struct MapScreen: View {
                 showSelectedSource(selectedSourceId)
             }
         }
+        .onChange(of: mapViewModel.location, perform: { newValue in
+            appViewModel.userLocation = newValue
+        })
         .onAppear {
             if let selectedSourceId {
                 showSelectedSource(selectedSourceId)
