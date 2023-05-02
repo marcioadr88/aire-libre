@@ -15,8 +15,6 @@ class MapScreenViewModel: NSObject, ObservableObject {
     private let log = Logger(subsystem: "mapvm.re.airelib.ios",
                              category: String(describing: MapScreenViewModel.self))
     
-    private let locationManager: CLLocationManager
-    private var updateRegionWithUserLocationOnNextUpdate = false
     private let zoomFactor: CGFloat = 1.5
     private let savePath = URL.documentsDirectory.appending(path: MapScreenViewModel.regionStoreKey)
     
@@ -36,20 +34,17 @@ class MapScreenViewModel: NSObject, ObservableObject {
     }
     
     override init() {
-        self.locationManager = CLLocationManager()
-        
         super.init()
-        
-        self.locationManager.delegate = self
         
         loadSavedRegion()
     }
     
     func centerToUserLocation() {
-        guard !updateRegionWithUserLocationOnNextUpdate else { return }
-        
-        updateRegionWithUserLocationOnNextUpdate = true
-        determineUserAuthorizationStatus()
+        if let location {
+            withAnimation {
+                region.center = location.coordinate
+            }
+        }
     }
     
     func zoomIn() {
@@ -60,53 +55,6 @@ class MapScreenViewModel: NSObject, ObservableObject {
     func zoomOut() {
         region.span.latitudeDelta *= zoomFactor
         region.span.longitudeDelta *= zoomFactor
-    }
-}
-
-// MARK: User location permissions
-extension MapScreenViewModel: CLLocationManagerDelegate {
-    func determineUserAuthorizationStatus() {
-        switch locationManager.authorizationStatus {
-        case .notDetermined:
-            locationManager.requestWhenInUseAuthorization()
-        case .authorizedAlways, .authorizedWhenInUse:
-            updateLocations()
-        case .restricted, .denied:
-            break
-        @unknown default:
-            break
-        }
-    }
-    
-    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
-        switch manager.authorizationStatus {
-        case .authorizedAlways, .authorizedWhenInUse:
-            updateLocations()
-        default:
-            break
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        location = locations.last
-        
-        if updateRegionWithUserLocationOnNextUpdate {
-            updateRegionWithUserLocationOnNextUpdate.toggle()
-            
-            if let currentLocation = locations.last {
-//                withAnimation {
-                    region.center = currentLocation.coordinate
-//                }
-            }
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        log.error("Could not get location: \(error.localizedDescription)")
-    }
-    
-    func updateLocations() {
-        locationManager.requestLocation()
     }
 }
 

@@ -11,6 +11,10 @@ import SwiftUI
 struct AireLibreApp: App {
     private let repository: AireLibreRepository
     
+    private let appViewModel: AppViewModel
+    private let mapScreenViewModel: MapScreenViewModel
+    private let locationViewModel: LocationViewModel
+    
     init() {
         let connectionChecker = NWPathMonitorConnectionChecker()
         let endpoints = ProductionEndpoints()
@@ -19,12 +23,18 @@ struct AireLibreApp: App {
         self.repository = AireLibreRepositoryImpl(networkService: networkService,
                                                   persistenceService: persistenceService,
                                                   connectionChecker: connectionChecker)
+        
+        self.appViewModel = AppViewModel(repository: repository)
+        self.mapScreenViewModel = MapScreenViewModel()
+        self.locationViewModel = LocationViewModel()
     }
     
     var body: some Scene {
         WindowGroup {
-            HomeScreen()
-                .environmentObject(AppViewModel(repository: repository))
+            RootScreen()
+                .environmentObject(appViewModel)
+                .environmentObject(mapScreenViewModel)
+                .environmentObject(locationViewModel)
         }
     }
 }

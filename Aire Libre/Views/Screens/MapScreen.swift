@@ -10,8 +10,11 @@ import MapKit
 
 struct MapScreen: View {
     @EnvironmentObject private var appViewModel: AppViewModel
-    @StateObject private var mapViewModel = MapScreenViewModel()
+    @EnvironmentObject private var locationViewModel: LocationViewModel
+    @EnvironmentObject private var mapViewModel: MapScreenViewModel
     
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+
     private var selectedSourceId: String?
     
     init(selectedSourceId: String? = nil) {
@@ -85,9 +88,6 @@ struct MapScreen: View {
                 showSelectedSource(selectedSourceId)
             }
         }
-        .onChange(of: mapViewModel.location, perform: { newValue in
-            appViewModel.userLocation = newValue
-        })
         .onAppear {
             if let selectedSourceId {
                 showSelectedSource(selectedSourceId)
@@ -122,6 +122,14 @@ struct MapScreen: View {
         #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
         #endif
+    }
+    
+    var backButton: some View {
+        Button(action: {
+            self.presentationMode.wrappedValue.dismiss()
+        }) {
+            Image(systemName: "list.bullet")
+                .aspectRatio(contentMode: .fit)        }
     }
     
     private func showSelectedSource(_ source: String) {

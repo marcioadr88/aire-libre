@@ -22,7 +22,7 @@ struct ListScreen: View {
     
     var body: some View {
         favoritesView
-            .navigationTitle(Localizables.favorites)
+            .navigationTitle("Aire Libre")
             .navigationDestination(for: Screens.self) { screen in
                 switch screen {
                 case .map(let source):

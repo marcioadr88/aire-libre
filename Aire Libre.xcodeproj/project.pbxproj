@@ -10,7 +10,7 @@
 		0A127CBE2940332B00D74240 /* AQIData+Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A127CBD2940332B00D74240 /* AQIData+Coordinates.swift */; };
 		0A27E4D629C3FCD000576F7F /* MapScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A27E4D529C3FCD000576F7F /* MapScreenViewModel.swift */; };
 		0A3B048A291733A90026D3DF /* AireLibreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B0489291733A90026D3DF /* AireLibreApp.swift */; };
-		0A3B048C291733A90026D3DF /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B048B291733A90026D3DF /* HomeScreen.swift */; };
+		0A3B048C291733A90026D3DF /* RootScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B048B291733A90026D3DF /* RootScreen.swift */; };
 		0A3B048E291733AA0026D3DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A3B048D291733AA0026D3DF /* Assets.xcassets */; };
 		0A3B0492291733AA0026D3DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A3B0491291733AA0026D3DF /* Preview Assets.xcassets */; };
 		0A3B049C291733AA0026D3DF /* AireLibreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B049B291733AA0026D3DF /* AireLibreTests.swift */; };
@@ -20,6 +20,7 @@
 		0A6CCBAB2977835500751E5C /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6CCBAA2977835500751E5C /* AppViewModel.swift */; };
 		0A8FCDAA293EB3AF006022B9 /* AQILevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8FCDA9293EB3AF006022B9 /* AQILevel.swift */; };
 		0A8FCDAC293EB4A5006022B9 /* AQIAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8FCDAB293EB4A5006022B9 /* AQIAnnotationView.swift */; };
+		0AA203F02A004F2200E68C0D /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA203EF2A004F2200E68C0D /* LocationViewModel.swift */; };
 		0AAFF68D29C9480A008694A9 /* ZoomControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAFF68C29C9480A008694A9 /* ZoomControls.swift */; };
 		0AB43DD629EB294800AB45CE /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB43DD529EB294800AB45CE /* PersistenceService.swift */; };
 		0AB43F9D2936DD38005299AC /* Task+AutoRetry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB43F9C2936DD38005299AC /* Task+AutoRetry.swift */; };
@@ -71,7 +72,7 @@
 		0A27E4D529C3FCD000576F7F /* MapScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenViewModel.swift; sourceTree = "<group>"; };
 		0A3B0486291733A90026D3DF /* Aire Libre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aire Libre.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A3B0489291733A90026D3DF /* AireLibreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AireLibreApp.swift; sourceTree = "<group>"; };
-		0A3B048B291733A90026D3DF /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		0A3B048B291733A90026D3DF /* RootScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreen.swift; sourceTree = "<group>"; };
 		0A3B048D291733AA0026D3DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A3B048F291733AA0026D3DF /* AireLibre.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AireLibre.entitlements; sourceTree = "<group>"; };
 		0A3B0491291733AA0026D3DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -85,6 +86,7 @@
 		0A7816DB29BE480F00C1CFB0 /* Aire-Libre-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Aire-Libre-Info.plist"; sourceTree = SOURCE_ROOT; };
 		0A8FCDA9293EB3AF006022B9 /* AQILevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQILevel.swift; sourceTree = "<group>"; };
 		0A8FCDAB293EB4A5006022B9 /* AQIAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIAnnotationView.swift; sourceTree = "<group>"; };
+		0AA203EF2A004F2200E68C0D /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		0AAFF68C29C9480A008694A9 /* ZoomControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomControls.swift; sourceTree = "<group>"; };
 		0AB43DD529EB294800AB45CE /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		0AB43F9C2936DD38005299AC /* Task+AutoRetry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+AutoRetry.swift"; sourceTree = "<group>"; };
@@ -143,7 +145,7 @@
 		0A1C3F4829A81946003B3ED8 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				0A3B048B291733A90026D3DF /* HomeScreen.swift */,
+				0A3B048B291733A90026D3DF /* RootScreen.swift */,
 				0AC9FDAB297ACA8200DBA5E1 /* MapScreen.swift */,
 				0AC9FDAD297ACB7600DBA5E1 /* ListScreen.swift */,
 			);
@@ -155,6 +157,7 @@
 			children = (
 				0A6CCBAA2977835500751E5C /* AppViewModel.swift */,
 				0A27E4D529C3FCD000576F7F /* MapScreenViewModel.swift */,
+				0AA203EF2A004F2200E68C0D /* LocationViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -453,7 +456,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A127CBE2940332B00D74240 /* AQIData+Coordinates.swift in Sources */,
-				0A3B048C291733A90026D3DF /* HomeScreen.swift in Sources */,
+				0A3B048C291733A90026D3DF /* RootScreen.swift in Sources */,
 				0A6CCBAB2977835500751E5C /* AppViewModel.swift in Sources */,
 				0AB43FA02936EA66005299AC /* Samples.swift in Sources */,
 				0A27E4D629C3FCD000576F7F /* MapScreenViewModel.swift in Sources */,
@@ -477,6 +480,7 @@
 				0AEF37C8292EEE4E0086514C /* AppConstants.swift in Sources */,
 				0ABB8754292D969600F7644E /* AireLibreRepository.swift in Sources */,
 				0AE5C1E9293D3F390084E68C /* Decodable+JSONFile.swift in Sources */,
+				0AA203F02A004F2200E68C0D /* LocationViewModel.swift in Sources */,
 				0A3B048A291733A90026D3DF /* AireLibreApp.swift in Sources */,
 				0A8FCDAA293EB3AF006022B9 /* AQILevel.swift in Sources */,
 				0AFA4EA929E3760000C6CEE9 /* FavoriteSensorStore.swift in Sources */,
@@ -655,6 +659,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Aire Libre/AireLibre.entitlements";
 				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
@@ -698,6 +703,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Aire Libre/AireLibre.entitlements";
 				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;

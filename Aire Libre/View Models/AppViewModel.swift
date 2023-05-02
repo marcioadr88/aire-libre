@@ -117,7 +117,20 @@ final class AppViewModel: NSObject, ObservableObject {
     
     private func nearestSensorToUser(_ location: CLLocation,
                                      data: [AQIData]) -> AQIData? {
-        return data.first
+        var nearestSensor: AQIData?
+        var smallestDistance = CLLocationDistanceMax
+        
+        for sensor in data {
+            let sensorLocation = CLLocation(latitude: sensor.latitude,
+                                            longitude: sensor.longitude)
+            let distance = location.distance(from: sensorLocation)
+            if distance < smallestDistance {
+                smallestDistance = distance
+                nearestSensor = sensor
+            }
+        }
+        
+        return nearestSensor
     }
     
     private func dateMinutesAgoFromNow(minutesAgo value: Int) -> Date? {
