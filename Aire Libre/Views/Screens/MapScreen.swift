@@ -30,7 +30,8 @@ struct MapScreen: View {
                 annotationItems: appViewModel.aqiData
             ) { item in
                 MapAnnotation(coordinate: item.coordinates) {
-                    AQIAnnotationView(aqiData: item)
+                    AQIAnnotationView(aqiData: item,
+                                      isSelected: .constant(item.source == mapViewModel.selectedData?.source))
                         .onTapGesture {
                             withAnimation {
                                 mapViewModel.selectedData = item
@@ -60,7 +61,8 @@ struct MapScreen: View {
                 Spacer()
                 if let selectedData = mapViewModel.selectedData,
                     let selectedDataBinding = Binding<AQIData>($mapViewModel.selectedData) {
-                    SensorInfo(sensorName: selectedData.description,
+                    SensorInfo(title: selectedData.description,
+                               subtitle: nil,
                                aqiIndex: selectedData.quality.index,
                                favorited: selectedDataBinding.isFavoriteSensor)
                     .frame(maxWidth: 500)

@@ -29,6 +29,7 @@
 
 /* Misc */
 "favorites" = "Favorites";
-"viewMap" = "Ver mapa";
-"loading" = "Cargando";
-"noFavorites" = "No hay favoritos";
+"viewMap" = "View map";
+"loading" = "Loading";
+"noFavorites" = "No favorites";
+"myLocation" = "My location";

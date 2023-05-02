@@ -96,21 +96,27 @@ struct ListScreen: View {
     
     @ViewBuilder
     private func sensorInfo(for data: AQIData) -> some View {
+        let title = data.isNearestToUser ? Localizables.myLocation : data.description
+        let subtitle = data.isNearestToUser ? data.description : nil
+        
         #if os(macOS)
-        SensorInfo(sensorName: data.description,
+        SensorInfo(title: title,
+                   subtitle: subtitle,
                    aqiIndex: data.quality.index,
                    favorited: .constant(data.isFavoriteSensor),
                    showFavoriteIcon: false)
         #else
         if UIDevice.current.userInterfaceIdiom == .phone {
             NavigationLink(value: Screens.map(source: data.source)) {
-                SensorInfo(sensorName: data.description,
+                SensorInfo(title: title,
+                           subtitle: subtitle,
                            aqiIndex: data.quality.index,
                            favorited: .constant(data.isFavoriteSensor),
                            showFavoriteIcon: false)
             }
         } else {
-            SensorInfo(sensorName: data.description,
+            SensorInfo(title: title,
+                       subtitle: subtitle,
                        aqiIndex: data.quality.index,
                        favorited: .constant(data.isFavoriteSensor),
                        showFavoriteIcon: false)

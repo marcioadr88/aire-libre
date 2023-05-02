@@ -30,6 +30,7 @@
 
 /* Misc */
 "favorites" = "Favoritos";
-"viewMap" = "View map";
-"loading" = "Loading";
-"noFavorites" = "No favorites";
+"viewMap" = "Ver mapa";
+"loading" = "Cargando";
+"noFavorites" = "No hay favoritos";
+"myLocation" = "Mi localización";

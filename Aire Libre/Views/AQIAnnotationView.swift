@@ -15,30 +15,33 @@ struct AQIAnnotationView: View {
     private let aqiIndex: Int
     private let color: Color
     
-    init(aqiIndex: Int, color: Color) {
+    @Binding private var isSelected: Bool
+    
+    init(aqiIndex: Int, color: Color, isSelected: Binding<Bool> = .constant(false)) {
         self.aqiIndex = aqiIndex
         self.color = color
+        self._isSelected = isSelected
     }
     
-    init?(aqiData: AQIData) {
+    init?(aqiData: AQIData, isSelected: Binding<Bool> = .constant(false)) {
         let aqiIndex = aqiData.quality.index
         
         guard let aqiCategory = AQILevel.fromIndex(aqiIndex) else {
             return nil
         }
         
-        self.init(aqiIndex: aqiIndex, color: aqiCategory.color)
+        self.init(aqiIndex: aqiIndex,
+                  color: aqiCategory.color,
+                  isSelected: isSelected)
     }
     
     var body: some View {
         ZStack {
-            Circle()
+            Color.clear
                 .frame(width: size, height: size)
-                .foregroundStyle(
-                    color
-                        .gradient
-                        .shadow(.drop(radius: 1))
-                )
+                .background(color.gradient, in: Circle())
+                .shadow(radius: 1)
+                .brightness(isSelected ? -0.2 : 0)
             
             Text("\(aqiIndex)")
                 .font(.caption)
