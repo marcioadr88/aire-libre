@@ -32,9 +32,23 @@
 		0AC259CD29175D6E0047397E /* AQIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC259CC29175D6E0047397E /* AQIData.swift */; };
 		0AC259CF29175D760047397E /* Quality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC259CE29175D760047397E /* Quality.swift */; };
 		0AC259D12917615B0047397E /* MeasurementData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC259D02917615B0047397E /* MeasurementData.swift */; };
+		0AC2E45B2A033FEC002D2446 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AC2E45A2A033FEC002D2446 /* WidgetKit.framework */; };
+		0AC2E45D2A033FEC002D2446 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AC2E45C2A033FEC002D2446 /* SwiftUI.framework */; };
+		0AC2E4602A033FEC002D2446 /* AQIWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2E45F2A033FEC002D2446 /* AQIWidgetBundle.swift */; };
+		0AC2E4622A033FEC002D2446 /* AQIWidgetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2E4612A033FEC002D2446 /* AQIWidgetProvider.swift */; };
+		0AC2E4642A033FED002D2446 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AC2E4632A033FED002D2446 /* Assets.xcassets */; };
+		0AC2E4682A033FED002D2446 /* Aire Libre WidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0AC2E4582A033FEC002D2446 /* Aire Libre WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0AC9FDAC297ACA8200DBA5E1 /* MapScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9FDAB297ACA8200DBA5E1 /* MapScreen.swift */; };
 		0AC9FDAE297ACB7600DBA5E1 /* ListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9FDAD297ACB7600DBA5E1 /* ListScreen.swift */; };
+		0ACA1CBA2A034CB400C0E8C3 /* WidgetConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA1CB92A034CB400C0E8C3 /* WidgetConfiguration.swift */; };
+		0ACA1CBC2A034CC300C0E8C3 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA1CBB2A034CC300C0E8C3 /* WidgetView.swift */; };
+		0AD65DC72A045B210045880F /* AQIGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE45B3229465B7B00A82228 /* AQIGauge.swift */; };
+		0AD65DC82A045B2B0045880F /* AQILevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8FCDA9293EB3AF006022B9 /* AQILevel.swift */; };
+		0AD65DC92A045B5E0045880F /* Strings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF37C2292EE6100086514C /* Strings.strings */; };
+		0AD65DCA2A045B620045880F /* Localizables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF37B9292EE4B90086514C /* Localizables.swift */; };
+		0AD65DCB2A045B950045880F /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5C1EE293D59700084E68C /* Color+Hex.swift */; };
 		0AE45B3329465B7B00A82228 /* AQIGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE45B3229465B7B00A82228 /* AQIGauge.swift */; };
+		0AE5A2742A0498F600C968A5 /* AQIEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5A2722A04977600C968A5 /* AQIEntry.swift */; };
 		0AE5C1E9293D3F390084E68C /* Decodable+JSONFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5C1E8293D3F390084E68C /* Decodable+JSONFile.swift */; };
 		0AE5C1EB293D3FD40084E68C /* JSONFileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5C1EA293D3FD40084E68C /* JSONFileLoader.swift */; };
 		0AE5C1ED293D408A0084E68C /* sample1.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AE5C1EC293D408A0084E68C /* sample1.json */; };
@@ -65,7 +79,28 @@
 			remoteGlobalIDString = 0A3B0485291733A90026D3DF;
 			remoteInfo = "Aire Libre";
 		};
+		0AC2E4662A033FED002D2446 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A3B047E291733A90026D3DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AC2E4572A033FEC002D2446;
+			remoteInfo = "Aire Libre WidgetExtension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0AC2E46C2A033FED002D2446 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0AC2E4682A033FED002D2446 /* Aire Libre WidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0A127CBD2940332B00D74240 /* AQIData+Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AQIData+Coordinates.swift"; sourceTree = "<group>"; };
@@ -98,9 +133,19 @@
 		0AC259CC29175D6E0047397E /* AQIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIData.swift; sourceTree = "<group>"; };
 		0AC259CE29175D760047397E /* Quality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quality.swift; sourceTree = "<group>"; };
 		0AC259D02917615B0047397E /* MeasurementData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementData.swift; sourceTree = "<group>"; };
+		0AC2E4582A033FEC002D2446 /* Aire Libre WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Aire Libre WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AC2E45A2A033FEC002D2446 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		0AC2E45C2A033FEC002D2446 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		0AC2E45F2A033FEC002D2446 /* AQIWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIWidgetBundle.swift; sourceTree = "<group>"; };
+		0AC2E4612A033FEC002D2446 /* AQIWidgetProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIWidgetProvider.swift; sourceTree = "<group>"; };
+		0AC2E4632A033FED002D2446 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0AC2E4652A033FED002D2446 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AC9FDAB297ACA8200DBA5E1 /* MapScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreen.swift; sourceTree = "<group>"; };
 		0AC9FDAD297ACB7600DBA5E1 /* ListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListScreen.swift; sourceTree = "<group>"; };
+		0ACA1CB92A034CB400C0E8C3 /* WidgetConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetConfiguration.swift; sourceTree = "<group>"; };
+		0ACA1CBB2A034CC300C0E8C3 /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
 		0AE45B3229465B7B00A82228 /* AQIGauge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIGauge.swift; sourceTree = "<group>"; };
+		0AE5A2722A04977600C968A5 /* AQIEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIEntry.swift; sourceTree = "<group>"; };
 		0AE5C1E8293D3F390084E68C /* Decodable+JSONFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decodable+JSONFile.swift"; sourceTree = "<group>"; };
 		0AE5C1EA293D3FD40084E68C /* JSONFileLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFileLoader.swift; sourceTree = "<group>"; };
 		0AE5C1EC293D408A0084E68C /* sample1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample1.json; sourceTree = "<group>"; };
@@ -139,6 +184,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0AC2E4552A033FEC002D2446 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AC2E45D2A033FEC002D2446 /* SwiftUI.framework in Frameworks */,
+				0AC2E45B2A033FEC002D2446 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -169,6 +223,8 @@
 				0A3B0488291733A90026D3DF /* Aire Libre */,
 				0A3B049A291733AA0026D3DF /* Aire LibreTests */,
 				0A3B04A4291733AA0026D3DF /* Aire LibreUITests */,
+				0AC2E45E2A033FEC002D2446 /* Aire Libre Widget */,
+				0AC2E4592A033FEC002D2446 /* Frameworks */,
 				0A3B0487291733A90026D3DF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -179,6 +235,7 @@
 				0A3B0486291733A90026D3DF /* Aire Libre.app */,
 				0A3B0497291733AA0026D3DF /* Aire LibreTests.xctest */,
 				0A3B04A1291733AA0026D3DF /* Aire LibreUITests.xctest */,
+				0AC2E4582A033FEC002D2446 /* Aire Libre WidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -284,6 +341,29 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		0AC2E4592A033FEC002D2446 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0AC2E45A2A033FEC002D2446 /* WidgetKit.framework */,
+				0AC2E45C2A033FEC002D2446 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0AC2E45E2A033FEC002D2446 /* Aire Libre Widget */ = {
+			isa = PBXGroup;
+			children = (
+				0AC2E45F2A033FEC002D2446 /* AQIWidgetBundle.swift */,
+				0AC2E4612A033FEC002D2446 /* AQIWidgetProvider.swift */,
+				0ACA1CB92A034CB400C0E8C3 /* WidgetConfiguration.swift */,
+				0ACA1CBB2A034CC300C0E8C3 /* WidgetView.swift */,
+				0AE5A2722A04977600C968A5 /* AQIEntry.swift */,
+				0AC2E4632A033FED002D2446 /* Assets.xcassets */,
+				0AC2E4652A033FED002D2446 /* Info.plist */,
+			);
+			path = "Aire Libre Widget";
+			sourceTree = "<group>";
+		};
 		0ACA398B291B434D0022DDC9 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
@@ -332,10 +412,12 @@
 				0A3B0482291733A90026D3DF /* Sources */,
 				0A3B0483291733A90026D3DF /* Frameworks */,
 				0A3B0484291733A90026D3DF /* Resources */,
+				0AC2E46C2A033FED002D2446 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0AC2E4672A033FED002D2446 /* PBXTargetDependency */,
 			);
 			name = "Aire Libre";
 			productName = "Aire Libre";
@@ -378,6 +460,23 @@
 			productReference = 0A3B04A1291733AA0026D3DF /* Aire LibreUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		0AC2E4572A033FEC002D2446 /* Aire Libre WidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AC2E4692A033FED002D2446 /* Build configuration list for PBXNativeTarget "Aire Libre WidgetExtension" */;
+			buildPhases = (
+				0AC2E4542A033FEC002D2446 /* Sources */,
+				0AC2E4552A033FEC002D2446 /* Frameworks */,
+				0AC2E4562A033FEC002D2446 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Aire Libre WidgetExtension";
+			productName = "Aire Libre WidgetExtension";
+			productReference = 0AC2E4582A033FEC002D2446 /* Aire Libre WidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -385,7 +484,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1400;
+				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					0A3B0485291733A90026D3DF = {
@@ -398,6 +497,9 @@
 					0A3B04A0291733AA0026D3DF = {
 						CreatedOnToolsVersion = 14.0.1;
 						TestTargetID = 0A3B0485291733A90026D3DF;
+					};
+					0AC2E4572A033FEC002D2446 = {
+						CreatedOnToolsVersion = 14.3;
 					};
 				};
 			};
@@ -418,6 +520,7 @@
 				0A3B0485291733A90026D3DF /* Aire Libre */,
 				0A3B0496291733AA0026D3DF /* Aire LibreTests */,
 				0A3B04A0291733AA0026D3DF /* Aire LibreUITests */,
+				0AC2E4572A033FEC002D2446 /* Aire Libre WidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -445,6 +548,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AC2E4562A033FEC002D2446 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AC2E4642A033FED002D2446 /* Assets.xcassets in Resources */,
+				0AD65DC92A045B5E0045880F /* Strings.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +621,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0AC2E4542A033FEC002D2446 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AC2E4602A033FEC002D2446 /* AQIWidgetBundle.swift in Sources */,
+				0AD65DCB2A045B950045880F /* Color+Hex.swift in Sources */,
+				0AE5A2742A0498F600C968A5 /* AQIEntry.swift in Sources */,
+				0AD65DCA2A045B620045880F /* Localizables.swift in Sources */,
+				0AD65DC72A045B210045880F /* AQIGauge.swift in Sources */,
+				0ACA1CBA2A034CB400C0E8C3 /* WidgetConfiguration.swift in Sources */,
+				0ACA1CBC2A034CC300C0E8C3 /* WidgetView.swift in Sources */,
+				0AD65DC82A045B2B0045880F /* AQILevel.swift in Sources */,
+				0AC2E4622A033FEC002D2446 /* AQIWidgetProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -521,6 +649,11 @@
 			isa = PBXTargetDependency;
 			target = 0A3B0485291733A90026D3DF /* Aire Libre */;
 			targetProxy = 0A3B04A2291733AA0026D3DF /* PBXContainerItemProxy */;
+		};
+		0AC2E4672A033FED002D2446 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0AC2E4572A033FEC002D2446 /* Aire Libre WidgetExtension */;
+			targetProxy = 0AC2E4662A033FED002D2446 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -655,6 +788,7 @@
 		0A3B04AC291733AA0026D3DF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Aire Libre/AireLibre.entitlements";
@@ -699,6 +833,7 @@
 		0A3B04AD291733AA0026D3DF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Aire Libre/AireLibre.entitlements";
@@ -830,6 +965,69 @@
 			};
 			name = Release;
 		};
+		0AC2E46A2A033FED002D2446 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 69SFKN563E;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Aire Libre Widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Aire Libre Widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "re.airelib.ios.Aire-Libre-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0AC2E46B2A033FED002D2446 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 69SFKN563E;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Aire Libre Widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Aire Libre Widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "re.airelib.ios.Aire-Libre-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -865,6 +1063,15 @@
 			buildConfigurations = (
 				0A3B04B2291733AA0026D3DF /* Debug */,
 				0A3B04B3291733AA0026D3DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AC2E4692A033FED002D2446 /* Build configuration list for PBXNativeTarget "Aire Libre WidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AC2E46A2A033FED002D2446 /* Debug */,
+				0AC2E46B2A033FED002D2446 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
