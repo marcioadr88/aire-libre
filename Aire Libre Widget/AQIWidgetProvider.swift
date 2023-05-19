@@ -7,8 +7,23 @@
 
 import WidgetKit
 import SwiftUI
+import CoreLocation
+import Combine
+import OSLog
 
-struct AQIWidgetProvider: TimelineProvider {
+final class AQIWidgetProvider: NSObject, TimelineProvider {
+    private let log = Logger(subsystem: "widgetprovider.re.airelib.ios",
+                             category: String(describing: AQIWidgetProvider.self))
+    
+    private let locationManager = CLLocationManager()
+    private var completionCallback: ((Timeline<AQIEntry>) -> ())?
+    
+    override init() {
+        super.init()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+    }
+    
     func placeholder(in context: Context) -> AQIEntry {
         AQIEntry(date: Date(), location: "Placeholder", aqiIndex: 0)
     }
@@ -19,20 +34,50 @@ struct AQIWidgetProvider: TimelineProvider {
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<AQIEntry>) -> ()) {
+        completionCallback = completion
+        locationManager.startUpdatingLocation()
+    }
+    
+    func getTimeline(location: CLLocation, completion: @escaping (Timeline<AQIEntry>) -> ()) {
+        log.info("getTimeline with location \(location)")
+        
         let entries: [AQIEntry] = [
-            AQIEntry(date: Date(), location: "Entry 1", aqiIndex: 10),
-            AQIEntry(date: Date(), location: "Entry 2", aqiIndex: 20),
+            AQIEntry(date: Date(), location: "Entry 2", aqiIndex: 10),
+            AQIEntry(date: Date(), location: "Entry 3", aqiIndex: 20),
         ]
 
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-//        let currentDate = Date()
-//        for hourOffset in 0 ..< 5 {
-//            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-//            let entry = SimpleEntry(date: entryDate)
-//            entries.append(entry)
-//        }
-
         let timeline = Timeline(entries: entries, policy: .atEnd)
+        
+        locationManager.stopUpdatingLocation()
         completion(timeline)
+    }
+}
+
+extension AQIWidgetProvider: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager,
+                         didUpdateLocations locations: [CLLocation]) {
+        guard let newLocation = locations.last else { return }
+        
+        getTimeline(location: newLocation) { [weak self] entry in
+            self?.completionCallback?(entry)
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        log.error("Could not get location: \(error.localizedDescription)")
+    }
+    
+    func startUpdatingLocation() {
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+    }
+    
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        switch manager.authorizationStatus {
+        case .authorizedAlways, .authorizedWhenInUse:
+            locationManager.startUpdatingLocation()
+        default:
+            break
+        }
     }
 }

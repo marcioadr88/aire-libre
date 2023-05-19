@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A0098712A0B495C00A2352D /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA203EF2A004F2200E68C0D /* LocationViewModel.swift */; };
 		0A127CBE2940332B00D74240 /* AQIData+Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A127CBD2940332B00D74240 /* AQIData+Coordinates.swift */; };
 		0A27E4D629C3FCD000576F7F /* MapScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A27E4D529C3FCD000576F7F /* MapScreenViewModel.swift */; };
 		0A3B048A291733A90026D3DF /* AireLibreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B0489291733A90026D3DF /* AireLibreApp.swift */; };
@@ -628,6 +629,7 @@
 				0AC2E4602A033FEC002D2446 /* AQIWidgetBundle.swift in Sources */,
 				0AD65DCB2A045B950045880F /* Color+Hex.swift in Sources */,
 				0AE5A2742A0498F600C968A5 /* AQIEntry.swift in Sources */,
+				0A0098712A0B495C00A2352D /* LocationViewModel.swift in Sources */,
 				0AD65DCA2A045B620045880F /* Localizables.swift in Sources */,
 				0AD65DC72A045B210045880F /* AQIGauge.swift in Sources */,
 				0ACA1CBA2A034CB400C0E8C3 /* WidgetConfiguration.swift in Sources */,

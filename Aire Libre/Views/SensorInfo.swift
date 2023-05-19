@@ -91,7 +91,7 @@ struct SensorInfo: View {
 struct SensorInfo_Previews: PreviewProvider {
     static var previews: some View {
         SensorInfo(title: "Surubi'i",
-                   subtitle: nil,
+                   subtitle: "Subtitulo",
                    aqiIndex: 50,
                    favorited: .constant(true))
         .padding()

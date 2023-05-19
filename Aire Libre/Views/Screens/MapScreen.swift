@@ -7,6 +7,7 @@
 
 import SwiftUI
 import MapKit
+import WidgetKit
 
 struct MapScreen: View {
     @EnvironmentObject private var appViewModel: AppViewModel
@@ -107,6 +108,7 @@ struct MapScreen: View {
             ToolbarItem {
                 Button {
                     appViewModel.loadAQI()
+                    WidgetCenter.shared.reloadAllTimelines()
                 } label: {
                     if appViewModel.isLoading {
                         ProgressView()
