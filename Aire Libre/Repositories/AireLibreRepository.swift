@@ -29,6 +29,14 @@ protocol AireLibreRepository {
         distance: Double?,
         source: String?) async throws -> [AQIData]
     
+    func getAQI(
+        minutesAgo: Int,
+        end: Date?,
+        latitude: Double?,
+        longitude: Double?,
+        distance: Double?,
+        source: String?) async throws -> [AQIData]
+    
     /// Marks a sensor as favorite
     func saveFavorite(source: String) async throws
     
@@ -101,6 +109,31 @@ final class AireLibreRepositoryImpl: AireLibreRepository {
                                                  longitude: longitude,
                                                  distance: distance,
                                                  source: source)
+    }
+}
+
+extension AireLibreRepositoryImpl {
+    func getAQI(minutesAgo: Int,
+                end: Date?,
+                latitude: Double?,
+                longitude: Double?,
+                distance: Double?,
+                source: String?) async throws -> [AQIData] {
+        guard let startDate = dateMinutesAgoFromNow(minutesAgo: minutesAgo) else {
+            log.error("Cannot calculate \(minutesAgo) minutes ago from now")
+            throw AppError.unexpected(message: Localizables.cantCalculateStart)
+        }
+        
+        return try await self.getAQI(start: startDate,
+                                     end: end,
+                                     latitude: latitude,
+                                     longitude: longitude,
+                                     distance: distance,
+                                     source: source)
+    }
+    
+    private func dateMinutesAgoFromNow(minutesAgo value: Int) -> Date? {
+        Calendar.current.date(byAdding: .minute, value: -value, to: Date.now)
     }
 }
 

@@ -40,8 +40,7 @@ final class AppViewModel: NSObject, ObservableObject {
             return favorites
         }
     }
-    
-    private let minutesAgo: Int = 60
+
     private let repository: AireLibreRepository
     
     private var subscriptions = [AnyCancellable]()
@@ -83,12 +82,7 @@ final class AppViewModel: NSObject, ObservableObject {
         
         Task(priority: .background) {
             do {
-                guard let startDate = dateMinutesAgoFromNow(minutesAgo: minutesAgo) else {
-                    log.error("Cannot calculate \(self.minutesAgo) minutes ago from now")
-                    throw AppError.unexpected(message: Localizables.cantCalculateStart)
-                }
-                
-                let data = try await repository.getAQI(start: startDate,
+                let data = try await repository.getAQI(minutesAgo: AppConstants.defaultMinutesAgo,
                                                        end: nil,
                                                        latitude: nil,
                                                        longitude: nil,
@@ -109,31 +103,9 @@ final class AppViewModel: NSObject, ObservableObject {
     
     private func updateNearestSensorToUser() {
         if let userLocation {
-            nearestSensorToUser = nearestSensorToUser(userLocation, data: aqiData)
+            nearestSensorToUser = AQIUtils.nearestSensorToUser(userLocation, data: aqiData)
         } else {
             nearestSensorToUser = nil
         }
-    }
-    
-    private func nearestSensorToUser(_ location: CLLocation,
-                                     data: [AQIData]) -> AQIData? {
-        var nearestSensor: AQIData?
-        var smallestDistance = CLLocationDistanceMax
-        
-        for sensor in data {
-            let sensorLocation = CLLocation(latitude: sensor.latitude,
-                                            longitude: sensor.longitude)
-            let distance = location.distance(from: sensorLocation)
-            if distance < smallestDistance {
-                smallestDistance = distance
-                nearestSensor = sensor
-            }
-        }
-        
-        return nearestSensor
-    }
-    
-    private func dateMinutesAgoFromNow(minutesAgo value: Int) -> Date? {
-        Calendar.current.date(byAdding: .minute, value: -value, to: Date.now)
     }
 }

@@ -10,6 +10,10 @@
 "noConnection" = "There's no active connection to the network";
 "unexpectedError" = "Unexpected error occurred";
 "cantCalculateStart" = "Can't calculate 'start' parameter to fetch AQI data";
+"failedPersistenceStoreInit" = "Failed to start persistence store";
+"turnOnLocationToGetData" = "Turn on location to get data";
+"errorWhileRetrievingLocation" = "Error while retrieving location";
+"widgetFamilyNotSupported" = "Widget family not supported";
 
 /*AQI Level Titles*/
 "aqiLevelTitleGood" = "Good";

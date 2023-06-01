@@ -13,6 +13,8 @@ final class AppConstants {
     static let asuncionCoordinates = CLLocationCoordinate2D(latitude: -25.287385,
                                                             longitude: -57.601522)
     static let defaultSpan = MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
+    
+    static let defaultMinutesAgo: Int = 30
 }
 
 typealias VoidCallback = () -> Void

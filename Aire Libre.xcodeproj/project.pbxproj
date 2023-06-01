@@ -19,13 +19,31 @@
 		0A3B04A8291733AA0026D3DF /* AireLibreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B04A7291733AA0026D3DF /* AireLibreUITestsLaunchTests.swift */; };
 		0A427F512944CE5100832C3A /* SensorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A427F502944CE5100832C3A /* SensorInfo.swift */; };
 		0A6CCBAB2977835500751E5C /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6CCBAA2977835500751E5C /* AppViewModel.swift */; };
+		0A7B2B782A1C5C3100C4949D /* AireLibreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABB8753292D969600F7644E /* AireLibreRepository.swift */; };
+		0A7B2B792A1C5C3C00C4949D /* AQIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC259CC29175D6E0047397E /* AQIData.swift */; };
+		0A7B2B7A2A1C5C4300C4949D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABB8756292D96B000F7644E /* NetworkService.swift */; };
+		0A7B2B7B2A1C5C4900C4949D /* ConnectionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF37C5292EEA260086514C /* ConnectionChecker.swift */; };
+		0A7B2B7C2A1C5C5000C4949D /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB43DD529EB294800AB45CE /* PersistenceService.swift */; };
+		0A7B2B7D2A1C5C5F00C4949D /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABB875A292D9A1000F7644E /* AppError.swift */; };
+		0A7B2B7E2A1C5C6800C4949D /* Quality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC259CE29175D760047397E /* Quality.swift */; };
+		0A7B2B7F2A1C5C8A00C4949D /* FavoriteSensorStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFA4EA829E3760000C6CEE9 /* FavoriteSensorStore.swift */; };
+		0A7B2B802A1C5CCB00C4949D /* NetworkServiceEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABB8758292D97DA00F7644E /* NetworkServiceEndpoints.swift */; };
+		0A7B2B812A1C5D3700C4949D /* Entities.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0AFA4EAD29E376D400C6CEE9 /* Entities.xcdatamodeld */; };
+		0A7B2B822A1C5D6800C4949D /* Task+AutoRetry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB43F9C2936DD38005299AC /* Task+AutoRetry.swift */; };
 		0A8FCDAA293EB3AF006022B9 /* AQILevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8FCDA9293EB3AF006022B9 /* AQILevel.swift */; };
 		0A8FCDAC293EB4A5006022B9 /* AQIAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8FCDAB293EB4A5006022B9 /* AQIAnnotationView.swift */; };
 		0AA203F02A004F2200E68C0D /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA203EF2A004F2200E68C0D /* LocationViewModel.swift */; };
+		0AACDC632A1EF1F6009F0405 /* AQIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AACDC622A1EF1F6009F0405 /* AQIUtils.swift */; };
+		0AACDC642A1EF3FE009F0405 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF37C7292EEE4E0086514C /* AppConstants.swift */; };
+		0AACDC652A1EF406009F0405 /* AQIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AACDC622A1EF1F6009F0405 /* AQIUtils.swift */; };
 		0AAFF68D29C9480A008694A9 /* ZoomControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAFF68C29C9480A008694A9 /* ZoomControls.swift */; };
 		0AB43DD629EB294800AB45CE /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB43DD529EB294800AB45CE /* PersistenceService.swift */; };
 		0AB43F9D2936DD38005299AC /* Task+AutoRetry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB43F9C2936DD38005299AC /* Task+AutoRetry.swift */; };
 		0AB43FA02936EA66005299AC /* Samples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB43F9F2936EA66005299AC /* Samples.swift */; };
+		0AB635892A281F0500682A47 /* FatalErrorWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB635882A281F0500682A47 /* FatalErrorWidgetView.swift */; };
+		0AB6358B2A282C2600682A47 /* ErrorWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB6358A2A282C2600682A47 /* ErrorWidgetView.swift */; };
+		0AB6358E2A28300D00682A47 /* SystemSmallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB6358D2A28300D00682A47 /* SystemSmallView.swift */; };
+		0AB635902A28302D00682A47 /* SystemMediumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB6358F2A28302D00682A47 /* SystemMediumView.swift */; };
 		0ABB8754292D969600F7644E /* AireLibreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABB8753292D969600F7644E /* AireLibreRepository.swift */; };
 		0ABB8757292D96B000F7644E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABB8756292D96B000F7644E /* NetworkService.swift */; };
 		0ABB8759292D97DA00F7644E /* NetworkServiceEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABB8758292D97DA00F7644E /* NetworkServiceEndpoints.swift */; };
@@ -123,10 +141,15 @@
 		0A8FCDA9293EB3AF006022B9 /* AQILevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQILevel.swift; sourceTree = "<group>"; };
 		0A8FCDAB293EB4A5006022B9 /* AQIAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIAnnotationView.swift; sourceTree = "<group>"; };
 		0AA203EF2A004F2200E68C0D /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
+		0AACDC622A1EF1F6009F0405 /* AQIUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIUtils.swift; sourceTree = "<group>"; };
 		0AAFF68C29C9480A008694A9 /* ZoomControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomControls.swift; sourceTree = "<group>"; };
 		0AB43DD529EB294800AB45CE /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		0AB43F9C2936DD38005299AC /* Task+AutoRetry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+AutoRetry.swift"; sourceTree = "<group>"; };
 		0AB43F9F2936EA66005299AC /* Samples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Samples.swift; sourceTree = "<group>"; };
+		0AB635882A281F0500682A47 /* FatalErrorWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FatalErrorWidgetView.swift; sourceTree = "<group>"; };
+		0AB6358A2A282C2600682A47 /* ErrorWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorWidgetView.swift; sourceTree = "<group>"; };
+		0AB6358D2A28300D00682A47 /* SystemSmallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemSmallView.swift; sourceTree = "<group>"; };
+		0AB6358F2A28302D00682A47 /* SystemMediumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemMediumView.swift; sourceTree = "<group>"; };
 		0ABB8753292D969600F7644E /* AireLibreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AireLibreRepository.swift; sourceTree = "<group>"; };
 		0ABB8756292D96B000F7644E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		0ABB8758292D97DA00F7644E /* NetworkServiceEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceEndpoints.swift; sourceTree = "<group>"; };
@@ -321,6 +344,18 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		0AB6358C2A282C2D00682A47 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0ACA1CBB2A034CC300C0E8C3 /* WidgetView.swift */,
+				0AB635882A281F0500682A47 /* FatalErrorWidgetView.swift */,
+				0AB6358A2A282C2600682A47 /* ErrorWidgetView.swift */,
+				0AB6358D2A28300D00682A47 /* SystemSmallView.swift */,
+				0AB6358F2A28302D00682A47 /* SystemMediumView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		0ABB8755292D969D00F7644E /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,7 +392,7 @@
 				0AC2E45F2A033FEC002D2446 /* AQIWidgetBundle.swift */,
 				0AC2E4612A033FEC002D2446 /* AQIWidgetProvider.swift */,
 				0ACA1CB92A034CB400C0E8C3 /* WidgetConfiguration.swift */,
-				0ACA1CBB2A034CC300C0E8C3 /* WidgetView.swift */,
+				0AB6358C2A282C2D00682A47 /* Views */,
 				0AE5A2722A04977600C968A5 /* AQIEntry.swift */,
 				0AC2E4632A033FED002D2446 /* Assets.xcassets */,
 				0AC2E4652A033FED002D2446 /* Info.plist */,
@@ -389,6 +424,7 @@
 				0AEF37C7292EEE4E0086514C /* AppConstants.swift */,
 				0AE5C1EA293D3FD40084E68C /* JSONFileLoader.swift */,
 				0AFC850A29CBD22B00D201E7 /* CustomColors.swift */,
+				0AACDC622A1EF1F6009F0405 /* AQIUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -598,6 +634,7 @@
 				0A8FCDAA293EB3AF006022B9 /* AQILevel.swift in Sources */,
 				0AFA4EA929E3760000C6CEE9 /* FavoriteSensorStore.swift in Sources */,
 				0AB43DD629EB294800AB45CE /* PersistenceService.swift in Sources */,
+				0AACDC632A1EF1F6009F0405 /* AQIUtils.swift in Sources */,
 				0AC259CD29175D6E0047397E /* AQIData.swift in Sources */,
 				0ABB8757292D96B000F7644E /* NetworkService.swift in Sources */,
 				0AF6CF2B29F0ADAF00C725B7 /* NavigationPathStore.swift in Sources */,
@@ -629,10 +666,27 @@
 				0AC2E4602A033FEC002D2446 /* AQIWidgetBundle.swift in Sources */,
 				0AD65DCB2A045B950045880F /* Color+Hex.swift in Sources */,
 				0AE5A2742A0498F600C968A5 /* AQIEntry.swift in Sources */,
+				0A7B2B7B2A1C5C4900C4949D /* ConnectionChecker.swift in Sources */,
+				0AACDC642A1EF3FE009F0405 /* AppConstants.swift in Sources */,
+				0A7B2B822A1C5D6800C4949D /* Task+AutoRetry.swift in Sources */,
+				0A7B2B7D2A1C5C5F00C4949D /* AppError.swift in Sources */,
+				0A7B2B812A1C5D3700C4949D /* Entities.xcdatamodeld in Sources */,
+				0A7B2B782A1C5C3100C4949D /* AireLibreRepository.swift in Sources */,
+				0A7B2B792A1C5C3C00C4949D /* AQIData.swift in Sources */,
+				0A7B2B802A1C5CCB00C4949D /* NetworkServiceEndpoints.swift in Sources */,
+				0AB6358E2A28300D00682A47 /* SystemSmallView.swift in Sources */,
 				0A0098712A0B495C00A2352D /* LocationViewModel.swift in Sources */,
+				0A7B2B7F2A1C5C8A00C4949D /* FavoriteSensorStore.swift in Sources */,
+				0AB6358B2A282C2600682A47 /* ErrorWidgetView.swift in Sources */,
+				0AACDC652A1EF406009F0405 /* AQIUtils.swift in Sources */,
+				0AB635892A281F0500682A47 /* FatalErrorWidgetView.swift in Sources */,
+				0A7B2B7A2A1C5C4300C4949D /* NetworkService.swift in Sources */,
 				0AD65DCA2A045B620045880F /* Localizables.swift in Sources */,
+				0AB635902A28302D00682A47 /* SystemMediumView.swift in Sources */,
+				0A7B2B7C2A1C5C5000C4949D /* PersistenceService.swift in Sources */,
 				0AD65DC72A045B210045880F /* AQIGauge.swift in Sources */,
 				0ACA1CBA2A034CB400C0E8C3 /* WidgetConfiguration.swift in Sources */,
+				0A7B2B7E2A1C5C6800C4949D /* Quality.swift in Sources */,
 				0ACA1CBC2A034CC300C0E8C3 /* WidgetView.swift in Sources */,
 				0AD65DC82A045B2B0045880F /* AQILevel.swift in Sources */,
 				0AC2E4622A033FEC002D2446 /* AQIWidgetProvider.swift in Sources */,

@@ -11,6 +11,9 @@
 "unexpectedError" = "Ocurrió un error inesperado";
 "cantCalculateStart" = "No se pudo calcular el parámetro 'start' para la consulta de datos AQI";
 "failedPersistenceStoreInit" = "No se ha podido iniciar el persistence store";
+"turnOnLocationToGetData" = "Activa la localización para obtener datos";
+"errorWhileRetrievingLocation" = "Error al obtener la localización";
+"widgetFamilyNotSupported" = "No se soporta el tamaño del widget";
 
 /*AQI Level Titles*/
 "aqiLevelTitleGood" = "Bueno";

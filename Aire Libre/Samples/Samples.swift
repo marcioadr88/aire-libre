@@ -36,6 +36,10 @@ final class SuccessfulAireLibreRepository: AireLibreRepository {
                 source: String?) async throws -> [AQIData] {
         return aqiData
     }
+    
+    func getAQI(minutesAgo: Int, end: Date?, latitude: Double?, longitude: Double?, distance: Double?, source: String?) async throws -> [AQIData] {
+        return aqiData
+    }
 }
 
 final class FailureAireLibreRepository: AireLibreRepository {
@@ -49,6 +53,10 @@ final class FailureAireLibreRepository: AireLibreRepository {
                 longitude: Double?,
                 distance: Double?,
                 source: String?) async throws -> [AQIData] {
+        throw AppError.noConnection
+    }
+    
+    func getAQI(minutesAgo: Int, end: Date?, latitude: Double?, longitude: Double?, distance: Double?, source: String?) async throws -> [AQIData] {
         throw AppError.noConnection
     }
 }
