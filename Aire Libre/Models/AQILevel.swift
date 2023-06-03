@@ -100,3 +100,15 @@ extension AQILevel {
     }
 }
 
+extension AQILevel {
+    var symbol: String {
+        switch self {
+        case .good:
+            return "aqi.low"
+        case .moderate, .sensitive:
+            return "aqi.medium"
+        case .unhealthy, .veryUnhealthy, .hazardous:
+            return "aqi.high"
+        }
+    }
+}

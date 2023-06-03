@@ -28,6 +28,10 @@ struct WidgetView: View {
                 SystemSmallView(entry: entry)
             case .systemMedium:
                 SystemMediumView(entry: entry)
+            case .accessoryCircular:
+                AccessoryCircularView(entry: entry)
+            case .accessoryInline:
+                AccessoryInlineView(entry: entry)
             default:
                 FatalErrorWidgetView(message: Localizables.widgetFamilyNotSupported)
             }

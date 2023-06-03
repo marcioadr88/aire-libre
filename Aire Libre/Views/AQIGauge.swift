@@ -31,9 +31,9 @@ struct AQIGauge: View {
     
     var body: some View {
         Gauge(value: value, in: aqiIndexRange) {
+            Text(Localizables.aqi)
         } currentValueLabel: {
             valueLabel
-                .font(.title2.weight(.medium))
         }
         .gaugeStyle(.accessoryCircular)
         .tint(gradient)
@@ -44,7 +44,7 @@ struct AQIGauge: View {
         if let index {
             Text(index, format: .number)
         } else {
-            Text("-")
+            Text("--")
         }
     }
 }
