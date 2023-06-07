@@ -13,8 +13,6 @@ struct MapScreen: View {
     @EnvironmentObject private var appViewModel: AppViewModel
     @EnvironmentObject private var locationViewModel: LocationViewModel
     @EnvironmentObject private var mapViewModel: MapScreenViewModel
-    
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
     private var selectedSourceId: String?
     
@@ -75,7 +73,6 @@ struct MapScreen: View {
                     .padding()
                     .transition(.move(edge: .bottom))
                     .onChange(of: selectedDataBinding.isFavoriteSensor.wrappedValue) { newValue in
-                        print("changeOf \(selectedDataBinding.wrappedValue.description) \(newValue)")
                         //update view model with the updated selectedData values
                         guard let updatedSelectedData = self.mapViewModel.selectedData else {
                             return
@@ -91,6 +88,14 @@ struct MapScreen: View {
                 showSelectedSource(selectedSourceId)
             }
         }
+        .onChange(of: appViewModel.aqiData, perform: { _ in
+            // update current selected sensor info with new updated data
+            if let target = selectedSourceId ?? mapViewModel.selectedData?.source {
+                withAnimation {
+                    showSelectedSource(target, centerToSource: false)
+                }
+            }
+        })
         .onAppear {
             if let selectedSourceId {
                 showSelectedSource(selectedSourceId)
@@ -128,15 +133,8 @@ struct MapScreen: View {
         #endif
     }
     
-    var backButton: some View {
-        Button(action: {
-            self.presentationMode.wrappedValue.dismiss()
-        }) {
-            Image(systemName: "list.bullet")
-                .aspectRatio(contentMode: .fit)        }
-    }
-    
-    private func showSelectedSource(_ source: String) {
+    private func showSelectedSource(_ source: String,
+                                    centerToSource: Bool = true) {
         let targetData = appViewModel
             .aqiData
             .first(where: { $0.source == source })
@@ -144,7 +142,7 @@ struct MapScreen: View {
         withAnimation {
             mapViewModel.selectedData = targetData
             
-            if let targetData {
+            if let targetData, centerToSource {
                 mapViewModel.region.center = targetData.coordinates
             }
         }

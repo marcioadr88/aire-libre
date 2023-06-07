@@ -37,9 +37,10 @@ struct AccessoryInlineView: View {
 struct AccesoryInlineView_Previews: PreviewProvider {
     static var previews: some View {
         AccessoryInlineView(entry: AQIEntry(date: Date(),
-                                              location: "Asunción",
-                                              aqiIndex: 10,
-                                              isUserLocation: true))
+                                            source: "29cx2",
+                                            location: "Asunción",
+                                            aqiIndex: 10,
+                                            isUserLocation: true))
         .previewContext(WidgetPreviewContext(family: .accessoryInline))
     }
 }

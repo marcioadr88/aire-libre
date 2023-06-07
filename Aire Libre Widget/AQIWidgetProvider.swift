@@ -36,11 +36,11 @@ final class AQIWidgetProvider: NSObject, TimelineProvider {
     }
     
     func placeholder(in context: Context) -> AQIEntry {
-        AQIEntry(date: Date(), location: "Placeholder", aqiIndex: 0)
+        AQIEntry(date: Date(), source: "29cx2", location: "Placeholder", aqiIndex: 0)
     }
     
     func getSnapshot(in context: Context, completion: @escaping (AQIEntry) -> ()) {
-        let entry = AQIEntry(date: Date(), location: "Snapshot", aqiIndex: 0)
+        let entry = AQIEntry(date: Date(), source: "29cx2", location: "Snapshot", aqiIndex: 0)
         completion(entry)
     }
     
@@ -68,11 +68,12 @@ final class AQIWidgetProvider: NSObject, TimelineProvider {
                 log.debug("fetched \(aqiData.count) elements")
                 
                 if let location,
-                   let nearestSensor = AQIUtils.nearestSensorToUser(location,
-                                                                    data: aqiData) {
+                   let nearestSensor = Utils.nearestSensorToUser(location,
+                                                                 data: aqiData) {
                     log.info("nearest sensor to user is: \(nearestSensor.description)")
                     
                     let sensorEntry = AQIEntry(date: Date(),
+                                               source: nearestSensor.source,
                                                location: nearestSensor.description,
                                                aqiIndex: nearestSensor.quality.index,
                                                isUserLocation: true)

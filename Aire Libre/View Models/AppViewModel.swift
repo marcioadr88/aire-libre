@@ -103,7 +103,7 @@ final class AppViewModel: NSObject, ObservableObject {
     
     private func updateNearestSensorToUser() {
         if let userLocation {
-            nearestSensorToUser = AQIUtils.nearestSensorToUser(userLocation, data: aqiData)
+            nearestSensorToUser = Utils.nearestSensorToUser(userLocation, data: aqiData)
         } else {
             nearestSensorToUser = nil
         }

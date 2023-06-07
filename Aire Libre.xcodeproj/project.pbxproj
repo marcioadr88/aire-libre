@@ -34,9 +34,9 @@
 		0A8FCDAC293EB4A5006022B9 /* AQIAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8FCDAB293EB4A5006022B9 /* AQIAnnotationView.swift */; };
 		0AA203F02A004F2200E68C0D /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA203EF2A004F2200E68C0D /* LocationViewModel.swift */; };
 		0AA96DD32A2BEF920020D4A5 /* AccessoryInlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA96DD22A2BEF920020D4A5 /* AccessoryInlineView.swift */; };
-		0AACDC632A1EF1F6009F0405 /* AQIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AACDC622A1EF1F6009F0405 /* AQIUtils.swift */; };
+		0AACDC632A1EF1F6009F0405 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AACDC622A1EF1F6009F0405 /* Utils.swift */; };
 		0AACDC642A1EF3FE009F0405 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF37C7292EEE4E0086514C /* AppConstants.swift */; };
-		0AACDC652A1EF406009F0405 /* AQIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AACDC622A1EF1F6009F0405 /* AQIUtils.swift */; };
+		0AACDC652A1EF406009F0405 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AACDC622A1EF1F6009F0405 /* Utils.swift */; };
 		0AAFF68D29C9480A008694A9 /* ZoomControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAFF68C29C9480A008694A9 /* ZoomControls.swift */; };
 		0AB43DD629EB294800AB45CE /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB43DD529EB294800AB45CE /* PersistenceService.swift */; };
 		0AB43F9D2936DD38005299AC /* Task+AutoRetry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB43F9C2936DD38005299AC /* Task+AutoRetry.swift */; };
@@ -144,7 +144,7 @@
 		0A8FCDAB293EB4A5006022B9 /* AQIAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIAnnotationView.swift; sourceTree = "<group>"; };
 		0AA203EF2A004F2200E68C0D /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		0AA96DD22A2BEF920020D4A5 /* AccessoryInlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryInlineView.swift; sourceTree = "<group>"; };
-		0AACDC622A1EF1F6009F0405 /* AQIUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIUtils.swift; sourceTree = "<group>"; };
+		0AACDC622A1EF1F6009F0405 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		0AAFF68C29C9480A008694A9 /* ZoomControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomControls.swift; sourceTree = "<group>"; };
 		0AB43DD529EB294800AB45CE /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		0AB43F9C2936DD38005299AC /* Task+AutoRetry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+AutoRetry.swift"; sourceTree = "<group>"; };
@@ -398,8 +398,8 @@
 				0AC2E45F2A033FEC002D2446 /* AQIWidgetBundle.swift */,
 				0AC2E4612A033FEC002D2446 /* AQIWidgetProvider.swift */,
 				0ACA1CB92A034CB400C0E8C3 /* WidgetConfiguration.swift */,
-				0AB6358C2A282C2D00682A47 /* Views */,
 				0AE5A2722A04977600C968A5 /* AQIEntry.swift */,
+				0AB6358C2A282C2D00682A47 /* Views */,
 				0AC2E4632A033FED002D2446 /* Assets.xcassets */,
 				0AC2E4652A033FED002D2446 /* Info.plist */,
 			);
@@ -430,7 +430,7 @@
 				0AEF37C7292EEE4E0086514C /* AppConstants.swift */,
 				0AE5C1EA293D3FD40084E68C /* JSONFileLoader.swift */,
 				0AFC850A29CBD22B00D201E7 /* CustomColors.swift */,
-				0AACDC622A1EF1F6009F0405 /* AQIUtils.swift */,
+				0AACDC622A1EF1F6009F0405 /* Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -640,7 +640,7 @@
 				0A8FCDAA293EB3AF006022B9 /* AQILevel.swift in Sources */,
 				0AFA4EA929E3760000C6CEE9 /* FavoriteSensorStore.swift in Sources */,
 				0AB43DD629EB294800AB45CE /* PersistenceService.swift in Sources */,
-				0AACDC632A1EF1F6009F0405 /* AQIUtils.swift in Sources */,
+				0AACDC632A1EF1F6009F0405 /* Utils.swift in Sources */,
 				0AC259CD29175D6E0047397E /* AQIData.swift in Sources */,
 				0ABB8757292D96B000F7644E /* NetworkService.swift in Sources */,
 				0AF6CF2B29F0ADAF00C725B7 /* NavigationPathStore.swift in Sources */,
@@ -685,7 +685,7 @@
 				0A0098712A0B495C00A2352D /* LocationViewModel.swift in Sources */,
 				0A7B2B7F2A1C5C8A00C4949D /* FavoriteSensorStore.swift in Sources */,
 				0AB6358B2A282C2600682A47 /* ErrorWidgetView.swift in Sources */,
-				0AACDC652A1EF406009F0405 /* AQIUtils.swift in Sources */,
+				0AACDC652A1EF406009F0405 /* Utils.swift in Sources */,
 				0AB635892A281F0500682A47 /* FatalErrorWidgetView.swift in Sources */,
 				0A7B2B7A2A1C5C4300C4949D /* NetworkService.swift in Sources */,
 				0AD361FC2A296C1700FE563A /* AccessoryCircularView.swift in Sources */,

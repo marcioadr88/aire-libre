@@ -31,7 +31,7 @@ struct SystemSmallView: View {
                     .lineLimit(2)
                     .minimumScaleFactor(0.5)
                     .font(.headline)
-
+                
                 Text(entry.date.formatted(date: .omitted,
                                           time: .standard))
                 .lineLimit(1)
@@ -46,9 +46,10 @@ struct SystemSmallView: View {
 struct SystemSmallView_Previews: PreviewProvider {
     static var previews: some View {
         SystemSmallView(entry: AQIEntry(date: Date(),
-                                         location: "Asunción",
-                                         aqiIndex: 10,
-                                         isUserLocation: true))
+                                        source: "29cx2",
+                                        location: "Asunción",
+                                        aqiIndex: 10,
+                                        isUserLocation: true))
         .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }

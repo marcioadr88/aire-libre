@@ -14,6 +14,8 @@ enum Screens: Hashable, Codable {
 }
 
 struct RootScreen: View {
+    @Environment(\.scenePhase) var scenePhase
+    
     @State private var selectedSensor: AQIData?
     @StateObject private var pathStore = NavigationPathStore()
     
@@ -24,14 +26,32 @@ struct RootScreen: View {
     var body: some View {
         navigationView
             .onAppear {
-                appViewModel.loadAQI()
-            }
-            .onAppear {
                 locationViewModel.startUpdatingLocation()
             }
             .onChange(of: locationViewModel.location) { newValue in
                 appViewModel.userLocation = newValue
                 mapScreenViewModel.location = newValue
+            }
+            .onChange(of: scenePhase) { phase in
+                if phase == .active {
+                    appViewModel.loadAQI()
+                }
+            }
+            .onOpenURL { url in
+                if let source = Utils.source(forWidgetOpenURL: url) {
+                    print("--> before ")
+                    print("--> path \(pathStore.path)")
+                    print("--> count \(pathStore.path.count)")
+                    
+                    if !pathStore.path.isEmpty {
+                        pathStore.path.removeLast()
+                    }
+                    print("--> after delete")
+                    print("--> path \(pathStore.path)")
+                    print("--> count \(pathStore.path.count)")
+                    
+                    pathStore.path.append(Screens.map(source: source))
+                }
             }
     }
     

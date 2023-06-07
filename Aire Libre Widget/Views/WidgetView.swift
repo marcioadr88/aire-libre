@@ -13,28 +13,46 @@ struct WidgetView: View {
     
     var entry: AQIWidgetProvider.Entry
     
+    var widgetURL: URL? {
+        guard let source = entry.source else {
+            return nil
+        }
+        
+        return Utils.widgetOpenURL(for: source)
+    }
+    
     var body: some View {
         if let error = entry.error {
-            switch error {
-            case .recoverable(let message):
-                ErrorWidgetView(date: entry.date,
-                                message: message)
-            case .fatal(let message):
-                FatalErrorWidgetView(message: message)
-            }
+            errorWidget(error)
         } else {
-            switch widgetFamily {
-            case .systemSmall:
-                SystemSmallView(entry: entry)
-            case .systemMedium:
-                SystemMediumView(entry: entry)
-            case .accessoryCircular:
-                AccessoryCircularView(entry: entry)
-            case .accessoryInline:
-                AccessoryInlineView(entry: entry)
-            default:
-                FatalErrorWidgetView(message: Localizables.widgetFamilyNotSupported)
-            }
+            widget(for: entry)
+                .widgetURL(widgetURL)
+        }
+    }
+    
+    @ViewBuilder
+    private func widget(for entry: AQIWidgetProvider.Entry) -> some View {
+        switch widgetFamily {
+        case .systemSmall:
+            SystemSmallView(entry: entry)
+        case .systemMedium:
+            SystemMediumView(entry: entry)
+        case .accessoryCircular:
+            AccessoryCircularView(entry: entry)
+        case .accessoryInline:
+            AccessoryInlineView(entry: entry)
+        default:
+            FatalErrorWidgetView(message: Localizables.widgetFamilyNotSupported)
+        }
+    }
+    
+    @ViewBuilder
+    private func errorWidget(_ error: EntryError) -> some View {
+        switch error {
+        case .recoverable(let message):
+            ErrorWidgetView(date: entry.date, message: message)
+        case .fatal(let message):
+            FatalErrorWidgetView(message: message)
         }
     }
 }
@@ -42,6 +60,7 @@ struct WidgetView: View {
 struct WidgetPreviews: PreviewProvider {
     static var previews: some View {
         WidgetView(entry: AQIEntry(date: Date(),
+                                   source: "29cx2",
                                    location: "Asunción",
                                    aqiIndex: 10,
                                    isUserLocation: true))

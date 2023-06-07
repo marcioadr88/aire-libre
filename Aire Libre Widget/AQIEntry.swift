@@ -23,6 +23,7 @@ enum EntryError {
 
 struct AQIEntry: TimelineEntry {
     let date: Date
+    let source: String?
     let location: String
     let aqiIndex: Int?
     let isUserLocation: Bool
@@ -38,16 +39,22 @@ struct AQIEntry: TimelineEntry {
         level?.description
     }
     
-    init(date: Date, location: String, aqiIndex: Int, isUserLocation: Bool = false) {
+    init(date: Date,
+         source: String,
+         location: String,
+         aqiIndex: Int,
+         isUserLocation: Bool = false) {
         self.location = location
         self.aqiIndex = aqiIndex
         self.isUserLocation = isUserLocation
         self.level = AQILevel.fromIndex(aqiIndex)
         self.date = date
+        self.source = source
         self.error = nil
     }
     
     init(date: Date, withError errorMessage: String) {
+        self.source = nil
         self.location = ""
         self.aqiIndex = nil
         self.isUserLocation = false
@@ -57,6 +64,7 @@ struct AQIEntry: TimelineEntry {
     }
     
     init(date: Date, withFatalErrorMessage errorMessage: String) {
+        self.source = nil
         self.date = date
         self.location = ""
         self.aqiIndex = nil

@@ -73,6 +73,7 @@ struct SystemMediumView: View {
 struct SystemMediumView_Previews: PreviewProvider {
     static var previews: some View {
         SystemMediumView(entry: AQIEntry(date: Date(),
+                                         source: "29cx2",
                                          location: "Asunción",
                                          aqiIndex: 10,
                                          isUserLocation: true))

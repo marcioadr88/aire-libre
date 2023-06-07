@@ -12,10 +12,14 @@ struct AccessoryCircularView: View {
     var entry: AQIWidgetProvider.Entry
     
     var body: some View {
-        if let index = entry.aqiIndex {
-            AQIGauge(index: index)
-        } else {
-            AQIGauge()
+        ZStack {
+            AccessoryWidgetBackground()
+            
+            if let index = entry.aqiIndex {
+                AQIGauge(index: index)
+            } else {
+                AQIGauge()
+            }
         }
     }
 }
@@ -23,6 +27,7 @@ struct AccessoryCircularView: View {
 struct AccessoryCircularView_Previews: PreviewProvider {
     static var previews: some View {
         AccessoryCircularView(entry: AQIEntry(date: Date(),
+                                              source: "29cx2",
                                               location: "Asunción",
                                               aqiIndex: 10,
                                               isUserLocation: true))
