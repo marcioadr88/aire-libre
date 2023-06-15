@@ -33,9 +33,6 @@ class NavigationPathStore: ObservableObject {
         
         DispatchQueue.global(qos: .background).async { [savePath] in
             let data = try? JSONEncoder().encode(representation)
-//            if let data {
-//                print(String(bytes: data, encoding: .utf8))
-//            }
             try? data?.write(to: savePath)
         }
     }

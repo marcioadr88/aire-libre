@@ -13,15 +13,18 @@ struct ErrorWidgetView: View {
     
     var date: Date
     var message: String
+    var showTimestamp: Bool
     
     var body: some View {
         switch widgetFamily {
         case .systemSmall:
             SmallErrorWidgetView(date: date,
-                                 message: message)
+                                 message: message,
+                                 showTimestamp: showTimestamp)
         case .systemMedium:
             MediumErrorWidgetView(date: date,
-                                  message: message)
+                                  message: message,
+                                  showTimestamp: showTimestamp)
             
         default:
             FatalErrorWidgetView(message: Localizables.widgetFamilyNotSupported)
@@ -32,6 +35,7 @@ struct ErrorWidgetView: View {
 struct SmallErrorWidgetView: View {
     var date: Date
     var message: String
+    var showTimestamp: Bool
     
     var body: some View {
         ZStack {
@@ -45,10 +49,12 @@ struct SmallErrorWidgetView: View {
                     .minimumScaleFactor(0.5)
                     .font(.subheadline)
                 
-                Text(date.formatted(date: .omitted,
-                                          time: .standard))
-                .lineLimit(1)
-                .font(.system(size: 8))
+                if showTimestamp {
+                    Text(date.formatted(date: .omitted,
+                                        time: .standard))
+                    .lineLimit(1)
+                    .font(.system(size: 8))
+                }
             }
             .multilineTextAlignment(.center)
             .padding()
@@ -60,6 +66,7 @@ struct SmallErrorWidgetView: View {
 struct MediumErrorWidgetView: View {
     var date: Date
     var message: String
+    var showTimestamp: Bool
     
     var body: some View {
         ZStack {
@@ -79,26 +86,28 @@ struct MediumErrorWidgetView: View {
             }
             .padding()
             
-            VStack {
-                Spacer()
-                
-                HStack {
+            if showTimestamp {
+                VStack {
                     Spacer()
                     
-                    Text(date.formatted(date: .omitted,
-                                              time: .standard))
+                    HStack {
+                        Spacer()
+                        
+                        Text(date.formatted(date: .omitted,
+                                            time: .standard))
                         .lineLimit(1)
                         .font(.system(size: 8))
+                    }
                 }
+                .padding()
             }
-            .padding()
         }
     }
 }
 
 struct ErrorWidgetView_Previews: PreviewProvider {
     static var previews: some View {
-        ErrorWidgetView(date: Date(), message: "Error")
+        ErrorWidgetView(date: Date(), message: "Error", showTimestamp: false)
             .previewContext(WidgetPreviewContext(family: .systemMedium))
     }
 }

@@ -23,6 +23,17 @@ final class AppViewModel: NSObject, ObservableObject {
     @Published var error: AppError?
     @Published var isLoading: Bool
     
+    var hasError: Bool {
+        get {
+            error != nil
+        }
+        set {
+            if !newValue {
+                error = nil
+            }
+        }
+    }
+    
     @Published var userLocation: CLLocation? {
         didSet {
             updateNearestSensorToUser()
@@ -42,8 +53,6 @@ final class AppViewModel: NSObject, ObservableObject {
     }
 
     private let repository: AireLibreRepository
-    
-    private var subscriptions = [AnyCancellable]()
     
     init(repository: AireLibreRepository) {
         self.repository = repository
@@ -99,6 +108,11 @@ final class AppViewModel: NSObject, ObservableObject {
                 }
             }
         }
+    }
+    
+    func aqiData(withSource source: String) -> AQIData? {
+        aqiData
+            .first(where: { $0.source == source })
     }
     
     private func updateNearestSensorToUser() {

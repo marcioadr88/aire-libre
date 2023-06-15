@@ -7,13 +7,14 @@
 
 import SwiftUI
 import MapKit
-import WidgetKit
 
 struct MapScreen: View {
     @EnvironmentObject private var appViewModel: AppViewModel
     @EnvironmentObject private var locationViewModel: LocationViewModel
     @EnvironmentObject private var mapViewModel: MapScreenViewModel
-
+    
+    @State private var selectedAQIData: AQIData?
+    
     private var selectedSourceId: String?
     
     init(selectedSourceId: String? = nil) {
@@ -30,12 +31,12 @@ struct MapScreen: View {
             ) { item in
                 MapAnnotation(coordinate: item.coordinates) {
                     AQIAnnotationView(aqiData: item,
-                                      isSelected: .constant(item.source == mapViewModel.selectedData?.source))
-                        .onTapGesture {
-                            withAnimation {
-                                mapViewModel.selectedData = item
-                            }
+                                      isSelected: .constant(item.source == mapViewModel.selectedSource))
+                    .onTapGesture {
+                        withAnimation {
+                            mapViewModel.selectedSource = item.source
                         }
+                    }
                 }
             }
             .ignoresSafeArea()
@@ -58,12 +59,18 @@ struct MapScreen: View {
             
             VStack {
                 Spacer()
-                if let selectedData = mapViewModel.selectedData,
-                    let selectedDataBinding = Binding<AQIData>($mapViewModel.selectedData) {
-                    SensorInfo(title: selectedData.description,
+                if let aqiDataForSensorInfo = selectedAQIData {
+                    SensorInfo(title: aqiDataForSensorInfo.description,
                                subtitle: nil,
-                               aqiIndex: selectedData.quality.index,
-                               favorited: selectedDataBinding.isFavoriteSensor)
+                               aqiIndex: aqiDataForSensorInfo.quality.index,
+                               favorited: Binding<Bool>(get: {
+                         selectedAQIData?.isFavoriteSensor ?? false
+                    }, set: { newValue in
+                        if let copy = selectedAQIData?.copy(isFavoriteSensor: newValue) {
+                            appViewModel.update(newValue: copy)
+                            selectedAQIData = copy
+                        }
+                    }))
                     .frame(maxWidth: 500)
                     .background(
                         RoundedRectangle(cornerRadius: 10)
@@ -72,34 +79,30 @@ struct MapScreen: View {
                     )
                     .padding()
                     .transition(.move(edge: .bottom))
-                    .onChange(of: selectedDataBinding.isFavoriteSensor.wrappedValue) { newValue in
-                        //update view model with the updated selectedData values
-                        guard let updatedSelectedData = self.mapViewModel.selectedData else {
-                            return
-                        }
-
-                        appViewModel.update(newValue: updatedSelectedData)
-                    }
+//                    .onChange(of: selectedAQIData?.isFavoriteSensor) { _ in
+//                        guard let selectedAQIData else {
+//                            return
+//                        }
+//
+//                        appViewModel.update(newValue: selectedAQIData)
+//                    }
                 }
             }
         }
-        .onChange(of: selectedSourceId) { selectedSourceId in
-            if let selectedSourceId {
-                showSelectedSource(selectedSourceId)
-            }
+        .onChange(of: mapViewModel.selectedSource) { _ in
+            showSelectedSource()
         }
-        .onChange(of: appViewModel.aqiData, perform: { _ in
-            // update current selected sensor info with new updated data
-            if let target = selectedSourceId ?? mapViewModel.selectedData?.source {
-                withAnimation {
-                    showSelectedSource(target, centerToSource: false)
-                }
-            }
-        })
+        .onChange(of: appViewModel.aqiData) { _ in
+            showSelectedSource(centerToSource: false)
+        }
+        .onChange(of: selectedSourceId) { newValue in
+            mapViewModel.selectedSource = newValue
+        }
         .onAppear {
-            if let selectedSourceId {
-                showSelectedSource(selectedSourceId)
-            }
+            mapViewModel.selectedSource = self.selectedSourceId
+        }
+        .onDisappear {
+            mapViewModel.selectedSource = nil
         }
         .toolbar {
             ToolbarItem {
@@ -113,14 +116,13 @@ struct MapScreen: View {
             ToolbarItem {
                 Button {
                     appViewModel.loadAQI()
-                    WidgetCenter.shared.reloadAllTimelines()
                 } label: {
                     if appViewModel.isLoading {
                         ProgressView()
                             .tint(Color.accentColor)
-                        #if os(macOS)
+#if os(macOS)
                             .controlSize(.small)
-                        #endif
+#endif
                     } else {
                         Image(systemName: "arrow.clockwise")
                     }
@@ -128,22 +130,23 @@ struct MapScreen: View {
                 .keyboardShortcut("r", modifiers: [.command])
             }
         }
-        #if os(iOS)
+#if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
-        #endif
+#endif
     }
     
-    private func showSelectedSource(_ source: String,
-                                    centerToSource: Bool = true) {
-        let targetData = appViewModel
-            .aqiData
-            .first(where: { $0.source == source })
+    private func showSelectedSource(centerToSource: Bool = true) {
+        var targetAQIData: AQIData?
+        
+        if let selectedSource = mapViewModel.selectedSource {
+            targetAQIData = appViewModel.aqiData(withSource: selectedSource)
+        }
         
         withAnimation {
-            mapViewModel.selectedData = targetData
+            selectedAQIData = targetAQIData
             
-            if let targetData, centerToSource {
-                mapViewModel.region.center = targetData.coordinates
+            if let selectedAQIData, centerToSource {
+                mapViewModel.region.center = selectedAQIData.coordinates
             }
         }
     }

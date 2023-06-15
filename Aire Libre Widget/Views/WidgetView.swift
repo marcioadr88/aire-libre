@@ -22,8 +22,8 @@ struct WidgetView: View {
     }
     
     var body: some View {
-        if let error = entry.error {
-            errorWidget(error)
+        if entry.isError {
+            errorWidget(for: entry)
         } else {
             widget(for: entry)
                 .widgetURL(widgetURL)
@@ -47,12 +47,16 @@ struct WidgetView: View {
     }
     
     @ViewBuilder
-    private func errorWidget(_ error: EntryError) -> some View {
-        switch error {
-        case .recoverable(let message):
-            ErrorWidgetView(date: entry.date, message: message)
-        case .fatal(let message):
-            FatalErrorWidgetView(message: message)
+    private func errorWidget(for entry: AQIWidgetProvider.Entry) -> some View {
+        if let error = entry.error {
+            switch error {
+            case .recoverable(let message):
+                ErrorWidgetView(date: entry.date,
+                                message: message,
+                                showTimestamp: entry.showTimestamp)
+            case .fatal(let message):
+                FatalErrorWidgetView(message: message)
+            }
         }
     }
 }

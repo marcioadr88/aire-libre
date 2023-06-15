@@ -53,19 +53,21 @@ struct SystemMediumView: View {
             }
             .padding()
             
-            VStack {
-                Spacer()
-                
-                HStack {
+            if entry.showTimestamp {
+                VStack {
                     Spacer()
                     
-                    Text(entry.date.formatted(date: .omitted,
-                                              time: .standard))
+                    HStack {
+                        Spacer()
+                        
+                        Text(entry.date.formatted(date: .omitted,
+                                                  time: .standard))
                         .lineLimit(1)
                         .font(.system(size: 8))
+                    }
                 }
+                .padding()
             }
-            .padding()
         }
     }
 }

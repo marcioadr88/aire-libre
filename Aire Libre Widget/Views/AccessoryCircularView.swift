@@ -13,8 +13,6 @@ struct AccessoryCircularView: View {
     
     var body: some View {
         ZStack {
-            AccessoryWidgetBackground()
-            
             if let index = entry.aqiIndex {
                 AQIGauge(index: index)
             } else {

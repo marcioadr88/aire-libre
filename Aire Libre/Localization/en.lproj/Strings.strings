@@ -14,6 +14,7 @@
 "turnOnLocationToGetData" = "Turn on location to get data";
 "errorWhileRetrievingLocation" = "Error while retrieving location";
 "widgetFamilyNotSupported" = "Widget family not supported";
+"errorOccurred" = "An error occurred";
 
 /*AQI Level Titles*/
 "aqiLevelTitleGood" = "Good";
@@ -38,3 +39,6 @@
 "noFavorites" = "No favorites";
 "myLocation" = "My location";
 "aqi" = "AQI";
+"appName" = "Aire Libre";
+"widgetConfigurationDescription" = "Get the air quality from the sensor closest to your location";
+"dismiss" = "Dismiss";

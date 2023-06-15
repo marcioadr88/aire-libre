@@ -25,7 +25,7 @@ class MapScreenViewModel: NSObject, ObservableObject {
         }
     }
     
-    @Published var selectedData: AQIData?
+    @Published var selectedSource: String?
     
     @Published var location: CLLocation? {
         didSet {

@@ -10,7 +10,7 @@ import WidgetKit
 
 struct FatalErrorWidgetView: View {
     var message: String
-
+    
     var body: some View {
         Text(message)
             .font(.callout)
@@ -23,6 +23,6 @@ struct FatalErrorWidgetView: View {
 struct FatalErrorWidgetView_Previews: PreviewProvider {
     static var previews: some View {
         FatalErrorWidgetView(message: "Mensaje error")
-        .previewContext(WidgetPreviewContext(family: .systemSmall))
+            .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }

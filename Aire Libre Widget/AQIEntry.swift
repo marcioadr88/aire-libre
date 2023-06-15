@@ -28,6 +28,7 @@ struct AQIEntry: TimelineEntry {
     let aqiIndex: Int?
     let isUserLocation: Bool
     let error: EntryError?
+    let showTimestamp: Bool
     
     private let level: AQILevel?
     
@@ -39,11 +40,16 @@ struct AQIEntry: TimelineEntry {
         level?.description
     }
     
+    var isError: Bool {
+        error != nil
+    }
+    
     init(date: Date,
          source: String,
          location: String,
          aqiIndex: Int,
-         isUserLocation: Bool = false) {
+         isUserLocation: Bool = false,
+         showTimestamp: Bool = false) {
         self.location = location
         self.aqiIndex = aqiIndex
         self.isUserLocation = isUserLocation
@@ -51,6 +57,7 @@ struct AQIEntry: TimelineEntry {
         self.date = date
         self.source = source
         self.error = nil
+        self.showTimestamp = showTimestamp
     }
     
     init(date: Date, withError errorMessage: String) {
@@ -60,6 +67,7 @@ struct AQIEntry: TimelineEntry {
         self.isUserLocation = false
         self.level = nil
         self.date = date
+        self.showTimestamp = false
         self.error = .recoverable(message: errorMessage)
     }
     
@@ -70,6 +78,16 @@ struct AQIEntry: TimelineEntry {
         self.aqiIndex = nil
         self.isUserLocation = false
         self.level = nil
+        self.showTimestamp = false
         self.error = .fatal(message: errorMessage)
+    }
+}
+
+extension AQIEntry {
+    static func placeholder() -> AQIEntry {
+        AQIEntry(date: Date(),
+                 source: "29cx2",
+                 location: "Asunción",
+                 aqiIndex: 0)
     }
 }

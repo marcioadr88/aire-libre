@@ -11,6 +11,7 @@ import Combine
 struct ListScreen: View {
     @EnvironmentObject private var appViewModel: AppViewModel
     @Binding private var selectedSensor: AQIData?
+    @Environment(\.userInterfaceIdiom) private var userInterfaceIdiom
     
     init() {
         _selectedSensor = .constant(nil)
@@ -22,7 +23,7 @@ struct ListScreen: View {
     
     var body: some View {
         favoritesView
-            .navigationTitle("Aire Libre")
+            .navigationTitle(Localizables.appName)
             .navigationDestination(for: Screens.self) { screen in
                 switch screen {
                 case .map(let source):
@@ -34,7 +35,7 @@ struct ListScreen: View {
             #if os(iOS)
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
-                if UIDevice.current.userInterfaceIdiom == .phone {
+                if userInterfaceIdiom == .phone {
                     ToolbarItem {
                         NavigationLink(value: Screens.map(source: nil)) {
                             Text(Localizables.viewMap)
@@ -56,7 +57,11 @@ struct ListScreen: View {
         if appViewModel.favorites.isEmpty {
             emptyFavoritesView
         } else {
-            populatedFavoritesView
+            if userInterfaceIdiom == .phone {
+                populatedFavoritesView
+            } else {
+                Text("Aquí no hacemos esto bro")
+            }
         }
     }
     
@@ -106,15 +111,7 @@ struct ListScreen: View {
                    favorited: .constant(data.isFavoriteSensor),
                    showFavoriteIcon: false)
         #else
-        if UIDevice.current.userInterfaceIdiom == .phone {
-            NavigationLink(value: Screens.map(source: data.source)) {
-                SensorInfo(title: title,
-                           subtitle: subtitle,
-                           aqiIndex: data.quality.index,
-                           favorited: .constant(data.isFavoriteSensor),
-                           showFavoriteIcon: false)
-            }
-        } else {
+        NavigationLink(value: Screens.map(source: data.source)) {
             SensorInfo(title: title,
                        subtitle: subtitle,
                        aqiIndex: data.quality.index,

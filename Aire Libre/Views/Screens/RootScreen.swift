@@ -25,12 +25,9 @@ struct RootScreen: View {
     
     var body: some View {
         navigationView
-            .onAppear {
-                locationViewModel.startUpdatingLocation()
-            }
-            .onChange(of: locationViewModel.location) { newValue in
-                appViewModel.userLocation = newValue
-                mapScreenViewModel.location = newValue
+            .onReceive(locationViewModel.$location) { location in
+                appViewModel.userLocation = location
+                mapScreenViewModel.location = location
             }
             .onChange(of: scenePhase) { phase in
                 if phase == .active {
@@ -39,19 +36,20 @@ struct RootScreen: View {
             }
             .onOpenURL { url in
                 if let source = Utils.source(forWidgetOpenURL: url) {
-                    print("--> before ")
-                    print("--> path \(pathStore.path)")
-                    print("--> count \(pathStore.path.count)")
-                    
                     if !pathStore.path.isEmpty {
                         pathStore.path.removeLast()
                     }
-                    print("--> after delete")
-                    print("--> path \(pathStore.path)")
-                    print("--> count \(pathStore.path.count)")
                     
                     pathStore.path.append(Screens.map(source: source))
                 }
+            }
+            .onAppear {
+                locationViewModel.startUpdatingLocation()
+            }
+            .alert(isPresented: $appViewModel.hasError) {
+                Alert(title: Text(Localizables.errorOccurred),
+                      message: Text(appViewModel.error?.localizedDescription ?? Localizables.unexpectedError),
+                      dismissButton: .default(Text("Dismiss")))
             }
     }
     

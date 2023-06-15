@@ -32,10 +32,12 @@ struct SystemSmallView: View {
                     .minimumScaleFactor(0.5)
                     .font(.headline)
                 
-                Text(entry.date.formatted(date: .omitted,
-                                          time: .standard))
-                .lineLimit(1)
-                .font(.system(size: 8))
+                if entry.showTimestamp {
+                    Text(entry.date.formatted(date: .omitted,
+                                              time: .standard))
+                    .lineLimit(1)
+                    .font(.system(size: 8))
+                }
             }
             .multilineTextAlignment(.center)
             .padding()

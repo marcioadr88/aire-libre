@@ -14,6 +14,7 @@
 "turnOnLocationToGetData" = "Activa la localización para obtener datos";
 "errorWhileRetrievingLocation" = "Error al obtener la localización";
 "widgetFamilyNotSupported" = "No se soporta el tamaño del widget";
+"errorOccurred" = "Ocurrió un error";
 
 /*AQI Level Titles*/
 "aqiLevelTitleGood" = "Bueno";
@@ -38,3 +39,6 @@
 "noFavorites" = "No hay favoritos";
 "myLocation" = "Mi localización";
 "aqi" = "AQI";
+"appName" = "Aire Libre";
+"widgetConfigurationDescription" = "Obtenga la calidad del aire del sensor más cercano a su localización";
+"dismiss" = "Cerrar";

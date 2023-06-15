@@ -58,6 +58,7 @@
 		0AC2E4622A033FEC002D2446 /* AQIWidgetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2E4612A033FEC002D2446 /* AQIWidgetProvider.swift */; };
 		0AC2E4642A033FED002D2446 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AC2E4632A033FED002D2446 /* Assets.xcassets */; };
 		0AC2E4682A033FED002D2446 /* Aire Libre WidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0AC2E4582A033FEC002D2446 /* Aire Libre WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0AC566B32A363DB20082F664 /* InterfaceIdiomEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC566B22A363DB20082F664 /* InterfaceIdiomEnvironment.swift */; };
 		0AC9FDAC297ACA8200DBA5E1 /* MapScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9FDAB297ACA8200DBA5E1 /* MapScreen.swift */; };
 		0AC9FDAE297ACB7600DBA5E1 /* ListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9FDAD297ACB7600DBA5E1 /* ListScreen.swift */; };
 		0ACA1CBA2A034CB400C0E8C3 /* WidgetConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA1CB92A034CB400C0E8C3 /* WidgetConfiguration.swift */; };
@@ -167,6 +168,7 @@
 		0AC2E4612A033FEC002D2446 /* AQIWidgetProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIWidgetProvider.swift; sourceTree = "<group>"; };
 		0AC2E4632A033FED002D2446 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AC2E4652A033FED002D2446 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AC566B22A363DB20082F664 /* InterfaceIdiomEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceIdiomEnvironment.swift; sourceTree = "<group>"; };
 		0AC9FDAB297ACA8200DBA5E1 /* MapScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreen.swift; sourceTree = "<group>"; };
 		0AC9FDAD297ACB7600DBA5E1 /* ListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListScreen.swift; sourceTree = "<group>"; };
 		0ACA1CB92A034CB400C0E8C3 /* WidgetConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetConfiguration.swift; sourceTree = "<group>"; };
@@ -431,6 +433,7 @@
 				0AE5C1EA293D3FD40084E68C /* JSONFileLoader.swift */,
 				0AFC850A29CBD22B00D201E7 /* CustomColors.swift */,
 				0AACDC622A1EF1F6009F0405 /* Utils.swift */,
+				0AC566B22A363DB20082F664 /* InterfaceIdiomEnvironment.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -620,6 +623,7 @@
 				0AAFF68D29C9480A008694A9 /* ZoomControls.swift in Sources */,
 				0A427F512944CE5100832C3A /* SensorInfo.swift in Sources */,
 				0AFA4EAF29E376D400C6CEE9 /* Entities.xcdatamodeld in Sources */,
+				0AC566B32A363DB20082F664 /* InterfaceIdiomEnvironment.swift in Sources */,
 				0AF6CF2D29F18B4A00C725B7 /* MKCoordinateRegion+Codable.swift in Sources */,
 				0AC9FDAC297ACA8200DBA5E1 /* MapScreen.swift in Sources */,
 				0AE45B3329465B7B00A82228 /* AQIGauge.swift in Sources */,

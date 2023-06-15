@@ -36,12 +36,14 @@ final class AQIWidgetProvider: NSObject, TimelineProvider {
     }
     
     func placeholder(in context: Context) -> AQIEntry {
-        AQIEntry(date: Date(), source: "29cx2", location: "Placeholder", aqiIndex: 0)
+        AQIEntry.placeholder()
     }
     
     func getSnapshot(in context: Context, completion: @escaping (AQIEntry) -> ()) {
-        let entry = AQIEntry(date: Date(), source: "29cx2", location: "Snapshot", aqiIndex: 0)
-        completion(entry)
+        Task(priority: .background) {
+            let snapshotEntry = await getSnapshotEntry()
+            completion(snapshotEntry)
+        }
     }
     
     func getTimeline(in context: Context, completion: @escaping (Timeline<AQIEntry>) -> ()) {
@@ -94,6 +96,28 @@ final class AQIWidgetProvider: NSObject, TimelineProvider {
             
             completion(timeline)
         }
+    }
+    
+    private func getSnapshotEntry() async -> AQIEntry {
+        let aqiData = try? await repository
+            .getAQI(minutesAgo: AppConstants.defaultMinutesAgo,
+                    end: nil,
+                    latitude: nil,
+                    longitude: nil,
+                    distance: nil,
+                    source: nil)
+        
+        log.debug("fetched \(aqiData?.count ?? 0) elements for snapshot")
+        
+        let snapshotEntry = aqiData?.randomElement().map {
+            AQIEntry(date: Date(),
+                     source: $0.source,
+                     location: $0.description,
+                     aqiIndex: $0.quality.index,
+                     isUserLocation: false)
+        }
+        
+        return snapshotEntry ?? AQIEntry.placeholder()
     }
     
     private func completeTimelineWithFatalError(withMessage message: String) {

@@ -35,6 +35,7 @@ struct AireLibreApp: App {
                 .environmentObject(appViewModel)
                 .environmentObject(mapScreenViewModel)
                 .environmentObject(locationViewModel)
+                .environment(\.userInterfaceIdiom, UIDevice.current.userInterfaceIdiom)
         }
     }
 }

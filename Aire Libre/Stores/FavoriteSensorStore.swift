@@ -6,6 +6,7 @@
 //
 
 import CoreData
+import OSLog
 
 protocol FavoriteSensorStore {
     func read() throws -> [String]
@@ -15,12 +16,14 @@ protocol FavoriteSensorStore {
 
 /// Core data persistent store
 class PersistentFavoriteSensorStore: FavoriteSensorStore {
+    private let log = Logger(subsystem: "persistence.re.airelib.ios",
+                             category: String(describing: PersistentFavoriteSensorStore.self))
     
     private let container: NSPersistentContainer
     
     init() async throws {
         container = NSPersistentContainer(name: "Entities")
-
+        
         try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<Void, Error>) in
             container.loadPersistentStores { [weak self] (description, error) in
                 if let error  {
@@ -56,13 +59,13 @@ class PersistentFavoriteSensorStore: FavoriteSensorStore {
         let result = try container.viewContext.fetch(fetchRequest)
         
         if let sensor = result.first {
-            print("Store: sensor to delete \(sensor)")
+            log.info("Store: sensor to delete \(sensor)")
             container.viewContext.delete(sensor)
             
             do {
                 try container.viewContext.save()
             } catch {
-                print("Error deleting \(source): \(error.localizedDescription)")
+                log.error("Error deleting \(source): \(error.localizedDescription)")
                 
                 throw error
             }
