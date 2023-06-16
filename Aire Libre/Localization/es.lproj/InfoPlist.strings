@@ -1,0 +1,8 @@
+/* 
+  InfoPlist.strings
+  Aire Libre
+
+  Created by Marcio Duarte on 2023-06-15.
+  
+*/
+"NSLocationWhenInUseUsageDescription" = "Usamos tu localización para mostrarte sensores cercanos";
