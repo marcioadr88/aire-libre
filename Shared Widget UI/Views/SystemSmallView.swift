@@ -13,7 +13,7 @@ struct SystemSmallView: View {
     
     var body: some View {
         ZStack {
-            Color(.systemGroupedBackground)
+            CustomColors.viewBackgroundColor
             
             VStack(alignment: .center, spacing: 4) {
                 Group {

@@ -17,12 +17,19 @@ struct AQIWidgetConfiguration: Widget {
         }
         .configurationDisplayName(Localizables.appName)
         .description(Localizables.widgetConfigurationDescription)
+        #if os(iOS)
         .supportedFamilies([
             .systemSmall,
             .systemMedium,
             .accessoryCircular,
             .accessoryInline
         ])
+        #elseif os(macOS)
+        .supportedFamilies([
+            .systemSmall,
+            .systemMedium
+        ])
+        #endif
     }
 }
 

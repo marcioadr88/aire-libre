@@ -39,7 +39,7 @@ struct SmallErrorWidgetView: View {
     
     var body: some View {
         ZStack {
-            Color(.systemGroupedBackground)
+            CustomColors.viewBackgroundColor
             
             VStack(alignment: .center, spacing: 6) {
                 AQIGauge()
@@ -70,7 +70,7 @@ struct MediumErrorWidgetView: View {
     
     var body: some View {
         ZStack {
-            Color(.systemGroupedBackground)
+            CustomColors.viewBackgroundColor
             
             VStack {
                 HStack(alignment: .center, spacing: 24) {

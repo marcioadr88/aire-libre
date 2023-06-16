@@ -23,7 +23,7 @@ struct SystemMediumView: View {
     
     var body: some View {
         ZStack {
-            Color(.systemGroupedBackground)
+            CustomColors.viewBackgroundColor
             
             VStack(alignment: .leading) {
                 HStack(alignment: .top, spacing: 24) {
