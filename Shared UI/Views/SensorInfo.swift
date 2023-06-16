@@ -42,7 +42,6 @@ struct SensorInfo: View {
                     if let subtitle {
                         Text(subtitle)
                             .font(.caption)
-                            .fixedSize(horizontal: false, vertical: true)
                     }
                     
                     if let level {
@@ -50,6 +49,7 @@ struct SensorInfo: View {
                             .font(.title2.weight(.medium))
                     }
                 }
+                .fixedSize(horizontal: false, vertical: true)
                 
                 Spacer()
                 
@@ -64,9 +64,9 @@ struct SensorInfo: View {
             if let level {
                 Text(level.description)
                     .font(.caption.weight(.regular))
-                    .lineLimit(nil)
             }
         }
+        .lineLimit(nil)
         .padding()
         .animation(nil, value: UUID())
     }
