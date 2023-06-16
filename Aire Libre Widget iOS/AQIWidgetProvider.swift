@@ -19,20 +19,23 @@ final class AQIWidgetProvider: NSObject, TimelineProvider {
     private var completionCallback: ((Timeline<AQIEntry>) -> ())?
     private var cancellables = Set<AnyCancellable>()
     private let repository: AireLibreRepository
+    private let locationStore: LocationStore
     
     override init() {
         let connectionChecker = NWPathMonitorConnectionChecker()
         let endpoints = ProductionEndpoints()
         let networkService = NetworkServiceImpl(endpoints: endpoints)
         let persistenceService = PersistenceServiceImpl()
-        self.repository = AireLibreRepositoryImpl(networkService: networkService,
-                                                  persistenceService: persistenceService,
-                                                  connectionChecker: connectionChecker)
+        locationStore = LocationStore()
+        repository = AireLibreRepositoryImpl(networkService: networkService,
+                                             persistenceService: persistenceService,
+                                             connectionChecker: connectionChecker)
         
         super.init()
         
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        
     }
     
     func placeholder(in context: Context) -> AQIEntry {
@@ -70,8 +73,8 @@ final class AQIWidgetProvider: NSObject, TimelineProvider {
                 log.debug("fetched \(aqiData.count) elements")
                 
                 if let location,
-                   let nearestSensor = Utils.nearestSensorToUser(location,
-                                                                 data: aqiData) {
+                   let nearestSensor = LocationUtils.nearestSensorToUser(location,
+                                                                         data: aqiData) {
                     log.info("nearest sensor to user is: \(nearestSensor.description)")
                     
                     let sensorEntry = AQIEntry(date: Date(),
@@ -136,7 +139,7 @@ extension AQIWidgetProvider: CLLocationManagerDelegate {
         guard let location = locations.last else { return }
         locationManager.stopUpdatingLocation()
         
-        saveLastKnwonLocation(location)
+        locationStore.saveLastKnwonLocation(location)
         getTimeline(location: location,
                     completion: completionCallback ?? { _ in })
     }
@@ -145,7 +148,7 @@ extension AQIWidgetProvider: CLLocationManagerDelegate {
         log.error("Could not get location: \(error.localizedDescription)")
         locationManager.stopUpdatingLocation()
         
-        let lastKnwonLocation = getLastKnwonLocation()
+        let lastKnwonLocation = locationStore.getLastKnwonLocation()
         getTimeline(location: lastKnwonLocation,
                     completion: completionCallback ?? { _ in })
     }
@@ -162,40 +165,5 @@ extension AQIWidgetProvider: CLLocationManagerDelegate {
         default:
             completeTimelineWithFatalError(withMessage: Localizables.turnOnLocationToGetData)
         }
-    }
-}
-
-extension AQIWidgetProvider {
-    private static let savedLocationKey = "LastKnwonLocation"
-    
-    func saveLastKnwonLocation(_ location: CLLocation) {
-        let userDefaults = UserDefaults.standard
-        
-        do {
-            let locationData = try NSKeyedArchiver.archivedData(withRootObject: location,
-                                                                requiringSecureCoding: false)
-            userDefaults.set(locationData,
-                             forKey: AQIWidgetProvider.savedLocationKey)
-            log.debug("LastKnwonLocation saved")
-        } catch {
-            log.error("Error saving location \(error.localizedDescription)")
-        }
-    }
-    
-    func getLastKnwonLocation() -> CLLocation? {
-        let userDefaults = UserDefaults.standard
-        
-        if let savedLocationData = userDefaults.data(forKey: AQIWidgetProvider.savedLocationKey) {
-            do {
-                let location = try NSKeyedUnarchiver.unarchivedObject(ofClass: CLLocation.self,
-                                                                      from: savedLocationData)
-                log.debug("LastKnwonLocation retrieved")
-                return location
-            } catch {
-                log.error("Error retrieving location: \(error.localizedDescription)")
-            }
-        }
-        
-        return nil
     }
 }

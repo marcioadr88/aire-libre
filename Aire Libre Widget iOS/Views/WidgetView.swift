@@ -18,7 +18,7 @@ struct WidgetView: View {
             return nil
         }
         
-        return Utils.widgetOpenURL(for: source)
+        return WidgetURLUtils.widgetOpenURL(for: source)
     }
     
     var body: some View {
