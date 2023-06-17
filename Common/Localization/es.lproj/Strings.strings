@@ -35,6 +35,7 @@
 /* Misc */
 "favorites" = "Favoritos";
 "viewMap" = "Ver mapa";
+"map" = "Mapa";
 "loading" = "Cargando";
 "noFavorites" = "No hay favoritos";
 "myLocation" = "Mi localización";

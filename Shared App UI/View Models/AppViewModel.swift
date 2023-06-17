@@ -43,7 +43,8 @@ final class AppViewModel: NSObject, ObservableObject {
     @Published var nearestSensorToUser: AQIData?
     
     var favorites: [AQIData] {
-        let favorites = aqiData.filter { $0.isFavoriteSensor }
+        var favorites = aqiData.filter { $0.isFavoriteSensor }
+        favorites = orderByDistance(data: favorites)
         
         if let nearestSensorToUser {
             return [nearestSensorToUser.copy(isNearestToUser: true)] + favorites
@@ -51,7 +52,7 @@ final class AppViewModel: NSObject, ObservableObject {
             return favorites
         }
     }
-
+    
     private let repository: AireLibreRepository
     
     init(repository: AireLibreRepository) {
@@ -66,7 +67,7 @@ final class AppViewModel: NSObject, ObservableObject {
               aqiData[index] != newValue else {
             return
         }
-
+        
         log.debug("Updating data of \(newValue.source) at index \(index)")
         
         Task {
@@ -117,9 +118,16 @@ final class AppViewModel: NSObject, ObservableObject {
     
     private func updateNearestSensorToUser() {
         if let userLocation {
-            nearestSensorToUser = LocationUtils.nearestSensorToUser(userLocation, data: aqiData)
+            nearestSensorToUser = LocationUtils.nearestSensorToUser(userLocation,
+                                                                    data: aqiData)
         } else {
             nearestSensorToUser = nil
         }
+    }
+    
+    private func orderByDistance(data: [AQIData]) -> [AQIData] {
+        guard let userLocation else { return data }
+        
+        return LocationUtils.sortByDistance(data: data, to: userLocation)
     }
 }

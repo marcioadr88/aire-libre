@@ -38,7 +38,7 @@ struct ListScreen: View {
                 if userInterfaceIdiom == .phone {
                     ToolbarItem {
                         NavigationLink(value: Screens.map(source: nil)) {
-                            Text(Localizables.viewMap)
+                            Text(Localizables.map)
                         }
                     }
                 }
