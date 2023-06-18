@@ -111,6 +111,8 @@
 		0A8D02F92A3D1AD400B4B43F /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFC850A29CBD22B00D201E7 /* CustomColors.swift */; };
 		0A8D02FB2A3D204700B4B43F /* AQIData+Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A127CBD2940332B00D74240 /* AQIData+Coordinates.swift */; };
 		0A8D02FC2A3D204800B4B43F /* AQIData+Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A127CBD2940332B00D74240 /* AQIData+Coordinates.swift */; };
+		0A8D02FE2A3E28FB00B4B43F /* InfoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8D02FD2A3E28FB00B4B43F /* InfoScreen.swift */; };
+		0A8D02FF2A3E28FB00B4B43F /* InfoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8D02FD2A3E28FB00B4B43F /* InfoScreen.swift */; };
 		0A8FCDAA293EB3AF006022B9 /* AQILevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8FCDA9293EB3AF006022B9 /* AQILevel.swift */; };
 		0A8FCDAC293EB4A5006022B9 /* AQIAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8FCDAB293EB4A5006022B9 /* AQIAnnotationView.swift */; };
 		0AA203F02A004F2200E68C0D /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA203EF2A004F2200E68C0D /* LocationViewModel.swift */; };
@@ -229,6 +231,7 @@
 		0A8D02C62A3D175A00B4B43F /* Aire Libre Widget macOS.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Aire Libre Widget macOS.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A8D02CE2A3D175C00B4B43F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A8D02CF2A3D175C00B4B43F /* Aire_Libre_Widget_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Aire_Libre_Widget_macOS.entitlements; sourceTree = "<group>"; };
+		0A8D02FD2A3E28FB00B4B43F /* InfoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoScreen.swift; sourceTree = "<group>"; };
 		0A8FCDA9293EB3AF006022B9 /* AQILevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQILevel.swift; sourceTree = "<group>"; };
 		0A8FCDAB293EB4A5006022B9 /* AQIAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIAnnotationView.swift; sourceTree = "<group>"; };
 		0AA203EF2A004F2200E68C0D /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
@@ -320,6 +323,7 @@
 				0A3B048B291733A90026D3DF /* RootScreen.swift */,
 				0AC9FDAB297ACA8200DBA5E1 /* MapScreen.swift */,
 				0AC9FDAD297ACB7600DBA5E1 /* ListScreen.swift */,
+				0A8D02FD2A3E28FB00B4B43F /* InfoScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -802,6 +806,7 @@
 				0A6CCBAB2977835500751E5C /* AppViewModel.swift in Sources */,
 				0AB43FA02936EA66005299AC /* Samples.swift in Sources */,
 				0A27E4D629C3FCD000576F7F /* MapScreenViewModel.swift in Sources */,
+				0A8D02FE2A3E28FB00B4B43F /* InfoScreen.swift in Sources */,
 				0AFC850B29CBD22B00D201E7 /* CustomColors.swift in Sources */,
 				0AC259CF29175D760047397E /* Quality.swift in Sources */,
 				0AAFF68D29C9480A008694A9 /* ZoomControls.swift in Sources */,
@@ -846,6 +851,7 @@
 				0A3BC3922A3CAAFC008A26BC /* AppError.swift in Sources */,
 				0A3BC39D2A3CACB4008A26BC /* LocationViewModel.swift in Sources */,
 				0A3BC39F2A3CACB4008A26BC /* MapScreenViewModel.swift in Sources */,
+				0A8D02FF2A3E28FB00B4B43F /* InfoScreen.swift in Sources */,
 				0A3BC3992A3CAC93008A26BC /* MapScreen.swift in Sources */,
 				0A3BC3982A3CAC93008A26BC /* RootScreen.swift in Sources */,
 				0A3BC3822A3CAAC2008A26BC /* Localizables.swift in Sources */,

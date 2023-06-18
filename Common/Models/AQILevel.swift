@@ -9,6 +9,9 @@ import Foundation
 import SwiftUI
 
 enum AQILevel: String {
+    static let minAQIIndex = 0
+    static let maxAQIIndex = 500
+    
     case good
     case moderate
     case sensitive
@@ -53,10 +56,26 @@ enum AQILevel: String {
     }
 }
 
+extension AQILevel {
+    var range: ClosedRange<Int> {
+        switch self {
+        case .good:
+            return 0...50
+        case .moderate:
+            return 51...100
+        case .sensitive:
+            return 101...150
+        case .unhealthy:
+            return 151...200
+        case .veryUnhealthy:
+            return 201...300
+        case .hazardous:
+            return 301...500
+        }
+    }
+}
+
 extension AQILevel: CaseIterable {
-    static let minAQIIndex = 0
-    static let maxAQIIndex = 500
-    
     static var colors: [Color] {
         allCases.map(\.color)
     }
@@ -110,5 +129,11 @@ extension AQILevel {
         case .unhealthy, .veryUnhealthy, .hazardous:
             return "aqi.high"
         }
+    }
+}
+
+extension AQILevel: Identifiable {
+    var id: String {
+        rawValue
     }
 }

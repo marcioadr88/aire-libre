@@ -14,6 +14,7 @@ struct MapScreen: View {
     @EnvironmentObject private var mapViewModel: MapScreenViewModel
     
     @State private var selectedAQIData: AQIData?
+    @State private var showingInfoSheet: Bool = false
     
     private var selectedSourceId: String?
     
@@ -104,7 +105,19 @@ struct MapScreen: View {
         .onDisappear {
             mapViewModel.selectedSource = nil
         }
+        .sheet(isPresented: $showingInfoSheet, content: {
+            InfoScreen()
+                .frame(maxWidth: 720)
+        })
         .toolbar {
+            ToolbarItem {
+                Button {
+                    showingInfoSheet.toggle()
+                } label: {
+                    Image(systemName: "info.circle")
+                }
+            }
+            
             ToolbarItem {
                 Button {
                     mapViewModel.centerToUserLocation()
@@ -120,9 +133,9 @@ struct MapScreen: View {
                     if appViewModel.isLoading {
                         ProgressView()
                             .tint(Color.accentColor)
-#if os(macOS)
+                            #if os(macOS)
                             .controlSize(.small)
-#endif
+                            #endif
                     } else {
                         Image(systemName: "arrow.clockwise")
                     }
@@ -130,9 +143,9 @@ struct MapScreen: View {
                 .keyboardShortcut("r", modifiers: [.command])
             }
         }
-#if os(iOS)
+        #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
-#endif
+        #endif
     }
     
     private func showSelectedSource(centerToSource: Bool = true) {

@@ -43,3 +43,14 @@
 "appName" = "Aire Libre";
 "widgetConfigurationDescription" = "Get the air quality from the sensor closest to your location";
 "dismiss" = "Dismiss";
+"to"="to";
+
+/* Info Screen */
+"whatsAireLibreTitle"="What is AireLibre?";
+"whatsAireLibreDescription"="AireLibre is a community response to the need to know about air quality in a free, collaborative and decentralized way.";
+"whatsAQITitle"="What is AQI?";
+"whatsAQIDescription"="It is an index used by environmental agencies to measure air quality. The higher the value, the higher the level of pollution.";
+"aqiScaleTitle"="AQI Scale";
+"scaleSource"="Source: [AirNow](https://www.airnow.gov/aqi/aqi-basics)";
+"knowMoreProject" = "Do you want to know more about the project?";
+"collaborateWithProject" = "If you want to collaborate, or learn how to **build your own sensor**, or know how it differs from other similar projects or [where our sensors are calibrated?](https://github.com/melizeche/AireLibre/#los-sensores-son-calibrados-en-suiza) Click [here for more info](https://github.com/melizeche/AireLibre/#faq).";
