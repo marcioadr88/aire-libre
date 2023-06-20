@@ -38,6 +38,7 @@
 "map" = "Map";
 "loading" = "Loading";
 "noFavorites" = "No favorites";
+"noData" = "No data";
 "myLocation" = "My location";
 "aqi" = "AQI";
 "appName" = "Aire Libre";
