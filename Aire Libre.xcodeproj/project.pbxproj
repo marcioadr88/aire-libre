@@ -402,16 +402,32 @@
 			path = "View Models";
 			sourceTree = "<group>";
 		};
-		0A3B047D291733A90026D3DF = {
+		0A31CA3B2A4269AD0082C6B0 /* Apps */ = {
 			isa = PBXGroup;
 			children = (
 				0A3B0488291733A90026D3DF /* Aire Libre iOS */,
 				0A3BC3742A3CAA99008A26BC /* Aire Libre macOS */,
 				0A6BD10E2A3F9A33006D26A8 /* Aire Libre watchOS */,
 				0A3BC3952A3CAC17008A26BC /* Shared App UI */,
+			);
+			path = Apps;
+			sourceTree = "<group>";
+		};
+		0A31CA3C2A4269B70082C6B0 /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
 				0AC2E45E2A033FEC002D2446 /* Aire Libre Widget iOS */,
 				0A8D02C92A3D175A00B4B43F /* Aire Libre Widget macOS */,
 				0A8D02D72A3D182C00B4B43F /* Shared Widget UI */,
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		0A3B047D291733A90026D3DF = {
+			isa = PBXGroup;
+			children = (
+				0A31CA3B2A4269AD0082C6B0 /* Apps */,
+				0A31CA3C2A4269B70082C6B0 /* Widgets */,
 				0A3BC3682A3CA64A008A26BC /* Common */,
 				0AC2E4592A033FEC002D2446 /* Frameworks */,
 				0A3B0487291733A90026D3DF /* Products */,
@@ -1212,8 +1228,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1268,8 +1282,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -1283,17 +1295,18 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Aire Libre iOS/AireLibre.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Apps/Aire Libre iOS/AireLibre.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_ASSET_PATHS = "Aire\\ Libre\\ iOS/Preview\\ Content/Preview\\ Assets.xcassets";
+				DEVELOPMENT_ASSET_PATHS = "Apps/Aire\\ Libre\\ iOS/Preview\\ Content/Preview\\ Assets.xcassets";
 				DEVELOPMENT_TEAM = 69SFKN563E;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Aire-Libre-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -1328,17 +1341,18 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Aire Libre iOS/AireLibre.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Apps/Aire Libre iOS/AireLibre.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_ASSET_PATHS = "Aire\\ Libre\\ iOS/Preview\\ Content/Preview\\ Assets.xcassets";
+				DEVELOPMENT_ASSET_PATHS = "Apps/Aire\\ Libre\\ iOS/Preview\\ Content/Preview\\ Assets.xcassets";
 				DEVELOPMENT_TEAM = 69SFKN563E;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Aire-Libre-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -1373,14 +1387,15 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Aire Libre macOS/Aire_Libre_macOS.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Apps/Aire Libre macOS/Aire_Libre_macOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Aire Libre macOS/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "Apps/Aire\\ Libre\\ macOS/Preview\\ Content/Preview\\ Assets.xcassets";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Aire-Libre-macOS-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1403,14 +1418,15 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Aire Libre macOS/Aire_Libre_macOS.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Apps/Aire Libre macOS/Aire_Libre_macOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Aire Libre macOS/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "Apps/Aire\\ Libre\\ macOS/Preview\\ Content/Preview\\ Assets.xcassets";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Aire-Libre-macOS-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1436,7 +1452,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Aire Libre watchOS/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Apps/Aire Libre watchOS/Preview Content\"";
 				DEVELOPMENT_TEAM = 69SFKN563E;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1444,6 +1460,7 @@
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = re.airelib.ios;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1469,7 +1486,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Aire Libre watchOS/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Apps/Aire Libre watchOS/Preview Content\"";
 				DEVELOPMENT_TEAM = 69SFKN563E;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1477,6 +1494,7 @@
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = re.airelib.ios;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1499,11 +1517,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_ENTITLEMENTS = "Aire Libre Widget macOS/Aire_Libre_Widget_macOS.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Widgets/Aire Libre Widget macOS/Aire_Libre_Widget_macOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Aire Libre Widget macOS/Info.plist";
+				INFOPLIST_FILE = "Widgets/Aire Libre Widget macOS/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Aire Libre Widget macOS";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1527,11 +1545,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_ENTITLEMENTS = "Aire Libre Widget macOS/Aire_Libre_Widget_macOS.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Widgets/Aire Libre Widget macOS/Aire_Libre_Widget_macOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Aire Libre Widget macOS/Info.plist";
+				INFOPLIST_FILE = "Widgets/Aire Libre Widget macOS/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Aire Libre Widget macOS";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1561,7 +1579,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 69SFKN563E;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Aire Libre Widget iOS/Info.plist";
+				INFOPLIST_FILE = "Widgets/Aire Libre Widget iOS/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Aire Libre Widget iOS";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
@@ -1593,7 +1611,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 69SFKN563E;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Aire Libre Widget iOS/Info.plist";
+				INFOPLIST_FILE = "Widgets/Aire Libre Widget iOS/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Aire Libre Widget iOS";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
