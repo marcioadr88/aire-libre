@@ -20,6 +20,10 @@ final class AppViewModel: NSObject, ObservableObject {
         }
     }
     
+    var aqiDataOrderedByDistance: [AQIData] {
+        orderByDistance(data: aqiData)
+    }
+    
     @Published var error: AppError?
     @Published var isLoading: Bool
     

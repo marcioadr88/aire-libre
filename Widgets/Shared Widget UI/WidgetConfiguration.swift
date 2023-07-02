@@ -29,6 +29,13 @@ struct AQIWidgetConfiguration: Widget {
             .systemSmall,
             .systemMedium
         ])
+        #elseif os(watchOS)
+        .supportedFamilies([
+            .accessoryCircular,
+            .accessoryCorner,
+            .accessoryInline,
+            .accessoryRectangular
+        ])
         #endif
     }
 }

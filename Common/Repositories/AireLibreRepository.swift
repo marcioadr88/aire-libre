@@ -97,7 +97,7 @@ final class AireLibreRepositoryImpl: AireLibreRepository {
         distance: Double?,
         source: String?
     ) async throws -> [AQIData] {
-        guard connectionChecker.isConnected else {
+        guard await connectionChecker.isConnected else {
             log.error("No connection detected")
             throw AppError.noConnection
         }

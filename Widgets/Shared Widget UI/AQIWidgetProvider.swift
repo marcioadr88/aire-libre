@@ -22,8 +22,14 @@ final class AQIWidgetProvider: NSObject, TimelineProvider {
     private let locationStore: LocationStore
     
     override init() {
-        let connectionChecker = NWPathMonitorConnectionChecker()
         let endpoints = ProductionEndpoints()
+        
+        #if os(watchOS)
+        let connectionChecker = HttpConnectionChecker(endpoints: endpoints)
+        #else
+        let connectionChecker = NWPathMonitorConnectionChecker()
+        #endif
+        
         let networkService = NetworkServiceImpl(endpoints: endpoints)
         let persistenceService = PersistenceServiceImpl()
         locationStore = LocationStore()

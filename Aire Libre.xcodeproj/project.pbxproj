@@ -105,6 +105,45 @@
 		0A7B2B802A1C5CCB00C4949D /* NetworkServiceEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABB8758292D97DA00F7644E /* NetworkServiceEndpoints.swift */; };
 		0A7B2B812A1C5D3700C4949D /* Entities.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0AFA4EAD29E376D400C6CEE9 /* Entities.xcdatamodeld */; };
 		0A7B2B822A1C5D6800C4949D /* Task+AutoRetry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB43F9C2936DD38005299AC /* Task+AutoRetry.swift */; };
+		0A867E192A426E6900F72303 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AC2E4632A033FED002D2446 /* Assets.xcassets */; };
+		0A867E1A2A426E7C00F72303 /* AQIWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2E45F2A033FEC002D2446 /* AQIWidgetBundle.swift */; };
+		0A867E1B2A426E7C00F72303 /* WidgetConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA1CB92A034CB400C0E8C3 /* WidgetConfiguration.swift */; };
+		0A867E1C2A426E7C00F72303 /* AQIWidgetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2E4612A033FEC002D2446 /* AQIWidgetProvider.swift */; };
+		0A867E1D2A426E7C00F72303 /* AQIEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5A2722A04977600C968A5 /* AQIEntry.swift */; };
+		0A867E1E2A426ED900F72303 /* Strings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF37C2292EE6100086514C /* Strings.strings */; };
+		0A867E1F2A426EDC00F72303 /* Localizables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF37B9292EE4B90086514C /* Localizables.swift */; };
+		0A867E202A426EDF00F72303 /* Entities.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0AFA4EAD29E376D400C6CEE9 /* Entities.xcdatamodeld */; };
+		0A867E212A426EE100F72303 /* FavoriteSensorStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFA4EA829E3760000C6CEE9 /* FavoriteSensorStore.swift */; };
+		0A867E222A426EE400F72303 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB43DD529EB294800AB45CE /* PersistenceService.swift */; };
+		0A867E232A426EE400F72303 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABB8756292D96B000F7644E /* NetworkService.swift */; };
+		0A867E242A426EE400F72303 /* NetworkServiceEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABB8758292D97DA00F7644E /* NetworkServiceEndpoints.swift */; };
+		0A867E252A426EE600F72303 /* AireLibreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABB8753292D969600F7644E /* AireLibreRepository.swift */; };
+		0A867E262A426EE900F72303 /* Task+AutoRetry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB43F9C2936DD38005299AC /* Task+AutoRetry.swift */; };
+		0A867E272A426EE900F72303 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5C1EE293D59700084E68C /* Color+Hex.swift */; };
+		0A867E282A426EE900F72303 /* AQIData+Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A127CBD2940332B00D74240 /* AQIData+Coordinates.swift */; };
+		0A867E292A426EEE00F72303 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF37C7292EEE4E0086514C /* AppConstants.swift */; };
+		0A867E2A2A426EEE00F72303 /* ConnectionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF37C5292EEA260086514C /* ConnectionChecker.swift */; };
+		0A867E2B2A426EEE00F72303 /* LocationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3BC3AB2A3CD953008A26BC /* LocationStore.swift */; };
+		0A867E2C2A426EEE00F72303 /* LocationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3BC3AF2A3CD95B008A26BC /* LocationUtils.swift */; };
+		0A867E2D2A426EEE00F72303 /* WidgetURLUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3BC3B32A3CD9A5008A26BC /* WidgetURLUtils.swift */; };
+		0A867E2E2A426EF100F72303 /* AQIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC259CC29175D6E0047397E /* AQIData.swift */; };
+		0A867E2F2A426EF100F72303 /* Quality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC259CE29175D760047397E /* Quality.swift */; };
+		0A867E302A426EF100F72303 /* AQILevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8FCDA9293EB3AF006022B9 /* AQILevel.swift */; };
+		0A867E312A426EF800F72303 /* AQIGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE45B3229465B7B00A82228 /* AQIGauge.swift */; };
+		0A867E322A426EFB00F72303 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFC850A29CBD22B00D201E7 /* CustomColors.swift */; };
+		0A867E332A426EFE00F72303 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABB875A292D9A1000F7644E /* AppError.swift */; };
+		0A867E362A426FF400F72303 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A867E352A426FF400F72303 /* WidgetView.swift */; };
+		0A867E372A42706B00F72303 /* AccessoryCircularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD361FB2A296C1700FE563A /* AccessoryCircularView.swift */; };
+		0A867E382A42706B00F72303 /* AccessoryInlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA96DD22A2BEF920020D4A5 /* AccessoryInlineView.swift */; };
+		0A867E3A2A42728400F72303 /* AccessoryRectangularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A867E392A42728400F72303 /* AccessoryRectangularView.swift */; };
+		0A867E3B2A4272C600F72303 /* SensorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6BD13E2A3FB157006D26A8 /* SensorInfo.swift */; };
+		0A867E3D2A4275CA00F72303 /* AccessoryCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A867E3C2A4275CA00F72303 /* AccessoryCornerView.swift */; };
+		0A867E3F2A428A5C00F72303 /* HttpConnectionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A867E3E2A428A5C00F72303 /* HttpConnectionChecker.swift */; };
+		0A867E402A428A6500F72303 /* HttpConnectionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A867E3E2A428A5C00F72303 /* HttpConnectionChecker.swift */; };
+		0A867E412A428A6500F72303 /* HttpConnectionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A867E3E2A428A5C00F72303 /* HttpConnectionChecker.swift */; };
+		0A867E422A428A6600F72303 /* HttpConnectionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A867E3E2A428A5C00F72303 /* HttpConnectionChecker.swift */; };
+		0A867E432A428A6600F72303 /* HttpConnectionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A867E3E2A428A5C00F72303 /* HttpConnectionChecker.swift */; };
+		0A867E442A428A6700F72303 /* HttpConnectionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A867E3E2A428A5C00F72303 /* HttpConnectionChecker.swift */; };
 		0A8D02C72A3D175A00B4B43F /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AC2E45A2A033FEC002D2446 /* WidgetKit.framework */; };
 		0A8D02C82A3D175A00B4B43F /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AC2E45C2A033FEC002D2446 /* SwiftUI.framework */; };
 		0A8D02D22A3D175C00B4B43F /* Aire Libre Widget macOS.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0A8D02C62A3D175A00B4B43F /* Aire Libre Widget macOS.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -147,6 +186,8 @@
 		0A8FCDAA293EB3AF006022B9 /* AQILevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8FCDA9293EB3AF006022B9 /* AQILevel.swift */; };
 		0A8FCDAC293EB4A5006022B9 /* AQIAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8FCDAB293EB4A5006022B9 /* AQIAnnotationView.swift */; };
 		0AA203F02A004F2200E68C0D /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA203EF2A004F2200E68C0D /* LocationViewModel.swift */; };
+		0AA322602A51DF0F003FE789 /* ErrorWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA3225F2A51DF0F003FE789 /* ErrorWidgetView.swift */; };
+		0AA322622A51FB2A003FE789 /* NWPathMonitorConnectionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA322612A51FB2A003FE789 /* NWPathMonitorConnectionChecker.swift */; };
 		0AA96DD32A2BEF920020D4A5 /* AccessoryInlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA96DD22A2BEF920020D4A5 /* AccessoryInlineView.swift */; };
 		0AACDC642A1EF3FE009F0405 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF37C7292EEE4E0086514C /* AppConstants.swift */; };
 		0AAFF68D29C9480A008694A9 /* ZoomControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAFF68C29C9480A008694A9 /* ZoomControls.swift */; };
@@ -161,6 +202,9 @@
 		0ABB8757292D96B000F7644E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABB8756292D96B000F7644E /* NetworkService.swift */; };
 		0ABB8759292D97DA00F7644E /* NetworkServiceEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABB8758292D97DA00F7644E /* NetworkServiceEndpoints.swift */; };
 		0ABB875B292D9A1000F7644E /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABB875A292D9A1000F7644E /* AppError.swift */; };
+		0AC231FC2A426C8E00ECC41E /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AC2E45A2A033FEC002D2446 /* WidgetKit.framework */; };
+		0AC231FD2A426C8E00ECC41E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AC2E45C2A033FEC002D2446 /* SwiftUI.framework */; };
+		0AC232062A426C8F00ECC41E /* Aire Libre Widget watchOS.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0AC231FB2A426C8E00ECC41E /* Aire Libre Widget watchOS.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0AC259CD29175D6E0047397E /* AQIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC259CC29175D6E0047397E /* AQIData.swift */; };
 		0AC259CF29175D760047397E /* Quality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC259CE29175D760047397E /* Quality.swift */; };
 		0AC2E45B2A033FEC002D2446 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AC2E45A2A033FEC002D2446 /* WidgetKit.framework */; };
@@ -212,6 +256,13 @@
 			remoteGlobalIDString = 0A8D02C52A3D175A00B4B43F;
 			remoteInfo = "Aire Libre Widget macOSExtension";
 		};
+		0AC232042A426C8F00ECC41E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A3B047E291733A90026D3DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AC231FA2A426C8E00ECC41E;
+			remoteInfo = "Aire Libre Widget watchOSExtension";
+		};
 		0AC2E4662A033FED002D2446 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0A3B047E291733A90026D3DF /* Project object */;
@@ -240,6 +291,17 @@
 			dstSubfolderSpec = 13;
 			files = (
 				0A8D02D22A3D175C00B4B43F /* Aire Libre Widget macOS.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AC2320A2A426C8F00ECC41E /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0AC232062A426C8F00ECC41E /* Aire Libre Widget watchOS.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +347,10 @@
 		0A6BD13E2A3FB157006D26A8 /* SensorInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorInfo.swift; sourceTree = "<group>"; };
 		0A6CCBAA2977835500751E5C /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 		0A7816DB29BE480F00C1CFB0 /* Aire-Libre-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Aire-Libre-Info.plist"; sourceTree = SOURCE_ROOT; };
+		0A867E352A426FF400F72303 /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
+		0A867E392A42728400F72303 /* AccessoryRectangularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryRectangularView.swift; sourceTree = "<group>"; };
+		0A867E3C2A4275CA00F72303 /* AccessoryCornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryCornerView.swift; sourceTree = "<group>"; };
+		0A867E3E2A428A5C00F72303 /* HttpConnectionChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpConnectionChecker.swift; sourceTree = "<group>"; };
 		0A8D02C62A3D175A00B4B43F /* Aire Libre Widget macOS.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Aire Libre Widget macOS.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A8D02CE2A3D175C00B4B43F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A8D02CF2A3D175C00B4B43F /* Aire_Libre_Widget_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Aire_Libre_Widget_macOS.entitlements; sourceTree = "<group>"; };
@@ -292,6 +358,8 @@
 		0A8FCDA9293EB3AF006022B9 /* AQILevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQILevel.swift; sourceTree = "<group>"; };
 		0A8FCDAB293EB4A5006022B9 /* AQIAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIAnnotationView.swift; sourceTree = "<group>"; };
 		0AA203EF2A004F2200E68C0D /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
+		0AA3225F2A51DF0F003FE789 /* ErrorWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorWidgetView.swift; sourceTree = "<group>"; };
+		0AA322612A51FB2A003FE789 /* NWPathMonitorConnectionChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NWPathMonitorConnectionChecker.swift; sourceTree = "<group>"; };
 		0AA96DD22A2BEF920020D4A5 /* AccessoryInlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryInlineView.swift; sourceTree = "<group>"; };
 		0AAFF68C29C9480A008694A9 /* ZoomControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomControls.swift; sourceTree = "<group>"; };
 		0AB43DD529EB294800AB45CE /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
@@ -305,6 +373,8 @@
 		0ABB8756292D96B000F7644E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		0ABB8758292D97DA00F7644E /* NetworkServiceEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceEndpoints.swift; sourceTree = "<group>"; };
 		0ABB875A292D9A1000F7644E /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		0AC231FB2A426C8E00ECC41E /* Aire Libre Widget watchOS.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Aire Libre Widget watchOS.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AC232032A426C8F00ECC41E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AC259CC29175D6E0047397E /* AQIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIData.swift; sourceTree = "<group>"; };
 		0AC259CE29175D760047397E /* Quality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quality.swift; sourceTree = "<group>"; };
 		0AC2E4582A033FEC002D2446 /* Aire Libre Widget iOS.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Aire Libre Widget iOS.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -369,6 +439,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0AC231F82A426C8E00ECC41E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AC231FD2A426C8E00ECC41E /* SwiftUI.framework in Frameworks */,
+				0AC231FC2A426C8E00ECC41E /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0AC2E4552A033FEC002D2446 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -418,6 +497,7 @@
 			children = (
 				0AC2E45E2A033FEC002D2446 /* Aire Libre Widget iOS */,
 				0A8D02C92A3D175A00B4B43F /* Aire Libre Widget macOS */,
+				0AC231FE2A426C8E00ECC41E /* Aire Libre Widget watchOS */,
 				0A8D02D72A3D182C00B4B43F /* Shared Widget UI */,
 			);
 			path = Widgets;
@@ -442,6 +522,7 @@
 				0A3BC3732A3CAA99008A26BC /* Aire Libre macOS.app */,
 				0A8D02C62A3D175A00B4B43F /* Aire Libre Widget macOS.appex */,
 				0A6BD10D2A3F9A33006D26A8 /* Aire Libre watchOS.app */,
+				0AC231FB2A426C8E00ECC41E /* Aire Libre Widget watchOS.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -502,6 +583,8 @@
 			isa = PBXGroup;
 			children = (
 				0AEF37C5292EEA260086514C /* ConnectionChecker.swift */,
+				0A867E3E2A428A5C00F72303 /* HttpConnectionChecker.swift */,
+				0AA322612A51FB2A003FE789 /* NWPathMonitorConnectionChecker.swift */,
 				0AEF37C7292EEE4E0086514C /* AppConstants.swift */,
 				0A3BC3AB2A3CD953008A26BC /* LocationStore.swift */,
 				0A3BC3AF2A3CD95B008A26BC /* LocationUtils.swift */,
@@ -675,6 +758,18 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		0AC231FE2A426C8E00ECC41E /* Aire Libre Widget watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				0AC232032A426C8F00ECC41E /* Info.plist */,
+				0A867E352A426FF400F72303 /* WidgetView.swift */,
+				0A867E392A42728400F72303 /* AccessoryRectangularView.swift */,
+				0A867E3C2A4275CA00F72303 /* AccessoryCornerView.swift */,
+				0AA3225F2A51DF0F003FE789 /* ErrorWidgetView.swift */,
+			);
+			path = "Aire Libre Widget watchOS";
+			sourceTree = "<group>";
+		};
 		0AC259CB29175CC20047397E /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -785,10 +880,12 @@
 				0A6BD1092A3F9A33006D26A8 /* Sources */,
 				0A6BD10A2A3F9A33006D26A8 /* Frameworks */,
 				0A6BD10B2A3F9A33006D26A8 /* Resources */,
+				0AC2320A2A426C8F00ECC41E /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0AC232052A426C8F00ECC41E /* PBXTargetDependency */,
 			);
 			name = "Aire Libre watchOS";
 			productName = "Aire Libre watchOS Watch App";
@@ -810,6 +907,23 @@
 			name = "Aire Libre Widget macOS";
 			productName = "Aire Libre Widget macOSExtension";
 			productReference = 0A8D02C62A3D175A00B4B43F /* Aire Libre Widget macOS.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		0AC231FA2A426C8E00ECC41E /* Aire Libre Widget watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AC232072A426C8F00ECC41E /* Build configuration list for PBXNativeTarget "Aire Libre Widget watchOS" */;
+			buildPhases = (
+				0AC231F72A426C8E00ECC41E /* Sources */,
+				0AC231F82A426C8E00ECC41E /* Frameworks */,
+				0AC231F92A426C8E00ECC41E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Aire Libre Widget watchOS";
+			productName = "Aire Libre Widget watchOSExtension";
+			productReference = 0AC231FB2A426C8E00ECC41E /* Aire Libre Widget watchOS.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		0AC2E4572A033FEC002D2446 /* Aire Libre Widget iOS */ = {
@@ -851,6 +965,9 @@
 					0A8D02C52A3D175A00B4B43F = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
+					0AC231FA2A426C8E00ECC41E = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
 					0AC2E4572A033FEC002D2446 = {
 						CreatedOnToolsVersion = 14.3;
 					};
@@ -875,6 +992,7 @@
 				0A6BD10C2A3F9A33006D26A8 /* Aire Libre watchOS */,
 				0AC2E4572A033FEC002D2446 /* Aire Libre Widget iOS */,
 				0A8D02C52A3D175A00B4B43F /* Aire Libre Widget macOS */,
+				0AC231FA2A426C8E00ECC41E /* Aire Libre Widget watchOS */,
 			);
 		};
 /* End PBXProject section */
@@ -922,6 +1040,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0AC231F92A426C8E00ECC41E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A867E192A426E6900F72303 /* Assets.xcassets in Resources */,
+				0A867E1E2A426ED900F72303 /* Strings.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0AC2E4562A033FEC002D2446 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -949,6 +1076,7 @@
 				0AAFF68D29C9480A008694A9 /* ZoomControls.swift in Sources */,
 				0A3BC3AC2A3CD953008A26BC /* LocationStore.swift in Sources */,
 				0A427F512944CE5100832C3A /* SensorInfo.swift in Sources */,
+				0A867E442A428A6700F72303 /* HttpConnectionChecker.swift in Sources */,
 				0AFA4EAF29E376D400C6CEE9 /* Entities.xcdatamodeld in Sources */,
 				0AC566B32A363DB20082F664 /* InterfaceIdiomEnvironment.swift in Sources */,
 				0AF6CF2D29F18B4A00C725B7 /* MKCoordinateRegion+Codable.swift in Sources */,
@@ -994,6 +1122,7 @@
 				0A3BC3822A3CAAC2008A26BC /* Localizables.swift in Sources */,
 				0A3BC3AD2A3CD953008A26BC /* LocationStore.swift in Sources */,
 				0A3BC3A82A3CAD7A008A26BC /* Samples.swift in Sources */,
+				0A867E432A428A6600F72303 /* HttpConnectionChecker.swift in Sources */,
 				0A3BC3932A3CAB01008A26BC /* AQIGauge.swift in Sources */,
 				0A3BC39C2A3CAC93008A26BC /* ListScreen.swift in Sources */,
 				0A3BC39A2A3CAC93008A26BC /* SensorInfo.swift in Sources */,
@@ -1043,6 +1172,7 @@
 				0A6BD12B2A3FA49F006D26A8 /* Color+Hex.swift in Sources */,
 				0A6BD1292A3FA497006D26A8 /* PersistenceService.swift in Sources */,
 				0A6BD12C2A3FA49F006D26A8 /* AQIData+Coordinates.swift in Sources */,
+				0A867E422A428A6600F72303 /* HttpConnectionChecker.swift in Sources */,
 				0A6BD1362A3FA4AA006D26A8 /* AppError.swift in Sources */,
 				0A6BD1252A3FA491006D26A8 /* Entities.xcdatamodeld in Sources */,
 				0A6BD13A2A3FA5FA006D26A8 /* LocationViewModel.swift in Sources */,
@@ -1063,6 +1193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A8D02E82A3D18C500B4B43F /* Quality.swift in Sources */,
+				0A867E402A428A6500F72303 /* HttpConnectionChecker.swift in Sources */,
 				0A8D02DE2A3D18B000B4B43F /* PersistenceService.swift in Sources */,
 				0A8D02EF2A3D196700B4B43F /* WidgetView.swift in Sources */,
 				0A8D02FC2A3D204800B4B43F /* AQIData+Coordinates.swift in Sources */,
@@ -1092,6 +1223,47 @@
 				0A8D02DB2A3D18AA00B4B43F /* FavoriteSensorStore.swift in Sources */,
 				0A8D02E02A3D18BA00B4B43F /* Task+AutoRetry.swift in Sources */,
 				0A8D02E92A3D18C500B4B43F /* AQIData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AC231F72A426C8E00ECC41E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AA322602A51DF0F003FE789 /* ErrorWidgetView.swift in Sources */,
+				0A867E2D2A426EEE00F72303 /* WidgetURLUtils.swift in Sources */,
+				0A867E272A426EE900F72303 /* Color+Hex.swift in Sources */,
+				0A867E3A2A42728400F72303 /* AccessoryRectangularView.swift in Sources */,
+				0A867E1F2A426EDC00F72303 /* Localizables.swift in Sources */,
+				0A867E222A426EE400F72303 /* PersistenceService.swift in Sources */,
+				0A867E372A42706B00F72303 /* AccessoryCircularView.swift in Sources */,
+				0A867E212A426EE100F72303 /* FavoriteSensorStore.swift in Sources */,
+				0A867E312A426EF800F72303 /* AQIGauge.swift in Sources */,
+				0A867E362A426FF400F72303 /* WidgetView.swift in Sources */,
+				0AA322622A51FB2A003FE789 /* NWPathMonitorConnectionChecker.swift in Sources */,
+				0A867E2B2A426EEE00F72303 /* LocationStore.swift in Sources */,
+				0A867E302A426EF100F72303 /* AQILevel.swift in Sources */,
+				0A867E292A426EEE00F72303 /* AppConstants.swift in Sources */,
+				0A867E3D2A4275CA00F72303 /* AccessoryCornerView.swift in Sources */,
+				0A867E2F2A426EF100F72303 /* Quality.swift in Sources */,
+				0A867E322A426EFB00F72303 /* CustomColors.swift in Sources */,
+				0A867E2C2A426EEE00F72303 /* LocationUtils.swift in Sources */,
+				0A867E1C2A426E7C00F72303 /* AQIWidgetProvider.swift in Sources */,
+				0A867E232A426EE400F72303 /* NetworkService.swift in Sources */,
+				0A867E2A2A426EEE00F72303 /* ConnectionChecker.swift in Sources */,
+				0A867E202A426EDF00F72303 /* Entities.xcdatamodeld in Sources */,
+				0A867E282A426EE900F72303 /* AQIData+Coordinates.swift in Sources */,
+				0A867E332A426EFE00F72303 /* AppError.swift in Sources */,
+				0A867E3B2A4272C600F72303 /* SensorInfo.swift in Sources */,
+				0A867E3F2A428A5C00F72303 /* HttpConnectionChecker.swift in Sources */,
+				0A867E2E2A426EF100F72303 /* AQIData.swift in Sources */,
+				0A867E1B2A426E7C00F72303 /* WidgetConfiguration.swift in Sources */,
+				0A867E242A426EE400F72303 /* NetworkServiceEndpoints.swift in Sources */,
+				0A867E262A426EE900F72303 /* Task+AutoRetry.swift in Sources */,
+				0A867E252A426EE600F72303 /* AireLibreRepository.swift in Sources */,
+				0A867E1D2A426E7C00F72303 /* AQIEntry.swift in Sources */,
+				0A867E382A42706B00F72303 /* AccessoryInlineView.swift in Sources */,
+				0A867E1A2A426E7C00F72303 /* AQIWidgetBundle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1131,6 +1303,7 @@
 				0ACA1CBC2A034CC300C0E8C3 /* WidgetView.swift in Sources */,
 				0AD65DC82A045B2B0045880F /* AQILevel.swift in Sources */,
 				0AC2E4622A033FEC002D2446 /* AQIWidgetProvider.swift in Sources */,
+				0A867E412A428A6500F72303 /* HttpConnectionChecker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1146,6 +1319,11 @@
 			isa = PBXTargetDependency;
 			target = 0A8D02C52A3D175A00B4B43F /* Aire Libre Widget macOS */;
 			targetProxy = 0A8D02D02A3D175C00B4B43F /* PBXContainerItemProxy */;
+		};
+		0AC232052A426C8F00ECC41E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0AC231FA2A426C8E00ECC41E /* Aire Libre Widget watchOS */;
+			targetProxy = 0AC232042A426C8F00ECC41E /* PBXContainerItemProxy */;
 		};
 		0AC2E4672A033FED002D2446 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1446,10 +1624,12 @@
 		0A6BD11C2A3F9A34006D26A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Apps/Aire Libre watchOS/Preview Content\"";
@@ -1480,10 +1660,12 @@
 		0A6BD11D2A3F9A34006D26A8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Apps/Aire Libre watchOS/Preview Content\"";
@@ -1531,7 +1713,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "re.airelib.macos.Aire-Libre-Widget-macOS";
+				PRODUCT_BUNDLE_IDENTIFIER = re.airelib.macos.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -1559,12 +1741,79 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "re.airelib.macos.Aire-Libre-Widget-macOS";
+				PRODUCT_BUNDLE_IDENTIFIER = re.airelib.macos.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		0AC232082A426C8F00ECC41E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 69SFKN563E;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Widgets/Aire Libre Widget watchOS/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Aire Libre Widget watchOS";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = re.airelib.ios.watchos.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Debug;
+		};
+		0AC232092A426C8F00ECC41E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 69SFKN563E;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Widgets/Aire Libre Widget watchOS/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Aire Libre Widget watchOS";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = re.airelib.ios.watchos.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
 			};
 			name = Release;
 		};
@@ -1590,7 +1839,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "re.airelib.ios.Aire-Libre-Widget";
+				PRODUCT_BUNDLE_IDENTIFIER = re.airelib.ios.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1622,7 +1871,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "re.airelib.ios.Aire-Libre-Widget";
+				PRODUCT_BUNDLE_IDENTIFIER = re.airelib.ios.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1677,6 +1926,15 @@
 			buildConfigurations = (
 				0A8D02D42A3D175C00B4B43F /* Debug */,
 				0A8D02D52A3D175C00B4B43F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AC232072A426C8F00ECC41E /* Build configuration list for PBXNativeTarget "Aire Libre Widget watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AC232082A426C8F00ECC41E /* Debug */,
+				0AC232092A426C8F00ECC41E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

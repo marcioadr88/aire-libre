@@ -32,7 +32,7 @@ struct ListScreen: View {
     @ViewBuilder
     private var list: some View {
         List {
-            ForEach(appViewModel.aqiData) { data in
+            ForEach(appViewModel.aqiDataOrderedByDistance) { data in
                 SensorInfo(title: data.description,
                            aqiIndex: data.quality.index)
             }

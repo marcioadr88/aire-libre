@@ -9,19 +9,23 @@ import SwiftUI
 
 struct SensorInfo: View {
     private let title: String
-    private let aqiIndex: Int
+    private let aqiIndex: Int?
     private let level: AQILevel?
     
     init(title: String,
-         aqiIndex: Int) {
+         aqiIndex: Int?) {
         self.title = title
         self.aqiIndex = aqiIndex
-        self.level = AQILevel.fromIndex(aqiIndex)
+        self.level = aqiIndex != nil ? AQILevel.fromIndex(aqiIndex!) : nil
     }
 
     var body: some View {
         HStack(alignment: .center, spacing: 8) {
-            AQIGauge(index: aqiIndex)
+            if let aqiIndex {
+                AQIGauge(index: aqiIndex)
+            } else {
+                AQIGauge()
+            }
 
             VStack(alignment: .leading) {
                 Text(title)
