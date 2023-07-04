@@ -16,7 +16,7 @@ struct AireLibreWatchOSApp: App {
     
     init() {
         let endpoints = ProductionEndpoints()
-        let connectionChecker = WatchOSConnectionChecker(endpoints: endpoints)
+        let connectionChecker = HttpConnectionChecker(endpoints: endpoints)
         let networkService = NetworkServiceImpl(endpoints: endpoints)
         let persistenceService = PersistenceServiceImpl()
         self.repository = AireLibreRepositoryImpl(networkService: networkService,

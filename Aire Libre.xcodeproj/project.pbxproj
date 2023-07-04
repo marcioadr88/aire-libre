@@ -9,9 +9,19 @@
 /* Begin PBXBuildFile section */
 		0A127CBE2940332B00D74240 /* AQIData+Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A127CBD2940332B00D74240 /* AQIData+Coordinates.swift */; };
 		0A27E4D629C3FCD000576F7F /* MapScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A27E4D529C3FCD000576F7F /* MapScreenViewModel.swift */; };
+		0A2B90592A54AC240074E0E8 /* NWPathMonitorConnectionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA322612A51FB2A003FE789 /* NWPathMonitorConnectionChecker.swift */; };
+		0A2B905A2A54AC250074E0E8 /* NWPathMonitorConnectionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA322612A51FB2A003FE789 /* NWPathMonitorConnectionChecker.swift */; };
+		0A2B905B2A54AC250074E0E8 /* NWPathMonitorConnectionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA322612A51FB2A003FE789 /* NWPathMonitorConnectionChecker.swift */; };
+		0A2B905C2A54AC260074E0E8 /* NWPathMonitorConnectionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA322612A51FB2A003FE789 /* NWPathMonitorConnectionChecker.swift */; };
+		0A2B905D2A54AC260074E0E8 /* NWPathMonitorConnectionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA322612A51FB2A003FE789 /* NWPathMonitorConnectionChecker.swift */; };
+		0A2B905F2A54AC2E0074E0E8 /* HttpConnectionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A867E3E2A428A5C00F72303 /* HttpConnectionChecker.swift */; };
+		0A2B90602A54AC2F0074E0E8 /* HttpConnectionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A867E3E2A428A5C00F72303 /* HttpConnectionChecker.swift */; };
+		0A2B90612A54AC310074E0E8 /* NWPathMonitorConnectionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA322612A51FB2A003FE789 /* NWPathMonitorConnectionChecker.swift */; };
+		0A2B90622A54B4490074E0E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A3B048D291733AA0026D3DF /* Assets.xcassets */; };
+		0A2B90642A54B4540074E0E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A3B048D291733AA0026D3DF /* Assets.xcassets */; };
+		0A2B90652A54B4550074E0E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A3B048D291733AA0026D3DF /* Assets.xcassets */; };
 		0A3B048A291733A90026D3DF /* AireLibreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B0489291733A90026D3DF /* AireLibreApp.swift */; };
 		0A3B048C291733A90026D3DF /* RootScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B048B291733A90026D3DF /* RootScreen.swift */; };
-		0A3B048E291733AA0026D3DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A3B048D291733AA0026D3DF /* Assets.xcassets */; };
 		0A3B0492291733AA0026D3DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A3B0491291733AA0026D3DF /* Preview Assets.xcassets */; };
 		0A3BC37D2A3CAA9A008A26BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A3BC37C2A3CAA9A008A26BC /* Preview Assets.xcassets */; };
 		0A3BC3822A3CAAC2008A26BC /* Localizables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF37B9292EE4B90086514C /* Localizables.swift */; };
@@ -31,7 +41,6 @@
 		0A3BC3912A3CAAFA008A26BC /* AQILevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8FCDA9293EB3AF006022B9 /* AQILevel.swift */; };
 		0A3BC3922A3CAAFC008A26BC /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABB875A292D9A1000F7644E /* AppError.swift */; };
 		0A3BC3932A3CAB01008A26BC /* AQIGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE45B3229465B7B00A82228 /* AQIGauge.swift */; };
-		0A3BC3942A3CAC00008A26BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A3B048D291733AA0026D3DF /* Assets.xcassets */; };
 		0A3BC3962A3CAC6F008A26BC /* AireLibreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B0489291733A90026D3DF /* AireLibreApp.swift */; };
 		0A3BC3972A3CAC93008A26BC /* ZoomControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAFF68C29C9480A008694A9 /* ZoomControls.swift */; };
 		0A3BC3982A3CAC93008A26BC /* RootScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B048B291733A90026D3DF /* RootScreen.swift */; };
@@ -62,9 +71,8 @@
 		0A3BC3B62A3CD9A5008A26BC /* WidgetURLUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3BC3B32A3CD9A5008A26BC /* WidgetURLUtils.swift */; };
 		0A427F512944CE5100832C3A /* SensorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A427F502944CE5100832C3A /* SensorInfo.swift */; };
 		0A4690172A3BFB0700679DE5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A4690192A3BFB0700679DE5 /* InfoPlist.strings */; };
-		0A6BD1142A3F9A34006D26A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A6BD1132A3F9A34006D26A8 /* Assets.xcassets */; };
 		0A6BD1172A3F9A34006D26A8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A6BD1162A3F9A34006D26A8 /* Preview Assets.xcassets */; };
-		0A6BD11A2A3F9A34006D26A8 /* Aire Libre watchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0A6BD10D2A3F9A33006D26A8 /* Aire Libre watchOS.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0A6BD11A2A3F9A34006D26A8 /* Aire Libre.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0A6BD10D2A3F9A33006D26A8 /* Aire Libre.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0A6BD1202A3FA3E9006D26A8 /* ListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6BD11F2A3FA3E9006D26A8 /* ListScreen.swift */; };
 		0A6BD1222A3FA45F006D26A8 /* AireLibreWatchOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6BD1212A3FA45F006D26A8 /* AireLibreWatchOSApp.swift */; };
 		0A6BD1232A3FA488006D26A8 /* Strings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF37C2292EE6100086514C /* Strings.strings */; };
@@ -139,8 +147,6 @@
 		0A867E3B2A4272C600F72303 /* SensorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6BD13E2A3FB157006D26A8 /* SensorInfo.swift */; };
 		0A867E3D2A4275CA00F72303 /* AccessoryCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A867E3C2A4275CA00F72303 /* AccessoryCornerView.swift */; };
 		0A867E3F2A428A5C00F72303 /* HttpConnectionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A867E3E2A428A5C00F72303 /* HttpConnectionChecker.swift */; };
-		0A867E402A428A6500F72303 /* HttpConnectionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A867E3E2A428A5C00F72303 /* HttpConnectionChecker.swift */; };
-		0A867E412A428A6500F72303 /* HttpConnectionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A867E3E2A428A5C00F72303 /* HttpConnectionChecker.swift */; };
 		0A867E422A428A6600F72303 /* HttpConnectionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A867E3E2A428A5C00F72303 /* HttpConnectionChecker.swift */; };
 		0A867E432A428A6600F72303 /* HttpConnectionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A867E3E2A428A5C00F72303 /* HttpConnectionChecker.swift */; };
 		0A867E442A428A6700F72303 /* HttpConnectionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A867E3E2A428A5C00F72303 /* HttpConnectionChecker.swift */; };
@@ -187,7 +193,6 @@
 		0A8FCDAC293EB4A5006022B9 /* AQIAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8FCDAB293EB4A5006022B9 /* AQIAnnotationView.swift */; };
 		0AA203F02A004F2200E68C0D /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA203EF2A004F2200E68C0D /* LocationViewModel.swift */; };
 		0AA322602A51DF0F003FE789 /* ErrorWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA3225F2A51DF0F003FE789 /* ErrorWidgetView.swift */; };
-		0AA322622A51FB2A003FE789 /* NWPathMonitorConnectionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA322612A51FB2A003FE789 /* NWPathMonitorConnectionChecker.swift */; };
 		0AA96DD32A2BEF920020D4A5 /* AccessoryInlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA96DD22A2BEF920020D4A5 /* AccessoryInlineView.swift */; };
 		0AACDC642A1EF3FE009F0405 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF37C7292EEE4E0086514C /* AppConstants.swift */; };
 		0AAFF68D29C9480A008694A9 /* ZoomControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAFF68C29C9480A008694A9 /* ZoomControls.swift */; };
@@ -279,7 +284,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				0A6BD11A2A3F9A34006D26A8 /* Aire Libre watchOS.app in Embed Watch Content */,
+				0A6BD11A2A3F9A34006D26A8 /* Aire Libre.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,13 +327,13 @@
 /* Begin PBXFileReference section */
 		0A127CBD2940332B00D74240 /* AQIData+Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AQIData+Coordinates.swift"; sourceTree = "<group>"; };
 		0A27E4D529C3FCD000576F7F /* MapScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenViewModel.swift; sourceTree = "<group>"; };
-		0A3B0486291733A90026D3DF /* Aire Libre iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aire Libre iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A3B0486291733A90026D3DF /* Aire Libre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aire Libre.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A3B0489291733A90026D3DF /* AireLibreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AireLibreApp.swift; sourceTree = "<group>"; };
 		0A3B048B291733A90026D3DF /* RootScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreen.swift; sourceTree = "<group>"; };
 		0A3B048D291733AA0026D3DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A3B048F291733AA0026D3DF /* AireLibre.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AireLibre.entitlements; sourceTree = "<group>"; };
 		0A3B0491291733AA0026D3DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0A3BC3732A3CAA99008A26BC /* Aire Libre macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aire Libre macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A3BC3732A3CAA99008A26BC /* Aire Libre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aire Libre.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A3BC37C2A3CAA9A008A26BC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0A3BC37E2A3CAA9A008A26BC /* Aire_Libre_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Aire_Libre_macOS.entitlements; sourceTree = "<group>"; };
 		0A3BC3AB2A3CD953008A26BC /* LocationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationStore.swift; sourceTree = "<group>"; };
@@ -337,8 +342,7 @@
 		0A427F502944CE5100832C3A /* SensorInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorInfo.swift; sourceTree = "<group>"; };
 		0A4690182A3BFB0700679DE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0A46901A2A3BFB0A00679DE5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		0A6BD10D2A3F9A33006D26A8 /* Aire Libre watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aire Libre watchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0A6BD1132A3F9A34006D26A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0A6BD10D2A3F9A33006D26A8 /* Aire Libre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aire Libre.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A6BD1162A3F9A34006D26A8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0A6BD11F2A3FA3E9006D26A8 /* ListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListScreen.swift; sourceTree = "<group>"; };
 		0A6BD1212A3FA45F006D26A8 /* AireLibreWatchOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AireLibreWatchOSApp.swift; sourceTree = "<group>"; };
@@ -517,11 +521,11 @@
 		0A3B0487291733A90026D3DF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0A3B0486291733A90026D3DF /* Aire Libre iOS.app */,
+				0A3B0486291733A90026D3DF /* Aire Libre.app */,
 				0AC2E4582A033FEC002D2446 /* Aire Libre Widget iOS.appex */,
-				0A3BC3732A3CAA99008A26BC /* Aire Libre macOS.app */,
+				0A3BC3732A3CAA99008A26BC /* Aire Libre.app */,
 				0A8D02C62A3D175A00B4B43F /* Aire Libre Widget macOS.appex */,
-				0A6BD10D2A3F9A33006D26A8 /* Aire Libre watchOS.app */,
+				0A6BD10D2A3F9A33006D26A8 /* Aire Libre.app */,
 				0AC231FB2A426C8E00ECC41E /* Aire Libre Widget watchOS.appex */,
 			);
 			name = Products;
@@ -662,7 +666,6 @@
 				0A6BD13B2A3FA646006D26A8 /* RootScreen.swift */,
 				0A6BD11F2A3FA3E9006D26A8 /* ListScreen.swift */,
 				0A6BD13E2A3FB157006D26A8 /* SensorInfo.swift */,
-				0A6BD1132A3F9A34006D26A8 /* Assets.xcassets */,
 				0A6BD1152A3F9A34006D26A8 /* Preview Content */,
 			);
 			path = "Aire Libre watchOS";
@@ -851,7 +854,7 @@
 			);
 			name = "Aire Libre iOS";
 			productName = "Aire Libre";
-			productReference = 0A3B0486291733A90026D3DF /* Aire Libre iOS.app */;
+			productReference = 0A3B0486291733A90026D3DF /* Aire Libre.app */;
 			productType = "com.apple.product-type.application";
 		};
 		0A3BC3722A3CAA99008A26BC /* Aire Libre macOS */ = {
@@ -870,7 +873,7 @@
 			);
 			name = "Aire Libre macOS";
 			productName = "Aire Libre macOS";
-			productReference = 0A3BC3732A3CAA99008A26BC /* Aire Libre macOS.app */;
+			productReference = 0A3BC3732A3CAA99008A26BC /* Aire Libre.app */;
 			productType = "com.apple.product-type.application";
 		};
 		0A6BD10C2A3F9A33006D26A8 /* Aire Libre watchOS */ = {
@@ -889,7 +892,7 @@
 			);
 			name = "Aire Libre watchOS";
 			productName = "Aire Libre watchOS Watch App";
-			productReference = 0A6BD10D2A3F9A33006D26A8 /* Aire Libre watchOS.app */;
+			productReference = 0A6BD10D2A3F9A33006D26A8 /* Aire Libre.app */;
 			productType = "com.apple.product-type.application";
 		};
 		0A8D02C52A3D175A00B4B43F /* Aire Libre Widget macOS */ = {
@@ -1003,10 +1006,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A3B0492291733AA0026D3DF /* Preview Assets.xcassets in Resources */,
-				0A3B048E291733AA0026D3DF /* Assets.xcassets in Resources */,
 				0AEF37C0292EE6100086514C /* Strings.strings in Resources */,
 				0AE5C1ED293D408A0084E68C /* sample1.json in Resources */,
 				0A4690172A3BFB0700679DE5 /* InfoPlist.strings in Resources */,
+				0A2B90652A54B4550074E0E8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1015,8 +1018,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A3BC37D2A3CAA9A008A26BC /* Preview Assets.xcassets in Resources */,
-				0A3BC3942A3CAC00008A26BC /* Assets.xcassets in Resources */,
 				0A3BC3832A3CAAC8008A26BC /* Strings.strings in Resources */,
+				0A2B90622A54B4490074E0E8 /* Assets.xcassets in Resources */,
 				0A3BC3A72A3CAD7A008A26BC /* sample1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1026,7 +1029,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A6BD1172A3F9A34006D26A8 /* Preview Assets.xcassets in Resources */,
-				0A6BD1142A3F9A34006D26A8 /* Assets.xcassets in Resources */,
+				0A2B90642A54B4540074E0E8 /* Assets.xcassets in Resources */,
 				0A6BD1232A3FA488006D26A8 /* Strings.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1079,6 +1082,7 @@
 				0A867E442A428A6700F72303 /* HttpConnectionChecker.swift in Sources */,
 				0AFA4EAF29E376D400C6CEE9 /* Entities.xcdatamodeld in Sources */,
 				0AC566B32A363DB20082F664 /* InterfaceIdiomEnvironment.swift in Sources */,
+				0A2B90592A54AC240074E0E8 /* NWPathMonitorConnectionChecker.swift in Sources */,
 				0AF6CF2D29F18B4A00C725B7 /* MKCoordinateRegion+Codable.swift in Sources */,
 				0AC9FDAC297ACA8200DBA5E1 /* MapScreen.swift in Sources */,
 				0AE45B3329465B7B00A82228 /* AQIGauge.swift in Sources */,
@@ -1125,6 +1129,7 @@
 				0A867E432A428A6600F72303 /* HttpConnectionChecker.swift in Sources */,
 				0A3BC3932A3CAB01008A26BC /* AQIGauge.swift in Sources */,
 				0A3BC39C2A3CAC93008A26BC /* ListScreen.swift in Sources */,
+				0A2B905A2A54AC250074E0E8 /* NWPathMonitorConnectionChecker.swift in Sources */,
 				0A3BC39A2A3CAC93008A26BC /* SensorInfo.swift in Sources */,
 				0A3BC3AA2A3CB333008A26BC /* InterfaceIdiomEnvironment.swift in Sources */,
 				0A3BC3A42A3CACE6008A26BC /* Decodable+JSONFile.swift in Sources */,
@@ -1167,6 +1172,7 @@
 				0A6BD12E2A3FA4A4006D26A8 /* ConnectionChecker.swift in Sources */,
 				0A6BD1352A3FA4A7006D26A8 /* AQILevel.swift in Sources */,
 				0A6BD13F2A3FB157006D26A8 /* SensorInfo.swift in Sources */,
+				0A2B905B2A54AC250074E0E8 /* NWPathMonitorConnectionChecker.swift in Sources */,
 				0A6BD1282A3FA497006D26A8 /* NetworkServiceEndpoints.swift in Sources */,
 				0A6BD1342A3FA4A7006D26A8 /* Quality.swift in Sources */,
 				0A6BD12B2A3FA49F006D26A8 /* Color+Hex.swift in Sources */,
@@ -1193,7 +1199,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A8D02E82A3D18C500B4B43F /* Quality.swift in Sources */,
-				0A867E402A428A6500F72303 /* HttpConnectionChecker.swift in Sources */,
 				0A8D02DE2A3D18B000B4B43F /* PersistenceService.swift in Sources */,
 				0A8D02EF2A3D196700B4B43F /* WidgetView.swift in Sources */,
 				0A8D02FC2A3D204800B4B43F /* AQIData+Coordinates.swift in Sources */,
@@ -1220,8 +1225,10 @@
 				0A8D02E22A3D18BF00B4B43F /* LocationUtils.swift in Sources */,
 				0A8D02E72A3D18C500B4B43F /* AQILevel.swift in Sources */,
 				0A8D02E52A3D18BF00B4B43F /* AppConstants.swift in Sources */,
+				0A2B90602A54AC2F0074E0E8 /* HttpConnectionChecker.swift in Sources */,
 				0A8D02DB2A3D18AA00B4B43F /* FavoriteSensorStore.swift in Sources */,
 				0A8D02E02A3D18BA00B4B43F /* Task+AutoRetry.swift in Sources */,
+				0A2B905D2A54AC260074E0E8 /* NWPathMonitorConnectionChecker.swift in Sources */,
 				0A8D02E92A3D18C500B4B43F /* AQIData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1240,7 +1247,7 @@
 				0A867E212A426EE100F72303 /* FavoriteSensorStore.swift in Sources */,
 				0A867E312A426EF800F72303 /* AQIGauge.swift in Sources */,
 				0A867E362A426FF400F72303 /* WidgetView.swift in Sources */,
-				0AA322622A51FB2A003FE789 /* NWPathMonitorConnectionChecker.swift in Sources */,
+				0A2B90612A54AC310074E0E8 /* NWPathMonitorConnectionChecker.swift in Sources */,
 				0A867E2B2A426EEE00F72303 /* LocationStore.swift in Sources */,
 				0A867E302A426EF100F72303 /* AQILevel.swift in Sources */,
 				0A867E292A426EEE00F72303 /* AppConstants.swift in Sources */,
@@ -1281,6 +1288,7 @@
 				0A3BC3AE2A3CD953008A26BC /* LocationStore.swift in Sources */,
 				0A3BC3B62A3CD9A5008A26BC /* WidgetURLUtils.swift in Sources */,
 				0A7B2B822A1C5D6800C4949D /* Task+AutoRetry.swift in Sources */,
+				0A2B905C2A54AC260074E0E8 /* NWPathMonitorConnectionChecker.swift in Sources */,
 				0A7B2B7D2A1C5C5F00C4949D /* AppError.swift in Sources */,
 				0A7B2B812A1C5D3700C4949D /* Entities.xcdatamodeld in Sources */,
 				0A7B2B782A1C5C3100C4949D /* AireLibreRepository.swift in Sources */,
@@ -1299,11 +1307,11 @@
 				0AD65DC72A045B210045880F /* AQIGauge.swift in Sources */,
 				0A3BC3B22A3CD95B008A26BC /* LocationUtils.swift in Sources */,
 				0ACA1CBA2A034CB400C0E8C3 /* WidgetConfiguration.swift in Sources */,
+				0A2B905F2A54AC2E0074E0E8 /* HttpConnectionChecker.swift in Sources */,
 				0A7B2B7E2A1C5C6800C4949D /* Quality.swift in Sources */,
 				0ACA1CBC2A034CC300C0E8C3 /* WidgetView.swift in Sources */,
 				0AD65DC82A045B2B0045880F /* AQILevel.swift in Sources */,
 				0AC2E4622A033FEC002D2446 /* AQIWidgetProvider.swift in Sources */,
-				0A867E412A428A6500F72303 /* HttpConnectionChecker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1471,8 +1479,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iOS AppIcon";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "Apps/Aire Libre iOS/AireLibre.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
@@ -1484,6 +1493,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Aire-Libre-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Aire Libre";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -1494,15 +1504,14 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = re.airelib.ios;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Aire Libre";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -1517,8 +1526,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iOS AppIcon";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "Apps/Aire Libre iOS/AireLibre.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
@@ -1530,6 +1540,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Aire-Libre-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Aire Libre";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -1540,15 +1551,14 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = re.airelib.ios;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Aire Libre";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -1563,8 +1573,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "macOS AppIcon";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "Apps/Aire Libre macOS/Aire_Libre_macOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1573,6 +1584,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Aire-Libre-macOS-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Aire Libre";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
@@ -1583,7 +1595,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = re.airelib.macos;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Aire Libre";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1594,8 +1606,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "macOS AppIcon";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "Apps/Aire Libre macOS/Aire_Libre_macOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1604,6 +1617,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Aire-Libre-macOS-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Aire Libre";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
@@ -1614,7 +1628,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = re.airelib.macos;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Aire Libre";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1625,8 +1639,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "watchOS AppIcon";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "Apple Development";
@@ -1636,7 +1651,6 @@
 				DEVELOPMENT_TEAM = 69SFKN563E;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Aire Libre watchOS";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = re.airelib.ios;
@@ -1647,7 +1661,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = re.airelib.ios.watchos;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Aire Libre";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1661,8 +1675,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "watchOS AppIcon";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "Apple Development";
@@ -1672,7 +1687,6 @@
 				DEVELOPMENT_TEAM = 69SFKN563E;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Aire Libre watchOS";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = re.airelib.ios;
@@ -1683,7 +1697,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = re.airelib.ios.watchos;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Aire Libre";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1763,7 +1777,7 @@
 				DEVELOPMENT_TEAM = 69SFKN563E;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Widgets/Aire Libre Widget watchOS/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Aire Libre Widget watchOS";
+				INFOPLIST_KEY_CFBundleDisplayName = "Aire Libre Widget";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1796,7 +1810,7 @@
 				DEVELOPMENT_TEAM = 69SFKN563E;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Widgets/Aire Libre Widget watchOS/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Aire Libre Widget watchOS";
+				INFOPLIST_KEY_CFBundleDisplayName = "Aire Libre Widget";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1829,7 +1843,7 @@
 				DEVELOPMENT_TEAM = 69SFKN563E;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Widgets/Aire Libre Widget iOS/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Aire Libre Widget iOS";
+				INFOPLIST_KEY_CFBundleDisplayName = "Aire Libre Widget";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
@@ -1861,7 +1875,7 @@
 				DEVELOPMENT_TEAM = 69SFKN563E;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Widgets/Aire Libre Widget iOS/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Aire Libre Widget iOS";
+				INFOPLIST_KEY_CFBundleDisplayName = "Aire Libre Widget";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
