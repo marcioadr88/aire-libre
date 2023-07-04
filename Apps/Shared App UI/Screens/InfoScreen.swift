@@ -45,6 +45,16 @@ struct InfoScreen: View {
                     
                     Text(.init(Localizables.collaborateWithProject))
                         .font(.body)
+                    
+                    Spacer(minLength: 24)
+                    
+                    Group {
+                        Text(.init(Localizables.developedBy))
+                        
+                        Spacer(minLength: 8)
+                        
+                        Text(.init(Localizables.sendCommentsHere))
+                    }
                 }
                 .tint(Color.blue)
             }

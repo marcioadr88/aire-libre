@@ -55,3 +55,5 @@
 "scaleSource"="Fuente de escala: [AirNow](https://www.airnow.gov/aqi/aqi-basics-in-spanish/)";
 "knowMoreProject" = "¿Querés saber más sobre el proyecto?";
 "collaborateWithProject" = "Si querés colaborar, o aprender a construir tu propio sensor, o saber en que se diferencia con otros proyectos similares o [¿donde se calibran nuestos sensores?](https://github.com/melizeche/AireLibre/#los-sensores-son-calibrados-en-suiza) Entrá [acá para más info](https://github.com/melizeche/AireLibre/#faq).";
+"developedBy" = "App desarrollada por [Marcio Duarte](http://linkedin.com/in/marcioadr88) - [Repositorio en GitHub](https://github.com/marcioadr88/aire-libre-ios)";
+"sendCommentsHere" = "Puedes enviar comentarios o sugerencias [aquí](mailto:screes-jerseys.0q@icloud.com) - el email llegará directamente al desarrollador.";
