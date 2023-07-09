@@ -1,0 +1,129 @@
+<mxfile host="app.diagrams.net" modified="2023-07-09T15:06:22.543Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5.1 Safari/605.1.15" etag="06qYqUi5r98VbvcTgdX7" version="21.6.1" type="device">
+  <diagram name="Page-1" id="Jg5S6Rm_jd4EF7fnGt72">
+    <mxGraphModel dx="1461" dy="972" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="1swLXUV-LxSYaKtOgCKo-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="1swLXUV-LxSYaKtOgCKo-49" target="1swLXUV-LxSYaKtOgCKo-25">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="623" y="420" />
+              <mxPoint x="425" y="420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1swLXUV-LxSYaKtOgCKo-49" value="Widgets" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingTop=8;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="435" y="110" width="395" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="1swLXUV-LxSYaKtOgCKo-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="1swLXUV-LxSYaKtOgCKo-48" target="1swLXUV-LxSYaKtOgCKo-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1swLXUV-LxSYaKtOgCKo-48" value="Apps" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingTop=8;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="10" y="90" width="390" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="1swLXUV-LxSYaKtOgCKo-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="1swLXUV-LxSYaKtOgCKo-4" target="1swLXUV-LxSYaKtOgCKo-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1swLXUV-LxSYaKtOgCKo-4" value="Aire Libre iOS" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="130" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1swLXUV-LxSYaKtOgCKo-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="1swLXUV-LxSYaKtOgCKo-5" target="1swLXUV-LxSYaKtOgCKo-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1swLXUV-LxSYaKtOgCKo-5" value="Aire Libre macOS" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="130" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1swLXUV-LxSYaKtOgCKo-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="1swLXUV-LxSYaKtOgCKo-6" target="1swLXUV-LxSYaKtOgCKo-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1swLXUV-LxSYaKtOgCKo-6" value="Aire Libre watchOS" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="130" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1swLXUV-LxSYaKtOgCKo-8" value="Shared App UI" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;labelPosition=center;verticalLabelPosition=middle;spacingTop=8;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="45" y="215.5" width="320" height="124" as="geometry" />
+        </mxCell>
+        <mxCell id="1swLXUV-LxSYaKtOgCKo-9" value="Screens" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="55" y="255.5" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1swLXUV-LxSYaKtOgCKo-10" value="Views" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="155" y="255.5" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1swLXUV-LxSYaKtOgCKo-11" value="ViewModels" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="255" y="255.5" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1swLXUV-LxSYaKtOgCKo-12" value="Navigation" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="55" y="298" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1swLXUV-LxSYaKtOgCKo-13" value="Utils" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="298" width="85" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1swLXUV-LxSYaKtOgCKo-14" value="Extensions" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="255" y="298" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1swLXUV-LxSYaKtOgCKo-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="1swLXUV-LxSYaKtOgCKo-15" target="1swLXUV-LxSYaKtOgCKo-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1swLXUV-LxSYaKtOgCKo-15" value="Aire Libre Widget iOS" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="465" y="150" width="115" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1swLXUV-LxSYaKtOgCKo-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="1swLXUV-LxSYaKtOgCKo-16" target="1swLXUV-LxSYaKtOgCKo-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1swLXUV-LxSYaKtOgCKo-16" value="Aire Libre Widget macOS" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="150" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1swLXUV-LxSYaKtOgCKo-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="1swLXUV-LxSYaKtOgCKo-17" target="1swLXUV-LxSYaKtOgCKo-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1swLXUV-LxSYaKtOgCKo-17" value="Aire Libre widget &lt;br&gt;watchOS" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="710" y="150" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1swLXUV-LxSYaKtOgCKo-18" value="Shared Widget UI" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;labelPosition=center;verticalLabelPosition=middle;spacingTop=8;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="485" y="235.5" width="320" height="85.5" as="geometry" />
+        </mxCell>
+        <mxCell id="1swLXUV-LxSYaKtOgCKo-19" value="Views" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="495" y="275.5" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1swLXUV-LxSYaKtOgCKo-21" value="WidgetConfiguration" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="675" y="275.5" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1swLXUV-LxSYaKtOgCKo-23" value="Entries" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="575" y="275.5" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1swLXUV-LxSYaKtOgCKo-25" value="Common" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingTop=8;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="245" y="490" width="360" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="1swLXUV-LxSYaKtOgCKo-26" value="Localization" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="275" y="540" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1swLXUV-LxSYaKtOgCKo-27" value="Stores" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="385" y="540" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1swLXUV-LxSYaKtOgCKo-28" value="Services" style="rounded=0;whiteSpace=wrap;html=1;spacingTop=4;spacingLeft=4;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="275" y="580" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="1swLXUV-LxSYaKtOgCKo-29" value="Networking" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="610" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1swLXUV-LxSYaKtOgCKo-30" value="Persistence" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="610" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1swLXUV-LxSYaKtOgCKo-31" value="Models" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="492" y="540" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1swLXUV-LxSYaKtOgCKo-32" value="Colors" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="492" y="580" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1swLXUV-LxSYaKtOgCKo-33" value="AQI Gauge" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="492" y="620" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1swLXUV-LxSYaKtOgCKo-35" value="Utils" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="275" y="660" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1swLXUV-LxSYaKtOgCKo-36" value="Extensions" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="660" width="90" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

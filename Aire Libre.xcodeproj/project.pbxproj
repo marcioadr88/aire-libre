@@ -651,7 +651,7 @@
 				0A1C3F4929A8196C003B3ED8 /* View Models */,
 				0AEF37C4292EEA160086514C /* Utils */,
 				0AB43F9B2936DD13005299AC /* Extensions */,
-				0AFA4EA729E375F100C6CEE9 /* Stores */,
+				0AFA4EA729E375F100C6CEE9 /* Navigation */,
 				0AB43F9E2936EA5C005299AC /* Samples */,
 				0A3B0489291733A90026D3DF /* AireLibreApp.swift */,
 				0A3B048D291733AA0026D3DF /* Assets.xcassets */,
@@ -825,12 +825,12 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		0AFA4EA729E375F100C6CEE9 /* Stores */ = {
+		0AFA4EA729E375F100C6CEE9 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
 				0AF6CF2A29F0ADAF00C725B7 /* NavigationPathStore.swift */,
 			);
-			path = Stores;
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

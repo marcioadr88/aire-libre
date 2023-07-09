@@ -30,7 +30,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0A6BD10C2A3F9A33006D26A8"
-               BuildableName = "Aire Libre watchOS.app"
+               BuildableName = "Aire Libre.app"
                BlueprintName = "Aire Libre watchOS"
                ReferencedContainer = "container:Aire Libre.xcodeproj">
             </BuildableReference>
@@ -44,7 +44,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0A3B0485291733A90026D3DF"
-               BuildableName = "Aire Libre iOS.app"
+               BuildableName = "Aire Libre.app"
                BlueprintName = "Aire Libre iOS"
                ReferencedContainer = "container:Aire Libre.xcodeproj">
             </BuildableReference>
@@ -84,7 +84,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0A6BD10C2A3F9A33006D26A8"
-            BuildableName = "Aire Libre watchOS.app"
+            BuildableName = "Aire Libre.app"
             BlueprintName = "Aire Libre watchOS"
             ReferencedContainer = "container:Aire Libre.xcodeproj">
          </BuildableReference>
