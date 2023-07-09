@@ -116,6 +116,7 @@ struct MapScreen: View {
                 } label: {
                     Image(systemName: "info.circle")
                 }
+                .disabled(appViewModel.isLoading)
             }
             
             ToolbarItem {
