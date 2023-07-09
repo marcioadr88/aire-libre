@@ -1,8 +1,10 @@
-# Aire Libre para iOS, iPadOS, macOS y watchOS
+# Aire Libre for iOS, iPadOS, macOS and watchOS
 
-La finalidad de esta aplicación es que los usuarios puedan visualizar los sensores cercanos y disponibles con lecturas de AQI obtenidos de la API del proyecto [Aire Libre](https://github.com/melizeche/AireLibre), tomando de ahí su nombre. Más info del proyecto: [www.airelib.re](www.airelib.re)
+[Spanish](README.es.md)
 
-Todos los datos consumidos y reflejados en la app se consumen a partir del endpoint disponibilidado del proyecto anteriormente mencionado.
+The purpose of this application is to allow users to view nearby and available sensors and Air Quality Index (AQI) readings obtained through the [Aire Libre](https://github.com/melizeche/AireLibre) project API, hence its name. More information about the project can be found at [www.airelib.re](www.airelib.re).
+
+All data consumed and displayed in the application are obtained from the endpoint provided by the project mentioned above.
 
 ## Screenshots
 
@@ -17,43 +19,40 @@ Todos los datos consumidos y reflejados en la app se consumen a partir del endpo
 | :---: | :--: |
 | ![watchOS](readme_files/widget_watchos.png)  **watchOS** | ![macOS medium](readme_files/widget_macos.png)  **macOS** |
 
-## Tecnologías y frameworks utilizados
-El proyecto utiliza SwiftUI para la interfaz del usuario en todas las plataformas y widgets, permitiendo de esta manera compartir código en común entre los distintos targets. 
+## Technologies and Frameworks used
+The project utilizes SwiftUI as the user interface framework across all platforms and widgets. This provides the advantage of sharing common code between different project targets.
 
-No se utilizan librerías de terceros, eso permite que no se incluyan manejadores de dependencias como Swift PM, Cocoapods, entre otros.
+It is important to note that no third-party libraries are used in the development. This decision has the benefit of avoiding the need to include dependency managers such as Swift PM, Cocoapods, among others.
 
-## Organización del proyecto
-
-La siguiente imagen muestra cómo están organizados los archivos del proyecto.
+## Project Organization
+Below is a diagram that illustrates the file structure of the project.
 
 ![](readme_files/project_structure.png)
 
-A continuación se muestra un diagrama de componentes y dependencias
+Here is a diagram showcasing the components and dependencies of the project.
 
 ![](readme_files/dependency_diagram.png)
 
+`Shared App UI` contains common code used by the applications. This code includes Views, ViewModels, navigation, utilities, and extensions. It is important to mention that the architecture used for the applications is MVVM.
 
-`Shared App UI` contiene código en común utilizado por las aplicaciones. Este código comprende Views, ViewModels, Navigation, utilidades y extensiones. Cabe destacar que la arquitectura utilizada para las aplicaciones es MVVM.
+`Shared Widget UI` encompasses the common code necessary for the widgets to function. This includes views for different widget sizes, Entries, and Configurations.
 
-`Shared Widget UI` comprende el código en común para el funcionamiento de los widgets. Esto implica, vistas para los distintos tipos de tamaño de widgets, Entries y Configuraciones.
+Both the applications and widgets depend on a set of common code that provides the foundation for their functionality. This code is located in the `Common` folder and includes the following:
 
-Tanto las apps como los widgets dependen de un set de código en común que brindan las bases para su funcionamiento. Este código reside en la carpeta `Common` y comprende:
-
-* **Localization**: Clases y recursos para acceso a cadenas localizadas.
-* **Stores**: Utilizadas para acceder a la persistencia local, con una implemetanción que utiliza CoreData.
-* **Models**: Modelos en común utilizados en todo el proyecto.
+* **Localization**: Classes and resources used to access localized strings.
+* **Stores**: Used to access local persistence, with an implementation that utilizes CoreData.
+* **Models**: Common models used throughout the project.
 * **Services**
-    * **Networking**: Abstracciones y clases para acceso a la red y obtención de datos del servicio web.
-    * **Persistence**: Abstracciones e implementaciones a los servicios de persistencia.
-* **Colors**: Colores globales utilizados
-* **AQIGauge**: Una vista de Gauge que se utiliza ampliamente en todo el proyecto
-* **Utils**, **Extensions**: Utilidades y extensiones
+    * **Networking**: Abstractions and classes for accessing the network and obtaining data from the web service.
+    * **Persistence**: Abstractions and implementations for persistence services.
+* **Colors**: Global colors used throughout the project.
+* **AQIGauge**: A widely-used Gauge view in the project.
+* **Utils**, **Extensions**: Miscellaneous utilities and extensions.
 
-## Trabajando con el proyecto
+## Working with the Project
+To open the project, clone the repository and open the `Aire Libre.xcodeproj` file.
 
-Para abrir el proyecto, clona el repositorio y abre el archivo `Aire Libre.xcodeproj`
+You can report bugs and submit PRs if you wish to contribute to the project. Suggestions and feedback are welcome.
 
-Puedes reportar bugs y enviar PRs en caso que quieras colaborar con el proyecto. Sugerencias y opiniones son bienvenidos.
-
-## Licencia
+## License
 GNU General Public License
