@@ -1,4 +1,4 @@
-# Aire Libre para iOS, iPad, macOS y watchOS
+# Aire Libre para iOS, iPadOS, macOS y watchOS
 
 La finalidad de esta aplicación es que los usuarios puedan visualizar los sensores cercanos y disponibles con lecturas de AQI obtenidos de la API del proyecto [Aire Libre](https://github.com/melizeche/AireLibre), tomando de ahí su nombre. Más info del proyecto: [www.airelib.re](www.airelib.re)
 
@@ -8,14 +8,14 @@ Todos los datos consumidos y reflejados en la app se consumen a partir del endpo
 
 ### Apps
 
-| ![iPhone](readme_files/ss_iphone.png)  **iOS (iPhone)** | ![](readme_files/ss_mac.png) **macOS** |
+| ![iOS](readme_files/ss_iphone.png)  **iOS** | ![iPadOS](readme_files/ss_ipad.png) **iPadOS** |
 | :---: | :--: |
-| ![](readme_files/ss_watch.png)  **watchOS** | ![](readme_files/ss_ipad.png) **iOS (iPad)** |
-
-
+| ![macOS](readme_files/ss_mac.png) **macOS** | ![watchOS](readme_files/ss_watch.png)  **watchOS** |
 
 ### Widgets
-
+| ![iOS/iPadOS Home Screen](readme_files/widget_home_screen.png)  **iOS/iPadOS Home Screen**  | ![iOS Lock Screen](readme_files/widget_lock_screen.png)  **iOS Lock Screen**  | ![watchOS](readme_files/widget_watchos.png)  **watchOS** |
+| :---: | :--: | :---: |
+| ![macOS small](readme_files/widget_macos_small.png) **macOS** | ![macOS medium](readme_files/widget_macos_medium.png)  **macOS** | |
 
 ## Tecnologías y frameworks utilizados
 El proyecto utiliza SwiftUI para la interfaz del usuario en todas las plataformas y widgets, permitiendo de esta manera compartir código en común entre los distintos targets. 
