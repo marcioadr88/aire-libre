@@ -13,9 +13,9 @@ Todos los datos consumidos y reflejados en la app se consumen a partir del endpo
 | ![macOS](readme_files/ss_mac.png) **macOS** | ![watchOS](readme_files/ss_watch.png)  **watchOS** |
 
 ### Widgets
-| ![iOS/iPadOS Home Screen](readme_files/widget_home_screen.png)  **iOS/iPadOS Home Screen**  | ![iOS Lock Screen](readme_files/widget_lock_screen.png)  **iOS Lock Screen**  | ![watchOS](readme_files/widget_watchos.png)  **watchOS** |
-| :---: | :--: | :---: |
-| ![macOS small](readme_files/widget_macos_small.png) **macOS** | ![macOS medium](readme_files/widget_macos_medium.png)  **macOS** | |
+| ![iOS/iPadOS Home Screen](readme_files/widget_home_screen.png)  **iOS/iPadOS Home Screen**  | ![iOS Lock Screen](readme_files/widget_lock_screen.png)  **iOS Lock Screen** |
+| :---: | :--: |
+| ![watchOS](readme_files/widget_watchos.png)  **watchOS** | ![macOS medium](readme_files/widget_macos.png)  **macOS** |
 
 ## Tecnologías y frameworks utilizados
 El proyecto utiliza SwiftUI para la interfaz del usuario en todas las plataformas y widgets, permitiendo de esta manera compartir código en común entre los distintos targets. 
