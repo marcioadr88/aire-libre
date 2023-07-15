@@ -45,7 +45,7 @@ protocol AireLibreRepository {
 }
 
 final class AireLibreRepositoryImpl: AireLibreRepository {
-    private let log = Logger(subsystem: "repository.re.airelib.ios",
+    private let log = Logger(subsystem: AppConstants.bundleId,
                              category: String(describing: AireLibreRepositoryImpl.self))
     
     private let networkService: NetworkService

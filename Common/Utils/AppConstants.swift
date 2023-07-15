@@ -16,6 +16,7 @@ final class AppConstants {
     static let defaultMinutesAgo: Int = 30
     static let scheme = "aire-libre"
     static let selectedSourceQueryParam = "selectedSource"
+    static let bundleId = Bundle.main.bundleIdentifier ?? "re.airelib.app"
 }
 
 typealias VoidCallback = () -> Void

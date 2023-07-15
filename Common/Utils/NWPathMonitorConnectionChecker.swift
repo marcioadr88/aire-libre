@@ -10,7 +10,7 @@ import OSLog
 
 /// A connection checker based on NWPathMonitor
 final class NWPathMonitorConnectionChecker: ConnectionChecker {
-    private let log = Logger(subsystem: "connection_checker.re.airelib.ios",
+    private let log = Logger(subsystem: AppConstants.bundleId,
                              category: String(describing: NWPathMonitorConnectionChecker.self))
     private let queue = DispatchQueue(label: "NWPathMonitorConnectionChecker.re.airelib.ios")
     private let monitor: NWPathMonitor

@@ -10,7 +10,7 @@ import CoreLocation
 import OSLog
 
 final class LocationStore {
-    private let log = Logger(subsystem: "locationstore.re.airelib.ios",
+    private let log = Logger(subsystem: AppConstants.bundleId,
                              category: String(describing: LocationStore.self))
     
     private static let savedLocationKey = "LastKnwonLocation"

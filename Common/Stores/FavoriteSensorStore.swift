@@ -16,7 +16,7 @@ protocol FavoriteSensorStore {
 
 /// Core data persistent store
 class PersistentFavoriteSensorStore: FavoriteSensorStore {
-    private let log = Logger(subsystem: "persistence.re.airelib.ios",
+    private let log = Logger(subsystem: AppConstants.bundleId,
                              category: String(describing: PersistentFavoriteSensorStore.self))
     
     private let container: NSPersistentContainer

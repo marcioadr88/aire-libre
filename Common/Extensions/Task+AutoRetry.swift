@@ -17,7 +17,7 @@ extension Task where Failure == Error {
         retryDelay: TimeInterval = 1,
         operation: @Sendable @escaping () async throws -> Success
     ) -> Task {
-        let log = Logger(subsystem: "com.swiftbysundell.www",
+        let log = Logger(subsystem: AppConstants.bundleId,
                          category: "Task.retrying")
         
         return Task(priority: priority) {

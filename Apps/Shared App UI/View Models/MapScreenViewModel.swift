@@ -12,7 +12,7 @@ import SwiftUI
 import OSLog
 
 class MapScreenViewModel: NSObject, ObservableObject {
-    private let log = Logger(subsystem: "mapvm.re.airelib.ios",
+    private let log = Logger(subsystem: AppConstants.bundleId,
                              category: String(describing: MapScreenViewModel.self))
     
     private let zoomFactor: CGFloat = 1.5

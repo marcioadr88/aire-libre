@@ -12,7 +12,7 @@ import Combine
 import OSLog
 
 final class AQIWidgetProvider: NSObject, TimelineProvider {
-    private let log = Logger(subsystem: "widgetprovider.re.airelib.ios",
+    private let log = Logger(subsystem: AppConstants.bundleId,
                              category: String(describing: AQIWidgetProvider.self))
     
     private let locationManager = CLLocationManager()

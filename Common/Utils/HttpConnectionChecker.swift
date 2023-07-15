@@ -10,7 +10,7 @@ import OSLog
 
 /// An http based connection checker for devices with unsopported NWPathMonitor
 final class HttpConnectionChecker: ConnectionChecker {
-    private let log = Logger(subsystem: "http.re.airelib.ios",
+    private let log = Logger(subsystem: AppConstants.bundleId,
                              category: String(describing: HttpConnectionChecker.self))
     private let endpoints: NetworkServiceEndpoints
     

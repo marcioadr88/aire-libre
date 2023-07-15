@@ -11,7 +11,7 @@ import OSLog
 import CoreLocation
 
 final class AppViewModel: NSObject, ObservableObject {
-    private let log = Logger(subsystem: "appvm.re.airelib.ios",
+    private let log = Logger(subsystem: AppConstants.bundleId,
                              category: String(describing: AppViewModel.self))
     
     @Published var aqiData: [AQIData] {

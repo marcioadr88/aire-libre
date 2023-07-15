@@ -11,7 +11,7 @@ import MapKit
 import OSLog
 
 class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
-    private let log = Logger(subsystem: "location.re.airelib.ios",
+    private let log = Logger(subsystem: AppConstants.bundleId,
                              category: String(describing: LocationViewModel.self))
     
     @Published var location: CLLocation?
