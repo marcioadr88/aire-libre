@@ -1486,7 +1486,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "Apps/Aire\\ Libre\\ iOS/Preview\\ Content/Preview\\ Assets.xcassets";
 				DEVELOPMENT_TEAM = 69SFKN563E;
@@ -1495,7 +1495,7 @@
 				INFOPLIST_FILE = "Aire-Libre-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Aire Libre";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We use your location to show you nearby sensors";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -1533,7 +1533,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "Apps/Aire\\ Libre\\ iOS/Preview\\ Content/Preview\\ Assets.xcassets";
 				DEVELOPMENT_TEAM = 69SFKN563E;
@@ -1542,7 +1542,7 @@
 				INFOPLIST_FILE = "Aire-Libre-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Aire Libre";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We use your location to show you nearby sensors";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -1579,7 +1579,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Apps/Aire Libre macOS/Aire_Libre_macOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "Apps/Aire\\ Libre\\ macOS/Preview\\ Content/Preview\\ Assets.xcassets";
 				DEVELOPMENT_TEAM = 69SFKN563E;
 				ENABLE_PREVIEWS = YES;
@@ -1588,7 +1588,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Aire Libre";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We use your location to show you nearby sensors";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -1613,7 +1613,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Apps/Aire Libre macOS/Aire_Libre_macOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "Apps/Aire\\ Libre\\ macOS/Preview\\ Content/Preview\\ Assets.xcassets";
 				DEVELOPMENT_TEAM = 69SFKN563E;
 				ENABLE_PREVIEWS = YES;
@@ -1622,7 +1622,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Aire Libre";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We use your location to show you nearby sensors";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -1648,12 +1648,12 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Apps/Aire Libre watchOS/Preview Content\"";
 				DEVELOPMENT_TEAM = 69SFKN563E;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We use your location to show you nearby sensors";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = re.airelib.app;
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
@@ -1684,12 +1684,12 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Apps/Aire Libre watchOS/Preview Content\"";
 				DEVELOPMENT_TEAM = 69SFKN563E;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We use your location to show you nearby sensors";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = re.airelib.app;
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
@@ -1717,7 +1717,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = "Widgets/Aire Libre Widget macOS/Aire_Libre_Widget_macOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 69SFKN563E;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Widgets/Aire Libre Widget macOS/Info.plist";
@@ -1746,7 +1746,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = "Widgets/Aire Libre Widget macOS/Aire_Libre_Widget_macOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 69SFKN563E;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Widgets/Aire Libre Widget macOS/Info.plist";
@@ -1777,7 +1777,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 69SFKN563E;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Widgets/Aire Libre Widget watchOS/Info.plist";
@@ -1810,7 +1810,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 69SFKN563E;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Widgets/Aire Libre Widget watchOS/Info.plist";
@@ -1843,7 +1843,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 69SFKN563E;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Widgets/Aire Libre Widget iOS/Info.plist";
@@ -1875,7 +1875,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 69SFKN563E;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Widgets/Aire Libre Widget iOS/Info.plist";
