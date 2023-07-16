@@ -51,7 +51,8 @@ struct InfoScreen: View {
                     Spacer(minLength: 24)
                     
                     Text(Localizables.rateApp)
-                        .foregroundColor(Color.accentColor)
+                        .font(.body)
+                        .foregroundColor(Color.blue)
                         .onTapGesture {
                             requestReview()
                         }
