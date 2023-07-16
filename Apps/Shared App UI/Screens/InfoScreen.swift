@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import StoreKit
 
 struct InfoScreen: View {
+    @Environment(\.requestReview) var requestReview
+    
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
@@ -35,8 +38,7 @@ struct InfoScreen: View {
     
                     aqiTable
                 }
-                .tint(Color.blue)
-                
+
                 Group {
                     Spacer(minLength: 16)
                     
@@ -48,6 +50,14 @@ struct InfoScreen: View {
                     
                     Spacer(minLength: 24)
                     
+                    Text(Localizables.rateApp)
+                        .foregroundColor(Color.accentColor)
+                        .onTapGesture {
+                            requestReview()
+                        }
+                    
+                    Spacer(minLength: 16)
+                    
                     Group {
                         Text(.init(Localizables.developedBy))
                         
@@ -56,8 +66,8 @@ struct InfoScreen: View {
                         Text(.init(Localizables.sendCommentsHere))
                     }
                 }
-                .tint(Color.blue)
             }
+            .tint(Color.blue)
             .lineLimit(nil)
             .multilineTextAlignment(.leading)
             .padding()
