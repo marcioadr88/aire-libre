@@ -18,7 +18,7 @@ final class Samples {
 }
 
 final class SuccessfulAireLibreRepository: AireLibreRepository {
-    func saveFavorite(source: String) throws {}
+    func saveFavorite(source: String, description: String) throws {}
     
     func deleteFavorite(source: String) throws {}
     
@@ -43,7 +43,7 @@ final class SuccessfulAireLibreRepository: AireLibreRepository {
 }
 
 final class FailureAireLibreRepository: AireLibreRepository {
-    func saveFavorite(source: String) throws {}
+    func saveFavorite(source: String, description: String) throws {}
     
     func deleteFavorite(source: String) throws {}
     

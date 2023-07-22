@@ -77,7 +77,8 @@ final class AppViewModel: NSObject, ObservableObject {
         Task {
             do {
                 if newValue.isFavoriteSensor {
-                    try await repository.saveFavorite(source: newValue.source)
+                    try await repository.saveFavorite(source: newValue.source,
+                                                      description: newValue.description)
                 } else {
                     try await repository.deleteFavorite(source: newValue.source)
                 }

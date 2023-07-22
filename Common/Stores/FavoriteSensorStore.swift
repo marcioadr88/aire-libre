@@ -10,7 +10,7 @@ import OSLog
 
 protocol FavoriteSensorStore {
     func read() throws -> [String]
-    func create(source: String) async throws
+    func create(source: String, description: String) async throws
     func delete(source: String) throws
 }
 
@@ -36,11 +36,12 @@ class PersistentFavoriteSensorStore: FavoriteSensorStore {
         }
     }
     
-    func create(source: String) async throws {
+    func create(source: String, description: String) async throws {
         return try await withCheckedThrowingContinuation { continuation in
             container.performBackgroundTask { context in
                 let sensor = FavoriteSensor(context: context)
                 sensor.source = source
+                sensor.name = description
                 
                 do {
                     try context.save()
@@ -91,7 +92,7 @@ class InMemoryFavoriteSensorStore: FavoriteSensorStore {
         return Array(favoriteSources)
     }
     
-    func create(source: String) async throws {
+    func create(source: String, description: String) async throws {
         favoriteSources.insert(source)
     }
     

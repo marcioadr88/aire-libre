@@ -12,7 +12,7 @@ protocol PersistenceService: FavoritesPersistenceServices {}
 
 protocol FavoritesPersistenceServices {
     func loadFavorites() async throws -> [String]
-    func saveFavorite(source: String) async throws
+    func saveFavorite(source: String, description: String) async throws
     func deleteFavorite(source: String) async throws
 }
 
@@ -56,9 +56,9 @@ extension PersistenceServiceImpl: FavoritesPersistenceServices {
         return favorites
     }
     
-    func saveFavorite(source: String) async throws {
+    func saveFavorite(source: String, description: String) async throws {
         log.info("Saving favorite with source \(source)")
-        try await favoritesStore.create(source: source)
+        try await favoritesStore.create(source: source, description: description)
     }
     
     func deleteFavorite(source: String) async throws {

@@ -38,7 +38,7 @@ protocol AireLibreRepository {
         source: String?) async throws -> [AQIData]
     
     /// Marks a sensor as favorite
-    func saveFavorite(source: String) async throws
+    func saveFavorite(source: String, description: String) async throws
     
     /// Deletes a sensor from favorites
     func deleteFavorite(source: String) async throws
@@ -139,8 +139,9 @@ extension AireLibreRepositoryImpl {
 
 // MARK: Favorites handling
 extension AireLibreRepositoryImpl {
-    func saveFavorite(source: String) async throws {
-        try await persistenceService.saveFavorite(source: source)
+    func saveFavorite(source: String, description: String) async throws {
+        try await persistenceService.saveFavorite(source: source,
+                                                  description: description)
     }
     
     func deleteFavorite(source: String) async throws {
