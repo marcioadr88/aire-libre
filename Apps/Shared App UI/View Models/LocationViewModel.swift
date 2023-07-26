@@ -19,9 +19,30 @@ class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     private let locationManager = CLLocationManager()
     private let locationStore = LocationStore()
     
+    @Published var authorizationStatus: CLAuthorizationStatus {
+        didSet {
+            switch authorizationStatus {
+            #if os(iOS)
+            case .authorizedAlways, .authorizedWhenInUse:
+                isAuthorized = true
+            #elseif os(macOS)
+            case .authorized, .authorizedAlways:
+                isAuthorized = true
+            #endif
+
+            default:
+                isAuthorized = false
+            }
+        }
+    }
+    
+    @Published var isAuthorized: Bool = false
+    
     override init() {
-        super.init()
+        authorizationStatus = locationManager.authorizationStatus
         
+        super.init()
+
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
@@ -59,5 +80,7 @@ class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
         default:
             location = nil
         }
+        
+        authorizationStatus = manager.authorizationStatus
     }
 }

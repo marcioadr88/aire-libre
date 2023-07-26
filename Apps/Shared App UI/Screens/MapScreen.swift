@@ -80,13 +80,6 @@ struct MapScreen: View {
                     )
                     .padding()
                     .transition(.move(edge: .bottom))
-//                    .onChange(of: selectedAQIData?.isFavoriteSensor) { _ in
-//                        guard let selectedAQIData else {
-//                            return
-//                        }
-//
-//                        appViewModel.update(newValue: selectedAQIData)
-//                    }
                 }
             }
         }
@@ -119,11 +112,13 @@ struct MapScreen: View {
                 .disabled(appViewModel.isLoading)
             }
             
-            ToolbarItem {
-                Button {
-                    mapViewModel.centerToUserLocation()
-                } label: {
-                    Image(systemName: "location")
+            if locationViewModel.isAuthorized {
+                ToolbarItem {
+                    Button {
+                        mapViewModel.centerToUserLocation()
+                    } label: {
+                        Image(systemName: "location")
+                    }
                 }
             }
             
