@@ -8,6 +8,10 @@
 import SwiftUI
 import MapKit
 
+#if os(macOS)
+import AppKit
+#endif
+
 struct MapScreen: View {
     @EnvironmentObject private var appViewModel: AppViewModel
     @EnvironmentObject private var locationViewModel: LocationViewModel
@@ -98,10 +102,24 @@ struct MapScreen: View {
         .onDisappear {
             mapViewModel.selectedSource = nil
         }
+        #if os(iOS)
         .sheet(isPresented: $showingInfoSheet, content: {
-            InfoScreen()
-                .frame(maxWidth: 720)
+            infoScreen
         })
+        #elseif os(macOS)
+        .onChange(of: showingInfoSheet) { newValue in
+            let controller = NSHostingController(rootView: infoScreen)
+            
+            let panel = NSPanel(contentViewController: controller)
+            panel.title = ""
+            
+            panel.styleMask.remove(.miniaturizable)
+            panel.styleMask.remove(.fullScreen)
+            panel.styleMask.remove(.fullSizeContentView)
+
+            panel.makeKeyAndOrderFront(nil)
+        }
+        #endif
         .toolbar {
             ToolbarItem {
                 Button {
@@ -141,6 +159,17 @@ struct MapScreen: View {
         }
         #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
+        #endif
+    }
+    
+    @ViewBuilder
+    private var infoScreen: some View {
+        #if os(macOS)
+        InfoScreen()
+            .frame(minWidth: 720, minHeight: 540)
+        #else
+        InfoScreen()
+            .frame(maxWidth: 720)
         #endif
     }
     
